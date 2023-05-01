@@ -1,0 +1,2956 @@
+@prefix : <http://www.semanticweb.org/sara/ontologies/2023/3//> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sara/ontologies/2023/3//> .
+
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//compatible_with_operating_system
+:compatible_with_operating_system rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  rdfs:domain :Device ;
+                                  rdfs:range :Operating_system .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_cache
+:cpu_has_cache rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :CPU ;
+               rdfs:range :Cache .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//designed_by_manufacturer
+:designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :Desktop_computer
+                                                      :Device
+                                                      :Hardware
+                                                      :Software
+                                                    )
+                                      ] ;
+                          rdfs:range :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_designed_by_manufacturer
+:desktop_computer_designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf :designed_by_manufacturer ;
+                                           rdfs:domain :Desktop_computer ;
+                                           rdfs:range :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has
+:desktop_computer_has rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :Desktop_computer ;
+                      rdfs:range :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_computer_case
+:desktop_computer_has_computer_case rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :desktop_computer_has ;
+                                    rdfs:domain :Desktop_computer ;
+                                    rdfs:range :Computer_case .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_cpu
+:desktop_computer_has_cpu rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :desktop_computer_has ;
+                          rdfs:domain :Desktop_computer ;
+                          rdfs:range :CPU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_graphic_card
+:desktop_computer_has_graphic_card rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :desktop_computer_has ;
+                                   rdfs:domain :Desktop_computer ;
+                                   rdfs:range :Graphic_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_hdd
+:desktop_computer_has_hdd rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :desktop_computer_has ;
+                          rdfs:domain :Desktop_computer ;
+                          rdfs:range :HDD .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_motherboard
+:desktop_computer_has_motherboard rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :desktop_computer_has ;
+                                  rdfs:domain :Desktop_computer ;
+                                  rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_psu
+:desktop_computer_has_psu rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :desktop_computer_has ;
+                          rdfs:domain :Desktop_computer ;
+                          rdfs:range :PSU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_ram
+:desktop_computer_has_ram rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :desktop_computer_has ;
+                          rdfs:domain :Desktop_computer ;
+                          rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//device_designed_by_manufacturer
+:device_designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :designed_by_manufacturer ;
+                                 rdfs:domain :Device ;
+                                 rdfs:range :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates
+:driver_operates rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Driver ;
+                 rdfs:range :Device .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_camera
+:driver_operates_camera rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :driver_operates ;
+                        rdfs:domain :Driver ;
+                        rdfs:range :Camera .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_computer_speakers
+:driver_operates_computer_speakers rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :driver_operates ;
+                                   rdfs:domain :Driver ;
+                                   rdfs:range :Computer_speakers .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_graphic_tablet
+:driver_operates_graphic_tablet rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :driver_operates ;
+                                rdfs:domain :Driver ;
+                                rdfs:range :Graphic_tablet .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_headphones
+:driver_operates_headphones rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :driver_operates ;
+                            rdfs:domain :Driver ;
+                            rdfs:range :Headphones .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_joystick
+:driver_operates_joystick rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :driver_operates ;
+                          rdfs:domain :Driver ;
+                          rdfs:range :Joystick .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_keyboard
+:driver_operates_keyboard rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :driver_operates ;
+                          rdfs:domain :Driver ;
+                          rdfs:range :Keyboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_microphone
+:driver_operates_microphone rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :driver_operates ;
+                            rdfs:domain :Driver ;
+                            rdfs:range :Microphone .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_monitor
+:driver_operates_monitor rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :driver_operates ;
+                         rdfs:domain :Driver ;
+                         rdfs:range :Monitor .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_mouse
+:driver_operates_mouse rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :driver_operates ;
+                       rdfs:domain :Driver ;
+                       rdfs:range :Mouse .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_printer
+:driver_operates_printer rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :driver_operates ;
+                         rdfs:domain :Driver ;
+                         rdfs:range :Printer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_projector
+:driver_operates_projector rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :driver_operates ;
+                           rdfs:domain :Driver ;
+                           rdfs:range :Projector .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_scanner
+:driver_operates_scanner rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :driver_operates ;
+                         rdfs:domain :Driver ;
+                         rdfs:range :Scanner .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_has_gpu
+:graphic_card_has_gpu rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :Graphic_card ;
+                      rdfs:range :GPU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_is_compatible_with_operating_system
+:graphic_tablet_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf :compatible_with_operating_system ;
+                                                    rdfs:domain :Graphic_tablet ;
+                                                    rdfs:range :Operating_system .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hardware_designed_by_manufacturer
+:hardware_designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :designed_by_manufacturer ;
+                                   rdfs:domain :Hardware ;
+                                   rdfs:range :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_graphic_card
+:is_comaptible_with_graphic_card rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                                 rdfs:domain :Motherboard ;
+                                 rdfs:range :Graphic_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_hdd
+:is_comaptible_with_hdd rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :HDD .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_network_interface_card
+:is_comaptible_with_network_interface_card rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                                           rdfs:domain :Motherboard ;
+                                           rdfs:range :Network_interface_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_cooler
+:is_compatible_with_cooler rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                           rdfs:domain :Motherboard ;
+                           rdfs:range :Cooler .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_cpu
+:is_compatible_with_cpu rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :CPU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_psu
+:is_compatible_with_psu rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :PSU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_ram
+:is_compatible_with_ram rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_sound_card
+:is_compatible_with_sound_card rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                               rdfs:domain :Motherboard ;
+                               rdfs:range :Sound_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_ssd
+:is_compatible_with_ssd rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :SSD .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//joystick_is_compatible_with_operating_system
+:joystick_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf :compatible_with_operating_system ;
+                                              rdfs:domain :Joystick ;
+                                              rdfs:range :Operating_system .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with
+:operating_system_is_compatible_with rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain :Operating_system ;
+                                     rdfs:range :Software .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with_antivirus
+:operating_system_is_compatible_with_antivirus rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :operating_system_is_compatible_with ;
+                                               rdfs:domain :Operating_system ;
+                                               rdfs:range :Antivirus .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with_driver
+:operating_system_is_compatible_with_driver rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf :operating_system_is_compatible_with ;
+                                            rdfs:domain :Operating_system ;
+                                            rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with_office_package
+:operating_system_is_compatible_with_office_package rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf :operating_system_is_compatible_with ;
+                                                    rdfs:domain :Operating_system ;
+                                                    rdfs:range :Office_package .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with_video_games
+:operating_system_is_compatible_with_video_games rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf :operating_system_is_compatible_with ;
+                                                 rdfs:domain :Operating_system ;
+                                                 rdfs:range :Video_game .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//software_designed_by_manufacturer
+:software_designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :designed_by_manufacturer ;
+                                   rdfs:domain :Software ;
+                                   rdfs:range :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#motherboard_is_compatible_with
+:motherboard_is_compatible_with rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdfs:domain :Motherboard ;
+                                rdfs:range :Hardware .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//antivirus_has_aim
+:antivirus_has_aim rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Antivirus ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//antivirus_has_name
+:antivirus_has_name rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Antivirus ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//antivirus_has_version
+:antivirus_has_version rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Antivirus ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cache_has_level
+:cache_has_level rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Cache ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cache_has_size_in_mb
+:cache_has_size_in_mb rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Cache ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//camera_has_microphone
+:camera_has_microphone rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Camera ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//camera_has_name
+:camera_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Camera ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//camera_has_resolution
+:camera_has_resolution rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Camera ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//camera_is_wireless
+:camera_is_wireless rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Camera ;
+                    rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_case_has_dimensions
+:computer_case_has_dimensions rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Computer_case ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_case_has_name
+:computer_case_has_name rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Computer_case ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_case_has_psu
+:computer_case_has_psu rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Computer_case ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_case_supports_motherboard
+:computer_case_supports_motherboard rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                    rdfs:domain :Computer_case ;
+                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_speakers_are_wireless
+:computer_speakers_are_wireless rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdfs:domain :Computer_speakers ;
+                                rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_speakers_have_name
+:computer_speakers_have_name rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain :Computer_speakers ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_speakers_have_power_in_w
+:computer_speakers_have_power_in_w rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                   rdfs:domain :Computer_speakers ;
+                                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cooler_has_cooling_type
+:cooler_has_cooling_type rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Cooler ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cooler_has_name
+:cooler_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Cooler ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cooler_has_rpm
+:cooler_has_rpm rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Cooler ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_for_gaming
+:cpu_for_gaming rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :CPU ;
+                rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_clock_rate
+:cpu_has_clock_rate rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :CPU ;
+                    rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_cores
+:cpu_has_cores rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :CPU ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_name
+:cpu_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CPU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_tdp
+:cpu_has_tdp rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :CPU ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_threads
+:cpu_has_threads rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :CPU ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_type
+:cpu_has_type rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CPU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_with_integrated_gpu
+:cpu_with_integrated_gpu rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :CPU ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_dimension
+:desktop_computer_has_dimension rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdfs:domain :Desktop_computer ;
+                                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_name
+:desktop_computer_has_name rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :Desktop_computer ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_operating_system
+:desktop_computer_has_operating_system rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain :Desktop_computer ;
+                                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_has_name
+:driver_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Driver ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_has_version
+:driver_has_version rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Driver ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//gpu_has_name
+:gpu_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :GPU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_for_gaming
+:graphic_card_for_gaming rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Graphic_card ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_has_memory_in_gb
+:graphic_card_has_memory_in_gb rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Graphic_card ;
+                               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_has_memory_type
+:graphic_card_has_memory_type rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Graphic_card ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_has_name
+:graphic_card_has_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Graphic_card ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_has_dimension
+:graphic_tablet_has_dimension rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Graphic_tablet ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_has_name
+:graphic_tablet_has_name rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Graphic_tablet ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_has_resolution
+:graphic_tablet_has_resolution rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Graphic_tablet ;
+                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_has_buffer_in_mb
+:hdd_has_buffer_in_mb rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :HDD ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_has_capacity_in_gb
+:hdd_has_capacity_in_gb rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :HDD ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_has_format
+:hdd_has_format rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :HDD ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_has_name
+:hdd_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :HDD ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_has_rpm
+:hdd_has_rpm rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :HDD ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//headphones_are_wireless
+:headphones_are_wireless rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Headphones ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//headphones_for_gaming
+:headphones_for_gaming rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Headphones ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//headphones_have_microphone
+:headphones_have_microphone rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :Headphones ;
+                            rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//headphones_have_name
+:headphones_have_name rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Headphones ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//headphones_have_sensitivity_in_db
+:headphones_have_sensitivity_in_db rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                   rdfs:domain :Headphones ;
+                                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//joystick_has_name
+:joystick_has_name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Joystick ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//joystick_has_number_of_tasters
+:joystick_has_number_of_tasters rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdfs:domain :Joystick ;
+                                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//keyboard_has_dimension
+:keyboard_has_dimension rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Keyboard ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//keyboard_has_name
+:keyboard_has_name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Keyboard ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//keyboard_is_wireless
+:keyboard_is_wireless rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Keyboard ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//manufacturer_has_name
+:manufacturer_has_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Manufacturer ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//microphone_has_frequency
+:microphone_has_frequency rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain :Microphone ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//microphone_has_name
+:microphone_has_name rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Microphone ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//monitor_has_diagonal
+:monitor_has_diagonal rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Monitor ;
+                      rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//monitor_has_name
+:monitor_has_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Monitor ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//monitor_has_refreshment_in_hz
+:monitor_has_refreshment_in_hz rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Monitor ;
+                               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//monitor_has_resolution
+:monitor_has_resolution rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Monitor ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//monitor_is_curved
+:monitor_is_curved rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Monitor ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//motherboard_has_name
+:motherboard_has_name rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Motherboard ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//mouse_has_connection
+:mouse_has_connection rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Mouse ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//mouse_has_name
+:mouse_has_name rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Mouse ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//mouse_has_sensor
+:mouse_has_sensor rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Mouse ;
+                  rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//mouse_is_wireless
+:mouse_is_wireless rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Mouse ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//network_interface_card_has_interface
+:network_interface_card_has_interface rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdfs:domain :Network_interface_card ;
+                                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//network_interface_card_has_name
+:network_interface_card_has_name rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain :Network_interface_card ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//office_package_has_aim
+:office_package_has_aim rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Office_package ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//office_package_has_name
+:office_package_has_name rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Office_package ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//office_package_has_version
+:office_package_has_version rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :Office_package ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_has_name
+:operating_system_has_name rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :Operating_system ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_has_system_version
+:operating_system_has_system_version rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                     rdfs:domain :Operating_system ;
+                                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_has_version
+:operating_system_has_version rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Operating_system ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//printer_has_color
+:printer_has_color rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Printer ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//printer_has_format
+:printer_has_format rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Printer ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//printer_has_name
+:printer_has_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Printer ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//printer_has_type
+:printer_has_type rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Printer ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//projector_has_lightning_type
+:projector_has_lightning_type rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Projector ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//projector_has_name
+:projector_has_name rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Projector ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//projector_has_resolution
+:projector_has_resolution rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain :Projector ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//projector_has_system_projection
+:projector_has_system_projection rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain :Projector ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_has_certificate
+:psu_has_certificate rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :PSU ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_has_name
+:psu_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :PSU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_has_output_power
+:psu_has_output_power rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :PSU ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_has_pfc
+:psu_has_pfc rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :PSU ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_has_type
+:psu_has_type rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :PSU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_capacity_in_gb
+:ram_has_capacity_in_gb rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :RAM ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_latency
+:ram_has_latency rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :RAM ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_name
+:ram_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :RAM ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_rgb
+:ram_has_rgb rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :RAM ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_type
+:ram_has_type rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :RAM ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_voltage
+:ram_has_voltage rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :RAM ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//scanner_has_color
+:scanner_has_color rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Scanner ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//scanner_has_format
+:scanner_has_format rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Scanner ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//scanner_has_name
+:scanner_has_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Scanner ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//sound_card_has_name
+:sound_card_has_name rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Sound_card ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//sound_card_has_type
+:sound_card_has_type rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Sound_card ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_has_capacity_in_gb
+:ssd_has_capacity_in_gb rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :SSD ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_has_format
+:ssd_has_format rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :SSD ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_has_interface
+:ssd_has_interface rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :SSD ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_has_name
+:ssd_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :SSD ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_has_read_speed_in_mbs
+:ssd_has_read_speed_in_mbs rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :SSD ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_has_write_speed_in_mbs
+:ssd_has_write_speed_in_mbs rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :SSD ;
+                            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//video_game_has_name
+:video_game_has_name rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Video_game ;
+                     rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Antivirus
+:Antivirus rdf:type owl:Class ;
+           rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Black_and_white_printer
+:Black_and_white_printer rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( :Printer
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :printer_has_color ;
+                                                                      owl:hasValue "false"^^xsd:boolean
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf :Printer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Black_and_white_scanner
+:Black_and_white_scanner rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( :Scanner
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :scanner_has_color ;
+                                                                      owl:hasValue "false"^^xsd:boolean
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf :Scanner .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//CPU
+:CPU rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Cache
+:Cache rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Camera
+:Camera rdf:type owl:Class ;
+        rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Color_printer
+:Color_printer rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Printer
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :printer_has_color ;
+                                                            owl:hasValue "true"^^xsd:boolean
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :Printer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Color_scanner
+:Color_scanner rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Scanner
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :scanner_has_color ;
+                                                            owl:hasValue "true"^^xsd:boolean
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+               rdfs:subClassOf :Scanner .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Computer_case
+:Computer_case rdf:type owl:Class ;
+               rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Computer_speakers
+:Computer_speakers rdf:type owl:Class ;
+                   rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Cooler
+:Cooler rdf:type owl:Class ;
+        rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Desktop_computer
+:Desktop_computer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Device
+:Device rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Driver
+:Driver rdf:type owl:Class ;
+        rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//GPU
+:GPU rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Graphic_card
+:Graphic_card rdf:type owl:Class ;
+              rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Graphic_tablet
+:Graphic_tablet rdf:type owl:Class ;
+                rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//HDD
+:HDD rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Hardware
+:Hardware rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Headphones
+:Headphones rdf:type owl:Class ;
+            rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Input
+:Input rdf:type owl:Class ;
+       rdfs:subClassOf :Device ;
+       owl:disjointWith :Output .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Joystick
+:Joystick rdf:type owl:Class ;
+          rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Keyboard
+:Keyboard rdf:type owl:Class ;
+          rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer
+:Manufacturer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Microphone
+:Microphone rdf:type owl:Class ;
+            rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Monitor
+:Monitor rdf:type owl:Class ;
+         rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Motherboard
+:Motherboard rdf:type owl:Class ;
+             rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Mouse
+:Mouse rdf:type owl:Class ;
+       rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Network_interface_card
+:Network_interface_card rdf:type owl:Class ;
+                        rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Office_package
+:Office_package rdf:type owl:Class ;
+                rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Operating_system
+:Operating_system rdf:type owl:Class ;
+                  rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Output
+:Output rdf:type owl:Class ;
+        rdfs:subClassOf :Device .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//PSU
+:PSU rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Printer
+:Printer rdf:type owl:Class ;
+         rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Projector
+:Projector rdf:type owl:Class ;
+           rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//RAM
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//SSD
+:SSD rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Scanner
+:Scanner rdf:type owl:Class ;
+         rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Software
+:Software rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Sound_card
+:Sound_card rdf:type owl:Class ;
+            rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Video_game
+:Video_game rdf:type owl:Class ;
+            rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wired_camera
+:Wired_camera rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Camera
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :camera_is_wireless ;
+                                                           owl:hasValue "false"^^xsd:boolean
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf :Camera ;
+              owl:disjointWith :Wireless_camera .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wired_computer_speakers
+:Wired_computer_speakers rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( :Computer_speakers
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :computer_speakers_are_wireless ;
+                                                                      owl:hasValue "false"^^xsd:boolean
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf :Computer_speakers ;
+                         owl:disjointWith :Wireless_computer_speakers .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wired_headphones
+:Wired_headphones rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Headphones
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :headphones_are_wireless ;
+                                                               owl:hasValue "false"^^xsd:boolean
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :Headphones ;
+                  owl:disjointWith :Wireless_headphones .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wired_keyboard
+:Wired_keyboard rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Keyboard
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :keyboard_is_wireless ;
+                                                             owl:hasValue "false"^^xsd:boolean
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :Keyboard ;
+                owl:disjointWith :Wireless_keyboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wired_mouse
+:Wired_mouse rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :Mouse
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :mouse_is_wireless ;
+                                                          owl:hasValue "false"^^xsd:boolean
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :Mouse ;
+             owl:disjointWith :Wireless_mouse .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wireless_camera
+:Wireless_camera rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Camera
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :camera_is_wireless ;
+                                                              owl:hasValue "true"^^xsd:boolean
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Camera .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wireless_computer_speakers
+:Wireless_computer_speakers rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :Computer_speakers
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :computer_speakers_are_wireless ;
+                                                                         owl:hasValue "true"^^xsd:boolean
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf :Computer_speakers .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wireless_headphones
+:Wireless_headphones rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :Headphones
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :headphones_are_wireless ;
+                                                                  owl:hasValue "true"^^xsd:boolean
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf :Headphones .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wireless_keyboard
+:Wireless_keyboard rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( :Keyboard
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :keyboard_is_wireless ;
+                                                                owl:hasValue "true"^^xsd:boolean
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf :Keyboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wireless_mouse
+:Wireless_mouse rdf:type owl:Class ;
+                rdfs:subClassOf :Mouse .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ALCTRON
+:ALCTRON rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "ALCTRON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ALCTRON_T8400_microphone
+:ALCTRON_T8400_microphone rdf:type owl:NamedIndividual ,
+                                   :Microphone ;
+                          :device_designed_by_manufacturer :ALCTRON ;
+                          :microphone_has_frequency "50 Hz - 16 kHz" ;
+                          :microphone_has_name "ALCTRON T8400 microphone" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//BROTHER
+:BROTHER rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "BROTHER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//BROTHER_Stampac_HL-B2080DW
+:BROTHER_Stampac_HL-B2080DW rdf:type owl:NamedIndividual ,
+                                     :Color_printer ;
+                            :device_designed_by_manufacturer :BROTHER ;
+                            :printer_has_color "true"^^xsd:boolean ;
+                            :printer_has_format "A4" ;
+                            :printer_has_name "BROTHER Stampac HL-B2080DW" ;
+                            :printer_has_type "Laserski" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//BROTHER_Stampac_HL1223WE-HL1223WEYJ1
+:BROTHER_Stampac_HL1223WE-HL1223WEYJ1 rdf:type owl:NamedIndividual ,
+                                               :Black_and_white_printer ;
+                                      :device_designed_by_manufacturer :BROTHER ;
+                                      :printer_has_color "false"^^xsd:boolean ;
+                                      :printer_has_format "A4" ;
+                                      :printer_has_name "BROTHER Stampac HL1223WE-HL1223WEYJ1" ;
+                                      :printer_has_type "Laserski" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//CANON
+:CANON rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "CANON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//CANON_Skener_imageFORMULA_DR-F120
+:CANON_Skener_imageFORMULA_DR-F120 rdf:type owl:NamedIndividual ,
+                                            :Black_and_white_scanner ;
+                                   :device_designed_by_manufacturer :CANON ;
+                                   :scanner_has_color "false"^^xsd:boolean ;
+                                   :scanner_has_format "A4" ;
+                                   :scanner_has_name "CANON Skener imageFORMULA DR-F120" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//CANON_Stampac_i-SENSYS_LBP223dw
+:CANON_Stampac_i-SENSYS_LBP223dw rdf:type owl:NamedIndividual ,
+                                          :Color_printer ;
+                                 :device_designed_by_manufacturer :CANON ;
+                                 :printer_has_color "true"^^xsd:boolean ;
+                                 :printer_has_format "A4" ;
+                                 :printer_has_name "CANON Stampac i-SENSYS LBP223dw" ;
+                                 :printer_has_type "Laserski" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//DELL_Monitor_S2421HN
+:DELL_Monitor_S2421HN rdf:type owl:NamedIndividual ,
+                               :Monitor ;
+                      :device_designed_by_manufacturer :Dell ;
+                      :monitor_has_diagonal 23.8 ;
+                      :monitor_has_name "DELL Monitor S2421HN" ;
+                      :monitor_has_refreshment_in_hz 75 ;
+                      :monitor_has_resolution "1920x1080 Full HD" ;
+                      :monitor_is_curved "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//DELL_Monitor_S2721HN
+:DELL_Monitor_S2721HN rdf:type owl:NamedIndividual ,
+                               :Monitor ;
+                      :device_designed_by_manufacturer :Dell ;
+                      :monitor_has_diagonal 27 ;
+                      :monitor_has_name "DELL Monitor S2721HN" ;
+                      :monitor_has_refreshment_in_hz 75 ;
+                      :monitor_has_resolution "1920x1080 Full HD" ;
+                      :monitor_is_curved "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//DELL_Monitor_SE2723DS
+:DELL_Monitor_SE2723DS rdf:type owl:NamedIndividual ,
+                                :Monitor ;
+                       :device_designed_by_manufacturer :Dell ;
+                       :monitor_has_diagonal 27 ;
+                       :monitor_has_name "DELL Monitor SE2723DS" ;
+                       :monitor_has_refreshment_in_hz 75 ;
+                       :monitor_has_resolution "2560x1440" ;
+                       :monitor_is_curved "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//DELL_Monitor_U4919DW
+:DELL_Monitor_U4919DW rdf:type owl:NamedIndividual ,
+                               :Monitor ;
+                      :device_designed_by_manufacturer :Dell ;
+                      :monitor_has_diagonal 49 ;
+                      :monitor_has_name "DELL Monitor U4919DW" ;
+                      :monitor_has_refreshment_in_hz 60 ;
+                      :monitor_has_resolution "5120x1440" ;
+                      :monitor_is_curved "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Dell
+:Dell rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "Dell" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Driver_Easy_Lite_2016
+:Driver_Easy_Lite_2016 rdf:type owl:NamedIndividual ,
+                                :Driver ;
+                       :driver_operates_camera :LOGITECH_BRIO_300_960-001442_Web_kamera ;
+                       :driver_operates_computer_speakers :LG_Bezicni_zvucnik_XBOOM_360 ;
+                       :driver_operates_graphic_tablet :HUION_H610_Pro_V2_Graphic_Drawing_Tablet ;
+                       :software_designed_by_manufacturer :Microsoft_Windows ;
+                       :driver_has_name "Driver Easy Lite 2016" ;
+                       :driver_has_version "2016" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Driver_Easy_Lite_2020
+:Driver_Easy_Lite_2020 rdf:type owl:NamedIndividual ,
+                                :Driver ;
+                       :driver_operates_monitor :LG_Monitor_26WQ500-B_Ultrawide ;
+                       :driver_operates_mouse :LOGITECH_Mouse_G502_X_Plus_910-006163 ;
+                       :driver_operates_printer :BROTHER_Stampac_HL-B2080DW ;
+                       :software_designed_by_manufacturer :Microsoft_Windows ;
+                       :driver_has_name "Driver Easy Lite 2020" ;
+                       :driver_has_version "2020" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Driver_Easy_Pro_2016
+:Driver_Easy_Pro_2016 rdf:type owl:NamedIndividual ,
+                               :Driver ;
+                      :driver_operates_joystick :LOGITECH_joystick_EXTREME_3D_PRO_-_963290-0403 ;
+                      :driver_operates_keyboard :LOGITECH_Keyboard_G_Pro_US_920-009392 ;
+                      :driver_operates_microphone :TRUST_Mikrofon_MICO ;
+                      :software_designed_by_manufacturer :Microsoft_Windows ;
+                      :driver_has_name "Driver Easy Pro 2016" ;
+                      :driver_has_version "2016" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EDIFIER
+:EDIFIER rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "EDIFIER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EDIFIER_Zvucnici_za_racunar_R1700BT
+:EDIFIER_Zvucnici_za_racunar_R1700BT rdf:type owl:NamedIndividual ,
+                                              :Wired_computer_speakers ;
+                                     :device_designed_by_manufacturer :EDIFIER ;
+                                     :computer_speakers_are_wireless "false"^^xsd:boolean ;
+                                     :computer_speakers_have_name "EDIFIER Zvucnici za racunar R1700BT" ;
+                                     :computer_speakers_have_power_in_w 66 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EPSON
+:EPSON rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "EPSON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EPSON_CO-W01_Projektor
+:EPSON_CO-W01_Projektor rdf:type owl:NamedIndividual ,
+                                 :Projector ;
+                        :device_designed_by_manufacturer :EPSON ;
+                        :projector_has_lightning_type "UHE" ;
+                        :projector_has_name "EPSON CO-W01 Projektor" ;
+                        :projector_has_resolution "1280 x 720 (WXGA)" ;
+                        :projector_has_system_projection "3LCD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EPSON_EB-U50_Projektor
+:EPSON_EB-U50_Projektor rdf:type owl:NamedIndividual ,
+                                 :Projector ;
+                        :device_designed_by_manufacturer :EPSON ;
+                        :projector_has_lightning_type "UHE" ;
+                        :projector_has_name "EPSON EB-U50 Projektor" ;
+                        :projector_has_resolution "1920 x 1200 (WUXGA)" ;
+                        :projector_has_system_projection "3LCD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EPSON_Prenosni_skener_DS310
+:EPSON_Prenosni_skener_DS310 rdf:type owl:NamedIndividual ,
+                                      :Color_scanner ;
+                             :device_designed_by_manufacturer :EPSON ;
+                             :scanner_has_color "true"^^xsd:boolean ;
+                             :scanner_has_format "A4" ;
+                             :scanner_has_name "EPSON Prenosni skener DS310" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EPSON_Skener_WorkForce_DS-530II
+:EPSON_Skener_WorkForce_DS-530II rdf:type owl:NamedIndividual ,
+                                          :Color_scanner ;
+                                 :device_designed_by_manufacturer :EPSON ;
+                                 :scanner_has_color "true"^^xsd:boolean ;
+                                 :scanner_has_format "A4" ;
+                                 :scanner_has_name "EPSON Skener WorkForce DS-530II" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//HUION
+:HUION rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "HUION" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//HUION_H610_Pro_V2_Graphic_Drawing_Tablet
+:HUION_H610_Pro_V2_Graphic_Drawing_Tablet rdf:type owl:NamedIndividual ,
+                                                   :Graphic_tablet ;
+                                          :device_designed_by_manufacturer :HUION ;
+                                          :graphic_tablet_is_compatible_with_operating_system :Windows_10_Pro ;
+                                          :graphic_tablet_has_dimension "13.89 x 9.64 x 0.55" ;
+                                          :graphic_tablet_has_name "HUION H610 Pro V2 Graphic Drawing Tablet" ;
+                                          :graphic_tablet_has_resolution "720p" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//INTEL_Core_i5-13400
+:INTEL_Core_i5-13400 rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :cpu_has_cache :L2_CACHE_3MB ,
+                                    :L3_CACHE_16MB ;
+                     :hardware_designed_by_manufacturer :Intel ;
+                     :cpu_for_gaming "true"^^xsd:boolean ;
+                     :cpu_has_clock_rate 2.5 ;
+                     :cpu_has_cores 10 ;
+                     :cpu_has_name "INTEL Core i5-13400" ;
+                     :cpu_has_tdp 65 ;
+                     :cpu_has_threads 16 ;
+                     :cpu_has_type "Intel Core i5" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Intel
+:Intel rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "Intel" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//JBL
+:JBL rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "JBL" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//JBL_200_JBLW200TWSBLK
+:JBL_200_JBLW200TWSBLK rdf:type owl:NamedIndividual ,
+                                :Wireless_headphones ;
+                       :device_designed_by_manufacturer :JBL ;
+                       :headphones_are_wireless "true"^^xsd:boolean ;
+                       :headphones_for_gaming "false"^^xsd:boolean ;
+                       :headphones_have_microphone "true"^^xsd:boolean ;
+                       :headphones_have_name "JBL 200 JBLW200TWSBLK" ;
+                       :headphones_have_sensitivity_in_db 108 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//JBL_JBLQUANTUM100BLUAM
+:JBL_JBLQUANTUM100BLUAM rdf:type owl:NamedIndividual ,
+                                 :Wired_headphones ;
+                        :device_designed_by_manufacturer :JBL ;
+                        :headphones_are_wireless "false"^^xsd:boolean ;
+                        :headphones_for_gaming "true"^^xsd:boolean ;
+                        :headphones_have_microphone "true"^^xsd:boolean ;
+                        :headphones_have_name "JBL JBLQUANTUM100BLUAM" ;
+                        :headphones_have_sensitivity_in_db 96 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//JBL_JBLQUANTUM300BLKAM
+:JBL_JBLQUANTUM300BLKAM rdf:type owl:NamedIndividual ,
+                                 :Wired_headphones ;
+                        :device_designed_by_manufacturer :JBL ;
+                        :headphones_are_wireless "false"^^xsd:boolean ;
+                        :headphones_for_gaming "true"^^xsd:boolean ;
+                        :headphones_have_microphone "true"^^xsd:boolean ;
+                        :headphones_have_name "JBL JBLQUANTUM300BLKAM" ;
+                        :headphones_have_sensitivity_in_db 100 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//JBL_JBLTOURONEBLKAM
+:JBL_JBLTOURONEBLKAM rdf:type owl:NamedIndividual ,
+                              :Wireless_headphones ;
+                     :device_designed_by_manufacturer :JBL ;
+                     :headphones_are_wireless "true"^^xsd:boolean ;
+                     :headphones_for_gaming "false"^^xsd:boolean ;
+                     :headphones_have_microphone "true"^^xsd:boolean ;
+                     :headphones_have_name "JBL JBLTOURONEBLKAM" ;
+                     :headphones_have_sensitivity_in_db 90 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//KASPERSKY
+:KASPERSKY rdf:type owl:NamedIndividual ,
+                    :Manufacturer ;
+           :manufacturer_has_name "KASPERSKY" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//KASPERSKY_Anti-Virus_Fizička_lica
+:KASPERSKY_Anti-Virus_Fizička_lica rdf:type owl:NamedIndividual ,
+                                            :Antivirus ;
+                                   :software_designed_by_manufacturer :KASPERSKY ;
+                                   :antivirus_has_aim "Obnova dve licence" ;
+                                   :antivirus_has_name "KASPERSKY Anti-Virus Fizička lica" ;
+                                   :antivirus_has_version "2016" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//KASPERSKY_Total_Security_Pravna_lica
+:KASPERSKY_Total_Security_Pravna_lica rdf:type owl:NamedIndividual ,
+                                               :Antivirus ;
+                                      :software_designed_by_manufacturer :KASPERSKY ;
+                                      :antivirus_has_aim "Total Security dve licence" ;
+                                      :antivirus_has_name "KASPERSKY Total Security Pravna lica" ;
+                                      :antivirus_has_version "2016" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LG
+:LG rdf:type owl:NamedIndividual ,
+             :Manufacturer ;
+    :manufacturer_has_name "LG" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LG_Bezicni_zvucnik_XBOOM_360
+:LG_Bezicni_zvucnik_XBOOM_360 rdf:type owl:NamedIndividual ,
+                                       :Wireless_computer_speakers ;
+                              :device_designed_by_manufacturer :LG ;
+                              :computer_speakers_are_wireless "true"^^xsd:boolean ;
+                              :computer_speakers_have_name "LG Bezicni zvucnik XBOOM 360" ;
+                              :computer_speakers_have_power_in_w 120 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LG_Monitor_26WQ500-B_Ultrawide
+:LG_Monitor_26WQ500-B_Ultrawide rdf:type owl:NamedIndividual ,
+                                         :Monitor ;
+                                :device_designed_by_manufacturer :LG ;
+                                :monitor_has_diagonal 25.7 ;
+                                :monitor_has_name "LG Monitor 26WQ500-B Ultrawide" ;
+                                :monitor_has_refreshment_in_hz 75 ;
+                                :monitor_has_resolution "2560x1080" ;
+                                :monitor_is_curved "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LG_Monitor_34WP65CP-B_Ultrawide
+:LG_Monitor_34WP65CP-B_Ultrawide rdf:type owl:NamedIndividual ,
+                                          :Monitor ;
+                                 :device_designed_by_manufacturer :LG ;
+                                 :monitor_has_diagonal 34 ;
+                                 :monitor_has_name "LG Monitor 34WP65CP-B Ultrawide" ;
+                                 :monitor_has_refreshment_in_hz 160 ;
+                                 :monitor_has_resolution "3440x1440" ;
+                                 :monitor_is_curved "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LG_Monitor_UltraFine_27EP950-B
+:LG_Monitor_UltraFine_27EP950-B rdf:type owl:NamedIndividual ,
+                                         :Monitor ;
+                                :device_designed_by_manufacturer :LG ;
+                                :monitor_has_diagonal 27 ;
+                                :monitor_has_name "LG Monitor UltraFine 27EP950-B" ;
+                                :monitor_has_refreshment_in_hz 60 ;
+                                :monitor_has_resolution "3840x2160 4K UHD" ;
+                                :monitor_is_curved "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH
+:LOGITECH rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "LOGITECH" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_BRIO_300_960-001442_Web_kamera
+:LOGITECH_BRIO_300_960-001442_Web_kamera rdf:type owl:NamedIndividual ,
+                                                  :Wired_camera ;
+                                         :device_designed_by_manufacturer :LOGITECH ;
+                                         :camera_has_microphone "true"^^xsd:boolean ;
+                                         :camera_has_name "LOGITECH BRIO 300 960-001442 Web kamera" ;
+                                         :camera_has_resolution "1920 x 1080" ;
+                                         :camera_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Brio_500_Web_kamera
+:LOGITECH_Brio_500_Web_kamera rdf:type owl:NamedIndividual ,
+                                       :Wired_camera ;
+                              :device_designed_by_manufacturer :LOGITECH ;
+                              :camera_has_microphone "true"^^xsd:boolean ;
+                              :camera_has_name "LOGITECH Brio 500 Web kamera" ;
+                              :camera_has_resolution "1920 x 1080" ;
+                              :camera_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_G733_LIGHTSPEED_WIRELESS
+:LOGITECH_G733_LIGHTSPEED_WIRELESS rdf:type owl:NamedIndividual ,
+                                            :Wireless_headphones ;
+                                   :device_designed_by_manufacturer :LOGITECH ;
+                                   :headphones_are_wireless "true"^^xsd:boolean ;
+                                   :headphones_for_gaming "true"^^xsd:boolean ;
+                                   :headphones_have_microphone "true"^^xsd:boolean ;
+                                   :headphones_have_name "LOGITECH G733 LIGHTSPEED WIRELESS" ;
+                                   :headphones_have_sensitivity_in_db 87 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_G935_Wireless
+:LOGITECH_G935_Wireless rdf:type owl:NamedIndividual ,
+                                 :Wireless_headphones ;
+                        :device_designed_by_manufacturer :LOGITECH ;
+                        :headphones_are_wireless "true"^^xsd:boolean ;
+                        :headphones_for_gaming "true"^^xsd:boolean ;
+                        :headphones_have_microphone "true"^^xsd:boolean ;
+                        :headphones_have_name "LOGITECH G935 WIRELESS" ;
+                        :headphones_have_sensitivity_in_db 93 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Keyboard_G_Pro_US_920-009392
+:LOGITECH_Keyboard_G_Pro_US_920-009392 rdf:type owl:NamedIndividual ,
+                                                :Wired_keyboard ;
+                                       :device_designed_by_manufacturer :LOGITECH ;
+                                       :keyboard_has_dimension "361 x 153 x 34 mm" ;
+                                       :keyboard_has_name "LOGITECH Keyboard G Pro US 920-009392" ;
+                                       :keyboard_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Keyboard_K380_Multi_device_US_920-009867
+:LOGITECH_Keyboard_K380_Multi_device_US_920-009867 rdf:type owl:NamedIndividual ,
+                                                            :Wireless_keyboard ;
+                                                   :device_designed_by_manufacturer :LOGITECH ;
+                                                   :keyboard_has_dimension "279 x 124 x 16 mm" ;
+                                                   :keyboard_has_name "LOGITECH Keyboard K380 Multi device US 920-009867" ;
+                                                   :keyboard_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Keyboard_K400_PLUS_US_920-007146
+:LOGITECH_Keyboard_K400_PLUS_US_920-007146 rdf:type owl:NamedIndividual ,
+                                                    :Wireless_keyboard ;
+                                           :device_designed_by_manufacturer :LOGITECH ;
+                                           :keyboard_has_dimension "354,3 x 139,9 x 23,5 mm" ;
+                                           :keyboard_has_name "LOGITECH Keyboard K400 PLUS US 920-007146" ;
+                                           :keyboard_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Keyboard_K860_ERGO_US
+:LOGITECH_Keyboard_K860_ERGO_US rdf:type owl:NamedIndividual ,
+                                         :Wireless_keyboard ;
+                                :device_designed_by_manufacturer :LOGITECH ;
+                                :keyboard_has_dimension "456 x 233 x 48 mm" ;
+                                :keyboard_has_name "LOGITECH Keyboard K860 ERGO US" ;
+                                :keyboard_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Mouse_G502_X_Plus_910-006163
+:LOGITECH_Mouse_G502_X_Plus_910-006163 rdf:type owl:NamedIndividual ,
+                                                :Wireless_mouse ;
+                                       :device_designed_by_manufacturer :LOGITECH ;
+                                       :mouse_has_connection "USB nano prijemnik" ;
+                                       :mouse_has_name "LOGITECH Mouse G502 X Plus 910-006163" ;
+                                       :mouse_has_sensor "true"^^xsd:boolean ;
+                                       :mouse_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Mouse_M330_SILENT_PLUS_910-00490
+:LOGITECH_Mouse_M330_SILENT_PLUS_910-00490 rdf:type owl:NamedIndividual ,
+                                                    :Wireless_mouse ;
+                                           :device_designed_by_manufacturer :LOGITECH ;
+                                           :mouse_has_connection "" ;
+                                           :mouse_has_name "LOGITECH Mouse M330 SILENT PLUS 910-00490" ;
+                                           :mouse_has_sensor "true"^^xsd:boolean ;
+                                           :mouse_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_PRO_X_WIRELESS_LIGHTSPEED
+:LOGITECH_PRO_X_WIRELESS_LIGHTSPEED rdf:type owl:NamedIndividual ,
+                                             :Wireless_headphones ;
+                                    :device_designed_by_manufacturer :LOGITECH ;
+                                    :headphones_are_wireless "true"^^xsd:boolean ;
+                                    :headphones_for_gaming "true"^^xsd:boolean ;
+                                    :headphones_have_microphone "true"^^xsd:boolean ;
+                                    :headphones_have_name "LOGITECH PRO X WIRELESS LIGHTSPEED" ;
+                                    :headphones_have_sensitivity_in_db 92 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Web_kamera_RALLY_PLUS_-_960-001242
+:LOGITECH_Web_kamera_RALLY_PLUS_-_960-001242 rdf:type owl:NamedIndividual ,
+                                                      :Wireless_camera ;
+                                             :device_designed_by_manufacturer :LOGITECH ;
+                                             :camera_has_microphone "true"^^xsd:boolean ;
+                                             :camera_has_name "4096 x 2160" ,
+                                                              "LOGITECH Web kamera RALLY PLUS - 960-001242" ;
+                                             :camera_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Wired_Mouse_M500S
+:LOGITECH_Wired_Mouse_M500S rdf:type owl:NamedIndividual ,
+                                     :Wired_mouse ;
+                            :device_designed_by_manufacturer :LOGITECH ;
+                            :mouse_has_connection "USB" ;
+                            :mouse_has_name "LOGITECH Wired Mouse M500S" ;
+                            :mouse_has_sensor "true"^^xsd:boolean ;
+                            :mouse_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Z313_2.1_zvucnici_-_980-000413
+:LOGITECH_Z313_2.1_zvucnici_-_980-000413 rdf:type owl:NamedIndividual ,
+                                                  :Wired_computer_speakers ;
+                                         :device_designed_by_manufacturer :LOGITECH ;
+                                         :computer_speakers_are_wireless "false"^^xsd:boolean ;
+                                         :computer_speakers_have_name "LOGITECH Z313 2.1 zvucnici - 980-000413" ;
+                                         :computer_speakers_have_power_in_w 25 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_joystick_EXTREME_3D_PRO_-_963290-0403
+:LOGITECH_joystick_EXTREME_3D_PRO_-_963290-0403 rdf:type owl:NamedIndividual ,
+                                                         :Joystick ;
+                                                :device_designed_by_manufacturer :LOGITECH ;
+                                                :joystick_is_compatible_with_operating_system :Windows_11_Pro ;
+                                                :joystick_has_name "LOGITECH joystick EXTREME 3D PRO - 963290-0403" ;
+                                                :joystick_has_number_of_tasters 12 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//MICROSOFT_365_Personal_QQ2-01404
+:MICROSOFT_365_Personal_QQ2-01404 rdf:type owl:NamedIndividual ,
+                                           :Office_package ;
+                                  :software_designed_by_manufacturer :Microsoft_Windows ;
+                                  :office_package_has_aim "Licenca za fizicka lica" ;
+                                  :office_package_has_name "MICROSOFT 365 Personal QQ2-01404" ;
+                                  :office_package_has_version "FPP" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//MICROSOFT_Office_Home_and_Student_2021_English_79G-05393
+:MICROSOFT_Office_Home_and_Student_2021_English_79G-05393 rdf:type owl:NamedIndividual ,
+                                                                   :Office_package ;
+                                                          :software_designed_by_manufacturer :Microsoft_Windows ;
+                                                          :office_package_has_aim "Licenca za fizicka lica" ;
+                                                          :office_package_has_name "MICROSOFT Office Home and Student 2021 English 79G-05393" ;
+                                                          :office_package_has_version "FPP" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Microsoft_Windows
+:Microsoft_Windows rdf:type owl:NamedIndividual ,
+                            :Manufacturer ;
+                   :manufacturer_has_name "Microsoft Windows" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//NATEC
+:NATEC rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "NATEC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//NATEC_Web_kamera_LORI_PLUS_NKI-1672
+:NATEC_Web_kamera_LORI_PLUS_NKI-1672 rdf:type owl:NamedIndividual ,
+                                              :Wireless_camera ;
+                                     :device_designed_by_manufacturer :NATEC ;
+                                     :camera_has_microphone "true"^^xsd:boolean ;
+                                     :camera_has_name "NATEC Web kamera LORI PLUS NKI-1672" ;
+                                     :camera_has_resolution "1920 x 1080" ;
+                                     :camera_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Nacon_Kontroler_PS4
+:Nacon_Kontroler_PS4 rdf:type owl:NamedIndividual ,
+                              :Joystick ;
+                     :device_designed_by_manufacturer :PS4 ;
+                     :joystick_is_compatible_with_operating_system :Windows_10_Pro ;
+                     :joystick_has_name "Nacon Kontroler PS4" ;
+                     :joystick_has_number_of_tasters 10 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Nacon_Kontroler_PS4_Asymmetric
+:Nacon_Kontroler_PS4_Asymmetric rdf:type owl:NamedIndividual ,
+                                         :Joystick ;
+                                :device_designed_by_manufacturer :PS4 ;
+                                :joystick_is_compatible_with_operating_system :Windows_11_Home ;
+                                :joystick_has_name "Nacon Kontroler PS4 Asymmetric" ;
+                                :joystick_has_number_of_tasters 10 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//PS4
+:PS4 rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "PS4" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//SONY
+:SONY rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "SONY" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//SONY_Projektor_VPL-PHZ50
+:SONY_Projektor_VPL-PHZ50 rdf:type owl:NamedIndividual ,
+                                   :Projector ;
+                          :device_designed_by_manufacturer :SONY ;
+                          :projector_has_lightning_type "UHE" ;
+                          :projector_has_name "SONY Projektor VPL-PHZ50" ;
+                          :projector_has_resolution "1920 x 1200 (WUXGA)" ;
+                          :projector_has_system_projection "3LCD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//TRUST
+:TRUST rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "TRUST" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//TRUST_Mikrofon_MICO
+:TRUST_Mikrofon_MICO rdf:type owl:NamedIndividual ,
+                              :Microphone ;
+                     :device_designed_by_manufacturer :TRUST ;
+                     :microphone_has_frequency "50 Hz - 16 kHz" ;
+                     :microphone_has_name "TRUST Mikrofon MICO" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//TRUST_mikrofon_GXT_252_Emita_-_21753
+:TRUST_mikrofon_GXT_252_Emita_-_21753 rdf:type owl:NamedIndividual ,
+                                               :Microphone ;
+                                      :device_designed_by_manufacturer :TRUST ;
+                                      :manufacturer_has_name "TRUST mikrofon GXT 252 Emita - 21753" ;
+                                      :microphone_has_frequency "18 Hz - 21 kHz" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//UGEE
+:UGEE rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "UGEE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//UGEE_10X6.27_Inches_Drawing_Tablet
+:UGEE_10X6.27_Inches_Drawing_Tablet rdf:type owl:NamedIndividual ,
+                                             :Graphic_tablet ;
+                                    :device_designed_by_manufacturer :UGEE ;
+                                    :graphic_tablet_is_compatible_with_operating_system :Windows_11_Home ;
+                                    :graphic_tablet_has_dimension "8.27 x 6.3 x 0.39" ;
+                                    :graphic_tablet_has_name "UGEE 10X6.27 Inches Drawing Tablet" ;
+                                    :graphic_tablet_has_resolution "720p" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Windows_10_Pro
+:Windows_10_Pro rdf:type owl:NamedIndividual ,
+                         :Operating_system ;
+                :operating_system_is_compatible_with_antivirus :KASPERSKY_Anti-Virus_Fizička_lica ;
+                :operating_system_is_compatible_with_driver :Driver_Easy_Lite_2016 ;
+                :operating_system_is_compatible_with_office_package :MICROSOFT_365_Personal_QQ2-01404 ;
+                :operating_system_is_compatible_with_video_games :PS4_Jumanji:_The_Video_Game ;
+                :software_designed_by_manufacturer :Microsoft_Windows ;
+                :operating_system_has_name "Windows 10 Pro" ;
+                :operating_system_has_system_version "Legalizacijski (GGK)" ;
+                :operating_system_has_version "Windows 10 Pro 64bit" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Windows_11_Home
+:Windows_11_Home rdf:type owl:NamedIndividual ,
+                          :Operating_system ;
+                 :operating_system_is_compatible_with_antivirus :KASPERSKY_Total_Security_Pravna_lica ;
+                 :operating_system_is_compatible_with_driver :Driver_Easy_Pro_2016 ;
+                 :operating_system_is_compatible_with_office_package :MICROSOFT_365_Personal_QQ2-01404 ;
+                 :operating_system_is_compatible_with_video_games :PS4_LEGO_Movie_2:_The_Videogame ;
+                 :software_designed_by_manufacturer :Microsoft_Windows ;
+                 :operating_system_has_name "Windows 11 Home" ;
+                 :operating_system_has_system_version "Legalizacijski (GGK)" ;
+                 :operating_system_has_version "Windows 11 Home 64bit" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Windows_11_Pro
+:Windows_11_Pro rdf:type owl:NamedIndividual ,
+                         :Operating_system ;
+                :operating_system_is_compatible_with_antivirus :KASPERSKY_Total_Security_Pravna_lica ;
+                :operating_system_is_compatible_with_driver :Driver_Easy_Lite_2020 ;
+                :operating_system_is_compatible_with_office_package :MICROSOFT_Office_Home_and_Student_2021_English_79G-05393 ;
+                :operating_system_is_compatible_with_video_games :PS4_LEGO_Movie_2:_The_Videogame ;
+                :software_designed_by_manufacturer :Microsoft_Windows ;
+                :operating_system_has_name "Windows 11 Pro" ;
+                :operating_system_has_system_version "Legalizacijski (GGK)" ;
+                :operating_system_has_version "Windows 11 Pro 64bit" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//PS4_Jumanji:_The_Video_Game
+:PS4_Jumanji:_The_Video_Game rdf:type owl:NamedIndividual ,
+                                      :Video_game ;
+                             :software_designed_by_manufacturer :PS4 ;
+                             :video_game_has_name "PS4 Jumanji: The Video Game" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//PS4_LEGO_Movie_2:_The_Videogame
+:PS4_LEGO_Movie_2:_The_Videogame rdf:type owl:NamedIndividual ,
+                                          :Video_game ;
+                                 :software_designed_by_manufacturer :PS4 ;
+                                 :video_game_has_name "PS4 LEGO Movie 2: The Videogame" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#A-DATA
+:A-DATA rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "A-DATA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#A-DATA_XPG_LANCER_RGB_16GB_-_RAM
+:A-DATA_XPG_LANCER_RGB_16GB_-_RAM rdf:type owl:NamedIndividual ,
+                                           :RAM ;
+                                  :hardware_designed_by_manufacturer :A-DATA ;
+                                  :ram_has_capacity_in_gb 16 ;
+                                  :ram_has_latency "CL12" ;
+                                  :ram_has_name "A-DATA XPG LANCER RGB 16GB  - RAM" ;
+                                  :ram_has_rgb "true"^^xsd:boolean ;
+                                  :ram_has_type "DDR5" ;
+                                  :ram_has_voltage 1.25 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD
+:AMD rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "AMD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD_Radeon_RX_6700_XT
+:AMD_Radeon_RX_6700_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :hardware_designed_by_manufacturer :AMD ;
+                       :gpu_has_name "AMD Radeon RX 6700 XT" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD_Ryzen_5_4500
+:AMD_Ryzen_5_4500 rdf:type owl:NamedIndividual ,
+                           :CPU ;
+                  :cpu_has_cache :L2_CACHE_2MB ,
+                                 :L3_CACHE_4MB ;
+                  :hardware_designed_by_manufacturer :AMD ;
+                  :cpu_for_gaming "true"^^xsd:boolean ;
+                  :cpu_has_clock_rate 3.6 ;
+                  :cpu_has_cores 6 ;
+                  :cpu_has_name "AMD Ryzen 5 4500" ;
+                  :cpu_has_tdp 65 ;
+                  :cpu_has_threads 12 ;
+                  :cpu_has_type "AMD Ryzen 5" ;
+                  :cpu_with_integrated_gpu "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD_Ryzen_5_5600X
+:AMD_Ryzen_5_5600X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :cpu_has_cache :L2_CACHE_3MB ,
+                                  :L3_CACHE_32MB ;
+                   :hardware_designed_by_manufacturer :AMD ;
+                   :cpu_for_gaming "true"^^xsd:boolean ;
+                   :cpu_has_clock_rate 3.7 ;
+                   :cpu_has_cores 6 ;
+                   :cpu_has_name "AMD Ryzen 5 5600X" ;
+                   :cpu_has_tdp 65 ;
+                   :cpu_has_threads 12 ;
+                   :cpu_has_type "AMD Ryzen 5" ;
+                   :cpu_with_integrated_gpu "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ANTEC
+:ANTEC rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "ANTEC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ANTEC_P10C_-_Kuciste
+:ANTEC_P10C_-_Kuciste rdf:type owl:NamedIndividual ,
+                               :Computer_case ;
+                      :hardware_designed_by_manufacturer :ANTEC ;
+                      :computer_case_has_dimensions "22 x 48.6 x 47.7" ;
+                      :computer_case_has_name "ANTEC P10C - Kuciste" ;
+                      :computer_case_has_psu "false"^^xsd:boolean ;
+                      :computer_case_supports_motherboard "ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ANTEC_kuciste_VSK2000-U3
+:ANTEC_kuciste_VSK2000-U3 rdf:type owl:NamedIndividual ,
+                                   :Computer_case ;
+                          :hardware_designed_by_manufacturer :ANTEC ;
+                          :computer_case_has_dimensions "356 x 388 x 102mm" ;
+                          :computer_case_has_name "ANTEC kuciste VSK2000-U3" ;
+                          :computer_case_has_psu "true"^^xsd:boolean ;
+                          :computer_case_supports_motherboard "Micro ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ARCTIC
+:ARCTIC rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "ARCTIC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ARCTIC_Procesorski_hladnjak_Freezer_i35_-_ACFRE00094A
+:ARCTIC_Procesorski_hladnjak_Freezer_i35_-_ACFRE00094A rdf:type owl:NamedIndividual ,
+                                                                :Cooler ;
+                                                       :hardware_designed_by_manufacturer :ARCTIC ;
+                                                       :cooler_has_cooling_type "vazdusno hladjenje" ;
+                                                       :cooler_has_name "ARCTIC Procesorski hladnjak Freezer i35 - ACFRE00094A" ;
+                                                       :cooler_has_rpm 1800 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS
+:ASUS rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "ASUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_7.1_PCIe_zvucna_kartica
+:ASUS_7.1_PCIe_zvucna_kartica rdf:type owl:NamedIndividual ,
+                                       :Sound_card ;
+                              :hardware_designed_by_manufacturer :ASUS ;
+                              :sound_card_has_name "ASUS 7.1 PCIe STRIX SOAR" ;
+                              :sound_card_has_type "PCI Express" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_Kuciste_ROG_STRIX_HELIOS_RGB_WHITE_EDITION_GX601
+:ASUS_Kuciste_ROG_STRIX_HELIOS_RGB_WHITE_EDITION_GX601 rdf:type owl:NamedIndividual ,
+                                                                :Computer_case ;
+                                                       :hardware_designed_by_manufacturer :ASUS ;
+                                                       :computer_case_has_dimensions "250 x 591 x 565 mm" ;
+                                                       :computer_case_has_name "ASUS Kuciste ROG STRIX HELIOS RGB WHITE EDITION GX601" ;
+                                                       :computer_case_has_psu "false"^^xsd:boolean ;
+                                                       :computer_case_supports_motherboard "E-ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_LANGUARD_NETWORK_CARD
+:ASUS_LANGUARD_NETWORK_CARD rdf:type owl:NamedIndividual ,
+                                     :Network_interface_card ;
+                            :hardware_designed_by_manufacturer :ASUS ;
+                            :network_interface_card_has_interface "Realtek RTL8111H" ;
+                            :network_interface_card_has_name "ASUS LANGUARD NETWORK CARD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_PRIME_B550-PLUS
+:ASUS_PRIME_B550-PLUS rdf:type owl:NamedIndividual ,
+                               :Motherboard ;
+                      :hardware_designed_by_manufacturer :ASUS ;
+                      :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
+                      :is_compatible_with_cpu :AMD_Ryzen_5_5600X ;
+                      :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                      :is_compatible_with_sound_card :ASUS_7.1_PCIe_zvucna_kartica ;
+                      :motherboard_has_name "ASUS PRIME B550-PLUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_PRIME_H670-PLUS_D4
+:ASUS_PRIME_H670-PLUS_D4 rdf:type owl:NamedIndividual ,
+                                  :Motherboard ;
+                         :hardware_designed_by_manufacturer :ASUS ;
+                         :is_comaptible_with_network_interface_card :ASUS_LANGUARD_NETWORK_CARD ;
+                         :is_compatible_with_cpu :INTEL_Core_i7-11700F ;
+                         :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                         :motherboard_has_name "ASUS PRIME H670-PLUS D4" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_PRIME_Z690-P_WIFI
+:ASUS_PRIME_Z690-P_WIFI rdf:type owl:NamedIndividual ,
+                                 :Motherboard ;
+                        :hardware_designed_by_manufacturer :ASUS ;
+                        :is_comaptible_with_hdd :WD_1TB_-_WD10SPZX ;
+                        :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
+                        :is_compatible_with_cooler :DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler ;
+                        :is_compatible_with_cpu :INTEL_Core_i9-13900K ;
+                        :is_compatible_with_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                        :motherboard_has_name "ASUS PRIME Z690-P WIFI" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_Realtek_2.5Gb_Ethernet
+:ASUS_Realtek_2.5Gb_Ethernet rdf:type owl:NamedIndividual ,
+                                      :Network_interface_card ;
+                             :hardware_designed_by_manufacturer :ASUS ;
+                             :network_interface_card_has_name "ASUS Realtek 2.5Gb Ethernet" ,
+                                                              """Realtek 2.5Gb Ethernet
+Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_nVidia_GeForce_GT_730
+:ASUS_nVidia_GeForce_GT_730 rdf:type owl:NamedIndividual ,
+                                     :Graphic_card ;
+                            :graphic_card_has_gpu :Nvidia_GeForce_GT_730 ;
+                            :hardware_designed_by_manufacturer :ASUS ;
+                            :graphic_card_for_gaming "true"^^xsd:boolean ;
+                            :graphic_card_has_memory_in_gb 2 ;
+                            :graphic_card_has_memory_type "GDDR5" ;
+                            :graphic_card_has_name "ASUS nVidia GeForce GT 730" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AUDIOQUEST
+:AUDIOQUEST rdf:type owl:NamedIndividual ,
+                     :Manufacturer ;
+            :manufacturer_has_name "AUDIOQUEST" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AUDIOQUEST_USB_Zvucna_kartica_Dragonfly
+:AUDIOQUEST_USB_Zvucna_kartica_Dragonfly rdf:type owl:NamedIndividual ,
+                                                  :Sound_card ;
+                                         :hardware_designed_by_manufacturer :AUDIOQUEST ;
+                                         :sound_card_has_name "AUDIOQUEST USB Zvucna kartica Dragonfly" ;
+                                         :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CHIEFTEC
+:CHIEFTEC rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "CHIEFTEC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB
+:CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB rdf:type owl:NamedIndividual ,
+                                                        :PSU ;
+                                               :hardware_designed_by_manufacturer :CHIEFTEC ;
+                                               :psu_has_certificate "ATX v.2.3" ;
+                                               :psu_has_name "CHIEFTEC napajanje Photon Series CTG-650C-RGB" ;
+                                               :psu_has_output_power 650 ;
+                                               :psu_has_pfc "Active pfc" ;
+                                               :psu_has_type "Polu-Modularno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CRUCIAL
+:CRUCIAL rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "CRUCIAL" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CRUCIAL_P3_Plus_2TB_SSD
+:CRUCIAL_P3_Plus_2TB_SSD rdf:type owl:NamedIndividual ,
+                                  :SSD ;
+                         :hardware_designed_by_manufacturer :CRUCIAL ;
+                         :ssd_has_capacity_in_gb 2000 ;
+                         :ssd_has_format "M.2 2280" ;
+                         :ssd_has_interface "PCIe 4.0" ;
+                         :ssd_has_name "CRUCIAL P3 Plus 2TB SSD" ;
+                         :ssd_has_read_speed_in_mbs 5000 ;
+                         :ssd_has_write_speed_in_mbs 4200 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CRUCIAL_SSD_1TB_BX500
+:CRUCIAL_SSD_1TB_BX500 rdf:type owl:NamedIndividual ,
+                                :SSD ;
+                       :hardware_designed_by_manufacturer :CRUCIAL ;
+                       :ssd_has_capacity_in_gb 1000 ;
+                       :ssd_has_format "2.5" ;
+                       :ssd_has_interface "SATA III" ;
+                       :ssd_has_name "CRUCIAL SSD 1TB BX500" ;
+                       :ssd_has_read_speed_in_mbs 540 ;
+                       :ssd_has_write_speed_in_mbs 500 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DEEPCOOL_AK500_WH_Kuler
+:DEEPCOOL_AK500_WH_Kuler rdf:type owl:NamedIndividual ,
+                                  :Cooler ;
+                         :hardware_designed_by_manufacturer :DEEP_COOL ;
+                         :cooler_has_cooling_type "vazdusno hladjenje" ;
+                         :cooler_has_name "DEEPCOOL AK500 WH Kuler" ;
+                         :cooler_has_rpm 1850 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DEEP_COOL
+:DEEP_COOL rdf:type owl:NamedIndividual ,
+                    :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler
+:DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler rdf:type owl:NamedIndividual ,
+                                                 :Cooler ;
+                                        :hardware_designed_by_manufacturer :DEEP_COOL ;
+                                        :cooler_has_cooling_type "Vazdusno hladjenje" ;
+                                        :cooler_has_name "DEEP COOL AK400 ZERO DARK PLUS - Kuler" ;
+                                        :cooler_has_rpm 1650 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GEMBIRD
+:GEMBIRD rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "GEMBIRD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GEMBIRD_USB_Zvucna_kartica
+:GEMBIRD_USB_Zvucna_kartica rdf:type owl:NamedIndividual ,
+                                     :Sound_card ;
+                            :hardware_designed_by_manufacturer :GEMBIRD ;
+                            :sound_card_has_name "GEMBIRD USB Zvucna kartica" ;
+                            :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE
+:GIGABYTE rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "GIGABYTE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE_B650_GAMING_-_Maticna_ploca
+:GIGABYTE_B650_GAMING_-_Maticna_ploca rdf:type owl:NamedIndividual ,
+                                               :Motherboard ;
+                                      :hardware_designed_by_manufacturer :GIGABYTE ;
+                                      :is_comaptible_with_network_interface_card :GIGABYTE_Realtek_2.5GbE_LAN_chip ;
+                                      :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
+                                      :is_compatible_with_ram :KINGSTON_Fury_Renegade_32GB__-_RAM ;
+                                      :motherboard_has_name "GIGABYTE B650 GAMING  - Maticna ploca" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE_GeForce_GTX_1650_D6_OC
+:GIGABYTE_GeForce_GTX_1650_D6_OC rdf:type owl:NamedIndividual ,
+                                          :Graphic_card ;
+                                 :graphic_card_has_gpu :Nvidia_GeForce_GTX_1650 ;
+                                 :hardware_designed_by_manufacturer :GIGABYTE ;
+                                 :graphic_card_for_gaming "false"^^xsd:boolean ;
+                                 :graphic_card_has_memory_in_gb 4 ;
+                                 :graphic_card_has_memory_type "GDDR6" ;
+                                 :graphic_card_has_name "GIGABYTE GeForce GTX 1650 D6 OC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE_Realtek_2.5GbE_LAN_chip
+:GIGABYTE_Realtek_2.5GbE_LAN_chip rdf:type owl:NamedIndividual ,
+                                           :Network_interface_card ;
+                                  :hardware_designed_by_manufacturer :GIGABYTE ;
+                                  :network_interface_card_has_interface "Realtek 2.5GbE LAN chip (2.5 Gbps/1 Gbps/100 Mbps)" ;
+                                  :network_interface_card_has_name "GIGABYTE Realtek 2.5GbE LAN chip" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#INTEL_Core_i7-11700F
+:INTEL_Core_i7-11700F rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_has_cache :L2_CACHE_3MB ,
+                                     :L3_CACHE_16MB ;
+                      :hardware_designed_by_manufacturer :Intel ;
+                      :cpu_for_gaming "true"^^xsd:boolean ;
+                      :cpu_has_clock_rate 2.5 ;
+                      :cpu_has_cores 8 ;
+                      :cpu_has_name "INTEL Core i7-11700F" ;
+                      :cpu_has_tdp 65 ;
+                      :cpu_has_threads 16 ;
+                      :cpu_has_type "INTEL Core i7" ;
+                      :cpu_with_integrated_gpu "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#INTEL_Core_i9-13900K
+:INTEL_Core_i9-13900K rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_has_cache :L2_CACHE_32MB ,
+                                     :L3_CACHE_32MB ;
+                      :hardware_designed_by_manufacturer :Intel ;
+                      :cpu_for_gaming "true"^^xsd:boolean ;
+                      :cpu_has_clock_rate 3.0 ;
+                      :cpu_has_cores 24 ;
+                      :cpu_has_name "INTEL Core i9-13900K" ;
+                      :cpu_has_tdp 125 ;
+                      :cpu_has_threads 32 ;
+                      :cpu_has_type "INTEL Core i9" ;
+                      :cpu_with_integrated_gpu "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Intel_UHD_Graphics_730
+:Intel_UHD_Graphics_730 rdf:type owl:NamedIndividual ,
+                                 :GPU ;
+                        :hardware_designed_by_manufacturer :Intel ;
+                        :gpu_has_name "Intel UHD Graphics 730" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Intel_UHD_Graphics_770
+:Intel_UHD_Graphics_770 rdf:type owl:NamedIndividual ,
+                                 :GPU ;
+                        :hardware_designed_by_manufacturer :Intel ;
+                        :gpu_has_name "Intel UHD Graphics 770" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON
+:KINGSTON rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "KINGSTON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_Fury_Renegade_32GB__-_RAM
+:KINGSTON_Fury_Renegade_32GB__-_RAM rdf:type owl:NamedIndividual ,
+                                             :RAM ;
+                                    :hardware_designed_by_manufacturer :KINGSTON ;
+                                    :ram_has_capacity_in_gb 32 ;
+                                    :ram_has_latency "CL32" ;
+                                    :ram_has_name "KINGSTON Fury Renegade 32GB  - RAM" ;
+                                    :ram_has_rgb "true"^^xsd:boolean ;
+                                    :ram_has_type "DDR5" ;
+                                    :ram_has_voltage 1.4 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_Fury_Renegade_SSD
+:KINGSTON_Fury_Renegade_SSD rdf:type owl:NamedIndividual ,
+                                     :SSD ;
+                            :hardware_designed_by_manufacturer :KINGSTON ;
+                            :ssd_has_capacity_in_gb 2000 ;
+                            :ssd_has_format "M.2 2280" ;
+                            :ssd_has_interface "PCIe 4.0" ;
+                            :ssd_has_name "KINGSTON Fury Renegade SSD" ;
+                            :ssd_has_read_speed_in_mbs 7300 ;
+                            :ssd_has_write_speed_in_mbs 7000 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_Renegade_RGB_64GB_-_RAM
+:KINGSTON_Renegade_RGB_64GB_-_RAM rdf:type owl:NamedIndividual ,
+                                           :RAM ;
+                                  :hardware_designed_by_manufacturer :KINGSTON ;
+                                  :ram_has_capacity_in_gb 64 ;
+                                  :ram_has_latency "CL18" ;
+                                  :ram_has_name "KINGSTON Renegade RGB 64GB - RAM" ;
+                                  :ram_has_rgb "true"^^xsd:boolean ;
+                                  :ram_has_type "DDR4" ;
+                                  :ram_has_voltage 1.35 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L2_CACHE_2MB
+:L2_CACHE_2MB rdf:type owl:NamedIndividual ,
+                       :Cache ;
+              :cache_has_level "2" ;
+              :cache_has_size_in_mb 2 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L2_CACHE_32MB
+:L2_CACHE_32MB rdf:type owl:NamedIndividual ,
+                        :Cache ;
+               :cache_has_level "2" ;
+               :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L2_CACHE_3MB
+:L2_CACHE_3MB rdf:type owl:NamedIndividual ,
+                       :Cache ;
+              :cache_has_level "2" ;
+              :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L3_CACHE_16MB
+:L3_CACHE_16MB rdf:type owl:NamedIndividual ,
+                        :Cache ;
+               :cache_has_level "3" ;
+               :cache_has_size_in_mb 16 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L3_CACHE_32MB
+:L3_CACHE_32MB rdf:type owl:NamedIndividual ,
+                        :Cache ;
+               :cache_has_level "3" ;
+               :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L3_CACHE_4MB
+:L3_CACHE_4MB rdf:type owl:NamedIndividual ,
+                       :Cache ;
+              :cache_has_level "3" ;
+              :cache_has_size_in_mb 4 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LC-Power_napajanje_300W_LC300SFX_V3.21
+:LC-Power_napajanje_300W_LC300SFX_V3.21 rdf:type owl:NamedIndividual ,
+                                                 :PSU ;
+                                        :hardware_designed_by_manufacturer :LC_POWER ;
+                                        :psu_has_certificate "SFX V3.21" ;
+                                        :psu_has_name "LC-Power napajanje 300W LC300SFX V3.21" ;
+                                        :psu_has_output_power 300 ;
+                                        :psu_has_pfc "Active pfc" ;
+                                        :psu_has_type "Standardno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LC_POWER
+:LC_POWER rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "LC POWER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LC_POWER_Kuciste_Gaming_800B_Interlayer_X_-_LC-800B-ON
+:LC_POWER_Kuciste_Gaming_800B_Interlayer_X_-_LC-800B-ON rdf:type owl:NamedIndividual ,
+                                                                 :Computer_case ;
+                                                        :hardware_designed_by_manufacturer :LC_POWER ;
+                                                        :computer_case_has_dimensions "20.5 x 48.5 x 43.5 cm" ;
+                                                        :computer_case_has_name "LC POWER Kuciste Gaming 800B Interlayer X - LC-800B-ON" ;
+                                                        :computer_case_has_psu "true"^^xsd:boolean ;
+                                                        :computer_case_supports_motherboard "ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MS
+:MS rdf:type owl:NamedIndividual ,
+             :Manufacturer ;
+    :manufacturer_has_name "MS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI
+:MSI rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "MSI" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI_GeForce_GTX_1660
+:MSI_GeForce_GTX_1660 rdf:type owl:NamedIndividual ,
+                               :Graphic_card ;
+                      :graphic_card_has_gpu :Nvidia_GeForce_GTX_1660_SUPER ;
+                      :hardware_designed_by_manufacturer :MSI ;
+                      :graphic_card_for_gaming "true"^^xsd:boolean ;
+                      :graphic_card_has_memory_in_gb 6 ;
+                      :graphic_card_has_memory_type "GDDR6" ;
+                      :graphic_card_has_name "MSI GeForce GTX 1660" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI_MPG_B550_GAMING_PLUS
+:MSI_MPG_B550_GAMING_PLUS rdf:type owl:NamedIndividual ,
+                                   :Motherboard ;
+                          :hardware_designed_by_manufacturer :MSI ;
+                          :is_comaptible_with_graphic_card :MSI_GeForce_GTX_1660 ;
+                          :is_comaptible_with_network_interface_card :MSI_Realtek_RTL8125B_2.5Gbps ;
+                          :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
+                          :is_compatible_with_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                          :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                          :is_compatible_with_sound_card :X-WAVE_Bluetooth_transmiter_RBT-036 ;
+                          :motherboard_has_name "MSI MPG B550 GAMING PLUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI_Realtek_RTL8125B_2.5Gbps
+:MSI_Realtek_RTL8125B_2.5Gbps rdf:type owl:NamedIndividual ,
+                                       :Network_interface_card ;
+                              :hardware_designed_by_manufacturer :MSI ;
+                              :network_interface_card_has_interface "Realtek RTL8125B 2.5Gbps LAN kontroler" ;
+                              :network_interface_card_has_name "MSI Realtek RTL8125B 2.5Gbps" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO
+:MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO rdf:type owl:NamedIndividual ,
+                                                      :PSU ;
+                                             :hardware_designed_by_manufacturer :MS ;
+                                             :psu_has_certificate "80 Plus Platinum" ;
+                                             :psu_has_name "MS Napajanje CORE M500 80 Plus PLATINUM PRO" ;
+                                             :psu_has_output_power 500 ;
+                                             :psu_has_pfc "Active pfc" ;
+                                             :psu_has_type "Standardno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#NVIDIA
+:NVIDIA rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "NVIDIA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nvidia_GeForce_GTX_1650
+:Nvidia_GeForce_GTX_1650 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :hardware_designed_by_manufacturer :NVIDIA ;
+                         :gpu_has_name "Nvidia GeForce GTX 1650" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nvidia_GeForce_GTX_1660_SUPER
+:Nvidia_GeForce_GTX_1660_SUPER rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :hardware_designed_by_manufacturer :NVIDIA ;
+                               :gpu_has_name "Nvidia GeForce GTX 1660 SUPER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nvidia_GeForce_GT_730
+:Nvidia_GeForce_GT_730 rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :hardware_designed_by_manufacturer :NVIDIA ;
+                       :gpu_has_name "Nvidia GeForce GT 730" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#RAIDMAX
+:RAIDMAX rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "RAIDMAX" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W
+:RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W rdf:type owl:NamedIndividual ,
+                                                        :PSU ;
+                                               :hardware_designed_by_manufacturer :RAIDMAX ;
+                                               :psu_has_certificate "80 Plus Gold" ;
+                                               :psu_has_name "RAIDMAX Napajanje VORTEX GOLD RX-800AE-V 800W" ;
+                                               :psu_has_output_power 800 ;
+                                               :psu_has_pfc "Active pfc" ;
+                                               :psu_has_type "Standardno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSUNG
+:SAMSUNG rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "SAMSUNG" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSUNG_2TB_SSD_970
+:SAMSUNG_2TB_SSD_970 rdf:type owl:NamedIndividual ,
+                              :SSD ;
+                     :hardware_designed_by_manufacturer :SAMSUNG ;
+                     :ssd_has_capacity_in_gb 2000 ;
+                     :ssd_has_format "M.2 2280" ;
+                     :ssd_has_interface "PCIe 3.0" ;
+                     :ssd_has_name "SAMSUNG 2TB SSD 970" ;
+                     :ssd_has_read_speed_in_mbs 3500 ;
+                     :ssd_has_write_speed_in_mbs 3300 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSUNG_SSD_4TB_MZ_77Q4T0BW
+:SAMSUNG_SSD_4TB_MZ_77Q4T0BW rdf:type owl:NamedIndividual ,
+                                      :SSD ;
+                             :hardware_designed_by_manufacturer :SAMSUNG ;
+                             :ssd_has_capacity_in_gb 4000 ;
+                             :ssd_has_format "2.5" ;
+                             :ssd_has_interface "SATA III" ;
+                             :ssd_has_name "SAMSUNG SSD 4TB  MZ 77Q4T0BW" ;
+                             :ssd_has_read_speed_in_mbs 560 ;
+                             :ssd_has_write_speed_in_mbs 530 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAPPHIRE
+:SAPPHIRE rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "SAPPHIRE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT
+:SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT rdf:type owl:NamedIndividual ,
+                                               :Graphic_card ;
+                                      :graphic_card_has_gpu :AMD_Radeon_RX_6700_XT ;
+                                      :hardware_designed_by_manufacturer :SAPPHIRE ;
+                                      :graphic_card_for_gaming "false"^^xsd:boolean ;
+                                      :graphic_card_has_memory_in_gb 12 ;
+                                      :graphic_card_has_memory_type "GDDR6" ;
+                                      :graphic_card_has_name "SAPPHIRE PULSE AMD Radeon RX 6700 XT" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SEAGATE
+:SEAGATE rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "SEAGATE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000
+:SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 rdf:type owl:NamedIndividual ,
+                                                                            :HDD ;
+                                                                   :hardware_designed_by_manufacturer :SEAGATE ;
+                                                                   :hdd_has_buffer_in_mb 256 ;
+                                                                   :hdd_has_capacity_in_gb 16000 ;
+                                                                   :hdd_has_format "3.5" ;
+                                                                   :hdd_has_name "SEAGATE HDD 16TB 3.5 SATA III 7200rpm 256MB IronWolf ST16000NE000" ;
+                                                                   :hdd_has_rpm 7200 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SILICON_POWER
+:SILICON_POWER rdf:type owl:NamedIndividual ,
+                        :Manufacturer ;
+               :manufacturer_has_name "SILICON POWER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SILICON_POWER_A60_SSD
+:SILICON_POWER_A60_SSD rdf:type owl:NamedIndividual ,
+                                :SSD ;
+                       :hardware_designed_by_manufacturer :SILICON_POWER ;
+                       :ssd_has_capacity_in_gb 1000 ;
+                       :ssd_has_format "M.2 2280" ;
+                       :ssd_has_interface "PCIe 3.0" ;
+                       :ssd_has_name "SILICON POWER A60 SSD" ;
+                       :ssd_has_read_speed_in_mbs 2200 ;
+                       :ssd_has_write_speed_in_mbs 1600 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#THERMALTAKE
+:THERMALTAKE rdf:type owl:NamedIndividual ,
+                      :Manufacturer ;
+             :manufacturer_has_name "THERMALTAKE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#THERMALTAKE_ventilator_Riing_Silent_12_RGB
+:THERMALTAKE_ventilator_Riing_Silent_12_RGB rdf:type owl:NamedIndividual ,
+                                                     :Cooler ;
+                                            :hardware_designed_by_manufacturer :THERMALTAKE ;
+                                            :cooler_has_cooling_type "vazdusno hladjenje" ;
+                                            :cooler_has_name "THERMALTAKE ventilator Riing Silent 12 RGB" ;
+                                            :cooler_has_rpm 1500 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#WD
+:WD rdf:type owl:NamedIndividual ,
+             :Manufacturer ;
+    :manufacturer_has_name "WD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#WD_1TB_-_WD10SPZX
+:WD_1TB_-_WD10SPZX rdf:type owl:NamedIndividual ,
+                            :HDD ;
+                   :hardware_designed_by_manufacturer :WD ;
+                   :hdd_has_buffer_in_mb 128 ;
+                   :hdd_has_capacity_in_gb 1000 ;
+                   :hdd_has_format "2.5" ;
+                   :hdd_has_name "WD 1TB - WD10SPZX" ;
+                   :hdd_has_rpm 5400 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD
+:WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD rdf:type owl:NamedIndividual ,
+                                                    :HDD ;
+                                           :hardware_designed_by_manufacturer :WD ;
+                                           :hdd_has_buffer_in_mb 128 ;
+                                           :hdd_has_capacity_in_gb 8000 ;
+                                           :hdd_has_format "3.5" ;
+                                           :hdd_has_name "WD Red Plus 8TB NAS SATA 3.5 WD80EFZZ HDD" ;
+                                           :hdd_has_rpm 5400 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#X-WAVE
+:X-WAVE rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "X-WAVE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#X-WAVE_Bluetooth_transmiter_RBT-036
+:X-WAVE_Bluetooth_transmiter_RBT-036 rdf:type owl:NamedIndividual ,
+                                              :Sound_card ;
+                                     :hardware_designed_by_manufacturer :X-WAVE ;
+                                     :sound_card_has_name "X-WAVE Bluetooth transmiter RBT-036" ;
+                                     :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37/480G
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37/480G> rdf:type owl:NamedIndividual ,
+                                                                                                                :SSD ;
+                                                                                                       :hardware_designed_by_manufacturer :KINGSTON ;
+                                                                                                       :ssd_has_capacity_in_gb 480 ;
+                                                                                                       :ssd_has_format "2.5" ;
+                                                                                                       :ssd_has_interface "SATA III" ;
+                                                                                                       :ssd_has_name "KINGSTON SSDNow SA400S37/480G" ;
+                                                                                                       :ssd_has_read_speed_in_mbs 500 ;
+                                                                                                       :ssd_has_write_speed_in_mbs 450 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_-_KVR32N22D8/32
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_-_KVR32N22D8/32> rdf:type owl:NamedIndividual ,
+                                                                                                                               :RAM ;
+                                                                                                                      :hardware_designed_by_manufacturer :KINGSTON ;
+                                                                                                                      :ram_has_capacity_in_gb 32 ;
+                                                                                                                      :ram_has_latency "CL22" ;
+                                                                                                                      :ram_has_name "KINGSTON ValueRAM 32GB SDRAM KVR32N22D8/32" ;
+                                                                                                                      :ram_has_rgb "false"^^xsd:boolean ;
+                                                                                                                      :ram_has_type "DDR4" ;
+                                                                                                                      :ram_has_voltage 1.2 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Antivirus
+                :Driver
+                :Office_package
+                :Operating_system
+                :Video_game
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CPU
+                :Computer_case
+                :Cooler
+                :GPU
+                :Graphic_card
+                :HDD
+                :Motherboard
+                :Network_interface_card
+                :PSU
+                :RAM
+                :SSD
+                :Sound_card
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cache
+                :Hardware
+                :Manufacturer
+                :Software
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Camera
+                :Graphic_tablet
+                :Joystick
+                :Keyboard
+                :Microphone
+                :Mouse
+                :Scanner
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Computer_speakers
+                :Headphones
+                :Monitor
+                :Printer
+                :Projector
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
