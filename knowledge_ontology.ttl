@@ -19,25 +19,11 @@
                                   rdfs:range :Operating_system .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//cooler_is_supported_on
-:cooler_is_supported_on rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_supported_on ;
-                        rdfs:domain :Cooler ;
-                        rdfs:range :Motherboard .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_cache
 :cpu_has_cache rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain :CPU ;
                rdfs:range :Cache .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_is_supported_on
-:cpu_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on ;
-                     rdfs:domain :CPU ;
-                     rdfs:range :Motherboard .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//designed_by_manufacturer
@@ -221,13 +207,6 @@
                       rdfs:range :GPU .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_is_supported_on
-:graphic_card_is_supported_on rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf :is_supported_on ;
-                              rdfs:domain :Graphic_card ;
-                              rdfs:range :Motherboard .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_is_compatible_with_operating_system
 :graphic_tablet_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
                                                     rdfs:subPropertyOf :compatible_with_operating_system ;
@@ -242,84 +221,67 @@
                                    rdfs:range :Manufacturer .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_is_supported_on
-:hdd_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on ;
-                     rdfs:domain :HDD ;
-                     rdfs:range :Motherboard .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_graphic_card
 :is_comaptible_with_graphic_card rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf :is_compatible_with ;
+                                 rdfs:subPropertyOf :motherboard_is_compatible_with ;
                                  rdfs:domain :Motherboard ;
                                  rdfs:range :Graphic_card .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_hdd
 :is_comaptible_with_hdd rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_compatible_with ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :HDD .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_network_interface_card
 :is_comaptible_with_network_interface_card rdf:type owl:ObjectProperty ;
-                                           rdfs:subPropertyOf :is_compatible_with ;
+                                           rdfs:subPropertyOf :motherboard_is_compatible_with ;
                                            rdfs:domain :Motherboard ;
                                            rdfs:range :Network_interface_card .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with
-:is_compatible_with rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_cooler
 :is_compatible_with_cooler rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf :is_compatible_with ;
+                           rdfs:subPropertyOf :motherboard_is_compatible_with ;
                            rdfs:domain :Motherboard ;
                            rdfs:range :Cooler .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_cpu
 :is_compatible_with_cpu rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_compatible_with ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :CPU .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_psu
 :is_compatible_with_psu rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_compatible_with ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :PSU .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_ram
 :is_compatible_with_ram rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_compatible_with ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :RAM .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_sound_card
 :is_compatible_with_sound_card rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf :is_compatible_with ;
+                               rdfs:subPropertyOf :motherboard_is_compatible_with ;
                                rdfs:domain :Motherboard ;
                                rdfs:range :Sound_card .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_ssd
 :is_compatible_with_ssd rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_compatible_with ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :SSD .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//is_supported_on
-:is_supported_on rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//joystick_is_compatible_with_operating_system
@@ -327,13 +289,6 @@
                                               rdfs:subPropertyOf :compatible_with_operating_system ;
                                               rdfs:domain :Joystick ;
                                               rdfs:range :Operating_system .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//network_interface_card_is_supported_on
-:network_interface_card_is_supported_on rdf:type owl:ObjectProperty ;
-                                        rdfs:subPropertyOf :is_supported_on ;
-                                        rdfs:domain :Network_interface_card ;
-                                        rdfs:range :Motherboard .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with
@@ -371,20 +326,6 @@
                                                  rdfs:range :Video_game .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_is_supported_on
-:psu_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on ;
-                     rdfs:domain :PSU ;
-                     rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_is_supported_on
-:ram_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on ;
-                     rdfs:domain :RAM ;
-                     rdfs:range :Motherboard .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//software_designed_by_manufacturer
 :software_designed_by_manufacturer rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf :designed_by_manufacturer ;
@@ -392,18 +333,11 @@
                                    rdfs:range :Manufacturer .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//sound_card_is_supported_on
-:sound_card_is_supported_on rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf :is_supported_on ;
-                            rdfs:domain :Sound_card ;
-                            rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_is_supported_on
-:ssd_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on ;
-                     rdfs:domain :SSD ;
-                     rdfs:range :Motherboard .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#motherboard_is_compatible_with
+:motherboard_is_compatible_with rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdfs:domain :Motherboard ;
+                                rdfs:range :Hardware .
 
 
 #################################################################
@@ -1096,13 +1030,6 @@
                   rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//sound_card_has_interface
-:sound_card_has_interface rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain :Sound_card ;
-                          rdfs:range xsd:string .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//sound_card_has_name
 :sound_card_has_name rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
@@ -1173,11 +1100,6 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//Antivirus
 :Antivirus rdf:type owl:Class ;
            rdfs:subClassOf :Software .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//Battery
-:Battery rdf:type owl:Class ;
-         rdfs:subClassOf :Hardware .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//Black_and_white_printer
@@ -1764,6 +1686,8 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//INTEL_Core_i5-13400
 :INTEL_Core_i5-13400 rdf:type owl:NamedIndividual ,
                               :CPU ;
+                     :cpu_has_cache :L2_CACHE_3MB ,
+                                    :L3_CACHE_16MB ;
                      :hardware_designed_by_manufacturer :Intel ;
                      :cpu_for_gaming "true"^^xsd:boolean ;
                      :cpu_has_clock_rate 2.5 ;
@@ -1910,7 +1834,7 @@
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_BRIO_300_960-001442_Web_kamera
 :LOGITECH_BRIO_300_960-001442_Web_kamera rdf:type owl:NamedIndividual ,
-                                                  :Camera ;
+                                                  :Wired_camera ;
                                          :device_designed_by_manufacturer :LOGITECH ;
                                          :camera_has_microphone "true"^^xsd:boolean ;
                                          :camera_has_name "LOGITECH BRIO 300 960-001442 Web kamera" ;
@@ -1920,7 +1844,7 @@
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Brio_500_Web_kamera
 :LOGITECH_Brio_500_Web_kamera rdf:type owl:NamedIndividual ,
-                                       :Camera ;
+                                       :Wired_camera ;
                               :device_designed_by_manufacturer :LOGITECH ;
                               :camera_has_microphone "true"^^xsd:boolean ;
                               :camera_has_name "LOGITECH Brio 500 Web kamera" ;
@@ -2019,7 +1943,7 @@
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//LOGITECH_Web_kamera_RALLY_PLUS_-_960-001242
 :LOGITECH_Web_kamera_RALLY_PLUS_-_960-001242 rdf:type owl:NamedIndividual ,
-                                                      :Camera ;
+                                                      :Wireless_camera ;
                                              :device_designed_by_manufacturer :LOGITECH ;
                                              :camera_has_microphone "true"^^xsd:boolean ;
                                              :camera_has_name "4096 x 2160" ,
@@ -2087,7 +2011,7 @@
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//NATEC_Web_kamera_LORI_PLUS_NKI-1672
 :NATEC_Web_kamera_LORI_PLUS_NKI-1672 rdf:type owl:NamedIndividual ,
-                                              :Camera ;
+                                              :Wireless_camera ;
                                      :device_designed_by_manufacturer :NATEC ;
                                      :camera_has_microphone "true"^^xsd:boolean ;
                                      :camera_has_name "NATEC Web kamera LORI PLUS NKI-1672" ;
@@ -2226,6 +2150,747 @@
                                  :video_game_has_name "PS4 LEGO Movie 2: The Videogame" .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#A-DATA
+:A-DATA rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "A-DATA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#A-DATA_XPG_LANCER_RGB_16GB_-_RAM
+:A-DATA_XPG_LANCER_RGB_16GB_-_RAM rdf:type owl:NamedIndividual ,
+                                           :RAM ;
+                                  :hardware_designed_by_manufacturer :A-DATA ;
+                                  :ram_has_capacity_in_gb 16 ;
+                                  :ram_has_latency "CL12" ;
+                                  :ram_has_name "A-DATA XPG LANCER RGB 16GB  - RAM" ;
+                                  :ram_has_rgb "true"^^xsd:boolean ;
+                                  :ram_has_type "DDR5" ;
+                                  :ram_has_voltage 1.25 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD
+:AMD rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "AMD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD_Radeon_RX_6700_XT
+:AMD_Radeon_RX_6700_XT rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :hardware_designed_by_manufacturer :AMD ;
+                       :gpu_has_name "AMD Radeon RX 6700 XT" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD_Ryzen_5_4500
+:AMD_Ryzen_5_4500 rdf:type owl:NamedIndividual ,
+                           :CPU ;
+                  :cpu_has_cache :L2_CACHE_2MB ,
+                                 :L3_CACHE_4MB ;
+                  :hardware_designed_by_manufacturer :AMD ;
+                  :cpu_for_gaming "true"^^xsd:boolean ;
+                  :cpu_has_clock_rate 3.6 ;
+                  :cpu_has_cores 6 ;
+                  :cpu_has_name "AMD Ryzen 5 4500" ;
+                  :cpu_has_tdp 65 ;
+                  :cpu_has_threads 12 ;
+                  :cpu_has_type "AMD Ryzen 5" ;
+                  :cpu_with_integrated_gpu "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AMD_Ryzen_5_5600X
+:AMD_Ryzen_5_5600X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :cpu_has_cache :L2_CACHE_3MB ,
+                                  :L3_CACHE_32MB ;
+                   :hardware_designed_by_manufacturer :AMD ;
+                   :cpu_for_gaming "true"^^xsd:boolean ;
+                   :cpu_has_clock_rate 3.7 ;
+                   :cpu_has_cores 6 ;
+                   :cpu_has_name "AMD Ryzen 5 5600X" ;
+                   :cpu_has_tdp 65 ;
+                   :cpu_has_threads 12 ;
+                   :cpu_has_type "AMD Ryzen 5" ;
+                   :cpu_with_integrated_gpu "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ANTEC
+:ANTEC rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "ANTEC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ANTEC_P10C_-_Kuciste
+:ANTEC_P10C_-_Kuciste rdf:type owl:NamedIndividual ,
+                               :Computer_case ;
+                      :hardware_designed_by_manufacturer :ANTEC ;
+                      :computer_case_has_dimensions "22 x 48.6 x 47.7" ;
+                      :computer_case_has_name "ANTEC P10C - Kuciste" ;
+                      :computer_case_has_psu "false"^^xsd:boolean ;
+                      :computer_case_supports_motherboard "ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ANTEC_kuciste_VSK2000-U3
+:ANTEC_kuciste_VSK2000-U3 rdf:type owl:NamedIndividual ,
+                                   :Computer_case ;
+                          :hardware_designed_by_manufacturer :ANTEC ;
+                          :computer_case_has_dimensions "356 x 388 x 102mm" ;
+                          :computer_case_has_name "ANTEC kuciste VSK2000-U3" ;
+                          :computer_case_has_psu "true"^^xsd:boolean ;
+                          :computer_case_supports_motherboard "Micro ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ARCTIC
+:ARCTIC rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "ARCTIC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ARCTIC_Procesorski_hladnjak_Freezer_i35_-_ACFRE00094A
+:ARCTIC_Procesorski_hladnjak_Freezer_i35_-_ACFRE00094A rdf:type owl:NamedIndividual ,
+                                                                :Cooler ;
+                                                       :hardware_designed_by_manufacturer :ARCTIC ;
+                                                       :cooler_has_cooling_type "vazdusno hladjenje" ;
+                                                       :cooler_has_name "ARCTIC Procesorski hladnjak Freezer i35 - ACFRE00094A" ;
+                                                       :cooler_has_rpm 1800 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS
+:ASUS rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "ASUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_7.1_PCIe_zvucna_kartica
+:ASUS_7.1_PCIe_zvucna_kartica rdf:type owl:NamedIndividual ,
+                                       :Sound_card ;
+                              :hardware_designed_by_manufacturer :ASUS ;
+                              :sound_card_has_name "ASUS 7.1 PCIe STRIX SOAR" ;
+                              :sound_card_has_type "PCI Express" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_Kuciste_ROG_STRIX_HELIOS_RGB_WHITE_EDITION_GX601
+:ASUS_Kuciste_ROG_STRIX_HELIOS_RGB_WHITE_EDITION_GX601 rdf:type owl:NamedIndividual ,
+                                                                :Computer_case ;
+                                                       :hardware_designed_by_manufacturer :ASUS ;
+                                                       :computer_case_has_dimensions "250 x 591 x 565 mm" ;
+                                                       :computer_case_has_name "ASUS Kuciste ROG STRIX HELIOS RGB WHITE EDITION GX601" ;
+                                                       :computer_case_has_psu "false"^^xsd:boolean ;
+                                                       :computer_case_supports_motherboard "E-ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_LANGUARD_NETWORK_CARD
+:ASUS_LANGUARD_NETWORK_CARD rdf:type owl:NamedIndividual ,
+                                     :Network_interface_card ;
+                            :hardware_designed_by_manufacturer :ASUS ;
+                            :network_interface_card_has_interface "Realtek RTL8111H" ;
+                            :network_interface_card_has_name "ASUS LANGUARD NETWORK CARD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_PRIME_B550-PLUS
+:ASUS_PRIME_B550-PLUS rdf:type owl:NamedIndividual ,
+                               :Motherboard ;
+                      :hardware_designed_by_manufacturer :ASUS ;
+                      :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
+                      :is_compatible_with_cpu :AMD_Ryzen_5_5600X ;
+                      :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                      :is_compatible_with_sound_card :ASUS_7.1_PCIe_zvucna_kartica ;
+                      :motherboard_has_name "ASUS PRIME B550-PLUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_PRIME_H670-PLUS_D4
+:ASUS_PRIME_H670-PLUS_D4 rdf:type owl:NamedIndividual ,
+                                  :Motherboard ;
+                         :hardware_designed_by_manufacturer :ASUS ;
+                         :is_comaptible_with_network_interface_card :ASUS_LANGUARD_NETWORK_CARD ;
+                         :is_compatible_with_cpu :INTEL_Core_i7-11700F ;
+                         :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                         :motherboard_has_name "ASUS PRIME H670-PLUS D4" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_PRIME_Z690-P_WIFI
+:ASUS_PRIME_Z690-P_WIFI rdf:type owl:NamedIndividual ,
+                                 :Motherboard ;
+                        :hardware_designed_by_manufacturer :ASUS ;
+                        :is_comaptible_with_hdd :WD_1TB_-_WD10SPZX ;
+                        :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
+                        :is_compatible_with_cooler :DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler ;
+                        :is_compatible_with_cpu :INTEL_Core_i9-13900K ;
+                        :is_compatible_with_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                        :motherboard_has_name "ASUS PRIME Z690-P WIFI" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_Realtek_2.5Gb_Ethernet
+:ASUS_Realtek_2.5Gb_Ethernet rdf:type owl:NamedIndividual ,
+                                      :Network_interface_card ;
+                             :hardware_designed_by_manufacturer :ASUS ;
+                             :network_interface_card_has_name "ASUS Realtek 2.5Gb Ethernet" ,
+                                                              """Realtek 2.5Gb Ethernet
+Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_nVidia_GeForce_GT_730
+:ASUS_nVidia_GeForce_GT_730 rdf:type owl:NamedIndividual ,
+                                     :Graphic_card ;
+                            :graphic_card_has_gpu :Nvidia_GeForce_GT_730 ;
+                            :hardware_designed_by_manufacturer :ASUS ;
+                            :graphic_card_for_gaming "true"^^xsd:boolean ;
+                            :graphic_card_has_memory_in_gb 2 ;
+                            :graphic_card_has_memory_type "GDDR5" ;
+                            :graphic_card_has_name "ASUS nVidia GeForce GT 730" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AUDIOQUEST
+:AUDIOQUEST rdf:type owl:NamedIndividual ,
+                     :Manufacturer ;
+            :manufacturer_has_name "AUDIOQUEST" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#AUDIOQUEST_USB_Zvucna_kartica_Dragonfly
+:AUDIOQUEST_USB_Zvucna_kartica_Dragonfly rdf:type owl:NamedIndividual ,
+                                                  :Sound_card ;
+                                         :hardware_designed_by_manufacturer :AUDIOQUEST ;
+                                         :sound_card_has_name "AUDIOQUEST USB Zvucna kartica Dragonfly" ;
+                                         :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CHIEFTEC
+:CHIEFTEC rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "CHIEFTEC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB
+:CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB rdf:type owl:NamedIndividual ,
+                                                        :PSU ;
+                                               :hardware_designed_by_manufacturer :CHIEFTEC ;
+                                               :psu_has_certificate "ATX v.2.3" ;
+                                               :psu_has_name "CHIEFTEC napajanje Photon Series CTG-650C-RGB" ;
+                                               :psu_has_output_power 650 ;
+                                               :psu_has_pfc "Active pfc" ;
+                                               :psu_has_type "Polu-Modularno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CRUCIAL
+:CRUCIAL rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "CRUCIAL" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CRUCIAL_P3_Plus_2TB_SSD
+:CRUCIAL_P3_Plus_2TB_SSD rdf:type owl:NamedIndividual ,
+                                  :SSD ;
+                         :hardware_designed_by_manufacturer :CRUCIAL ;
+                         :ssd_has_capacity_in_gb 2000 ;
+                         :ssd_has_format "M.2 2280" ;
+                         :ssd_has_interface "PCIe 4.0" ;
+                         :ssd_has_name "CRUCIAL P3 Plus 2TB SSD" ;
+                         :ssd_has_read_speed_in_mbs 5000 ;
+                         :ssd_has_write_speed_in_mbs 4200 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#CRUCIAL_SSD_1TB_BX500
+:CRUCIAL_SSD_1TB_BX500 rdf:type owl:NamedIndividual ,
+                                :SSD ;
+                       :hardware_designed_by_manufacturer :CRUCIAL ;
+                       :ssd_has_capacity_in_gb 1000 ;
+                       :ssd_has_format "2.5" ;
+                       :ssd_has_interface "SATA III" ;
+                       :ssd_has_name "CRUCIAL SSD 1TB BX500" ;
+                       :ssd_has_read_speed_in_mbs 540 ;
+                       :ssd_has_write_speed_in_mbs 500 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DEEPCOOL_AK500_WH_Kuler
+:DEEPCOOL_AK500_WH_Kuler rdf:type owl:NamedIndividual ,
+                                  :Cooler ;
+                         :hardware_designed_by_manufacturer :DEEP_COOL ;
+                         :cooler_has_cooling_type "vazdusno hladjenje" ;
+                         :cooler_has_name "DEEPCOOL AK500 WH Kuler" ;
+                         :cooler_has_rpm 1850 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DEEP_COOL
+:DEEP_COOL rdf:type owl:NamedIndividual ,
+                    :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler
+:DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler rdf:type owl:NamedIndividual ,
+                                                 :Cooler ;
+                                        :hardware_designed_by_manufacturer :DEEP_COOL ;
+                                        :cooler_has_cooling_type "Vazdusno hladjenje" ;
+                                        :cooler_has_name "DEEP COOL AK400 ZERO DARK PLUS - Kuler" ;
+                                        :cooler_has_rpm 1650 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GEMBIRD
+:GEMBIRD rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "GEMBIRD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GEMBIRD_USB_Zvucna_kartica
+:GEMBIRD_USB_Zvucna_kartica rdf:type owl:NamedIndividual ,
+                                     :Sound_card ;
+                            :hardware_designed_by_manufacturer :GEMBIRD ;
+                            :sound_card_has_name "GEMBIRD USB Zvucna kartica" ;
+                            :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE
+:GIGABYTE rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "GIGABYTE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE_B650_GAMING_-_Maticna_ploca
+:GIGABYTE_B650_GAMING_-_Maticna_ploca rdf:type owl:NamedIndividual ,
+                                               :Motherboard ;
+                                      :hardware_designed_by_manufacturer :GIGABYTE ;
+                                      :is_comaptible_with_network_interface_card :GIGABYTE_Realtek_2.5GbE_LAN_chip ;
+                                      :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
+                                      :is_compatible_with_ram :KINGSTON_Fury_Renegade_32GB__-_RAM ;
+                                      :motherboard_has_name "GIGABYTE B650 GAMING  - Maticna ploca" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE_GeForce_GTX_1650_D6_OC
+:GIGABYTE_GeForce_GTX_1650_D6_OC rdf:type owl:NamedIndividual ,
+                                          :Graphic_card ;
+                                 :graphic_card_has_gpu :Nvidia_GeForce_GTX_1650 ;
+                                 :hardware_designed_by_manufacturer :GIGABYTE ;
+                                 :graphic_card_for_gaming "false"^^xsd:boolean ;
+                                 :graphic_card_has_memory_in_gb 4 ;
+                                 :graphic_card_has_memory_type "GDDR6" ;
+                                 :graphic_card_has_name "GIGABYTE GeForce GTX 1650 D6 OC" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GIGABYTE_Realtek_2.5GbE_LAN_chip
+:GIGABYTE_Realtek_2.5GbE_LAN_chip rdf:type owl:NamedIndividual ,
+                                           :Network_interface_card ;
+                                  :hardware_designed_by_manufacturer :GIGABYTE ;
+                                  :network_interface_card_has_interface "Realtek 2.5GbE LAN chip (2.5 Gbps/1 Gbps/100 Mbps)" ;
+                                  :network_interface_card_has_name "GIGABYTE Realtek 2.5GbE LAN chip" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#INTEL_Core_i7-11700F
+:INTEL_Core_i7-11700F rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_has_cache :L2_CACHE_3MB ,
+                                     :L3_CACHE_16MB ;
+                      :hardware_designed_by_manufacturer :Intel ;
+                      :cpu_for_gaming "true"^^xsd:boolean ;
+                      :cpu_has_clock_rate 2.5 ;
+                      :cpu_has_cores 8 ;
+                      :cpu_has_name "INTEL Core i7-11700F" ;
+                      :cpu_has_tdp 65 ;
+                      :cpu_has_threads 16 ;
+                      :cpu_has_type "INTEL Core i7" ;
+                      :cpu_with_integrated_gpu "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#INTEL_Core_i9-13900K
+:INTEL_Core_i9-13900K rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_has_cache :L2_CACHE_32MB ,
+                                     :L3_CACHE_32MB ;
+                      :hardware_designed_by_manufacturer :Intel ;
+                      :cpu_for_gaming "true"^^xsd:boolean ;
+                      :cpu_has_clock_rate 3.0 ;
+                      :cpu_has_cores 24 ;
+                      :cpu_has_name "INTEL Core i9-13900K" ;
+                      :cpu_has_tdp 125 ;
+                      :cpu_has_threads 32 ;
+                      :cpu_has_type "INTEL Core i9" ;
+                      :cpu_with_integrated_gpu "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Intel_UHD_Graphics_730
+:Intel_UHD_Graphics_730 rdf:type owl:NamedIndividual ,
+                                 :GPU ;
+                        :hardware_designed_by_manufacturer :Intel ;
+                        :gpu_has_name "Intel UHD Graphics 730" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Intel_UHD_Graphics_770
+:Intel_UHD_Graphics_770 rdf:type owl:NamedIndividual ,
+                                 :GPU ;
+                        :hardware_designed_by_manufacturer :Intel ;
+                        :gpu_has_name "Intel UHD Graphics 770" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON
+:KINGSTON rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "KINGSTON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_Fury_Renegade_32GB__-_RAM
+:KINGSTON_Fury_Renegade_32GB__-_RAM rdf:type owl:NamedIndividual ,
+                                             :RAM ;
+                                    :hardware_designed_by_manufacturer :KINGSTON ;
+                                    :ram_has_capacity_in_gb 32 ;
+                                    :ram_has_latency "CL32" ;
+                                    :ram_has_name "KINGSTON Fury Renegade 32GB  - RAM" ;
+                                    :ram_has_rgb "true"^^xsd:boolean ;
+                                    :ram_has_type "DDR5" ;
+                                    :ram_has_voltage 1.4 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_Fury_Renegade_SSD
+:KINGSTON_Fury_Renegade_SSD rdf:type owl:NamedIndividual ,
+                                     :SSD ;
+                            :hardware_designed_by_manufacturer :KINGSTON ;
+                            :ssd_has_capacity_in_gb 2000 ;
+                            :ssd_has_format "M.2 2280" ;
+                            :ssd_has_interface "PCIe 4.0" ;
+                            :ssd_has_name "KINGSTON Fury Renegade SSD" ;
+                            :ssd_has_read_speed_in_mbs 7300 ;
+                            :ssd_has_write_speed_in_mbs 7000 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_Renegade_RGB_64GB_-_RAM
+:KINGSTON_Renegade_RGB_64GB_-_RAM rdf:type owl:NamedIndividual ,
+                                           :RAM ;
+                                  :hardware_designed_by_manufacturer :KINGSTON ;
+                                  :ram_has_capacity_in_gb 64 ;
+                                  :ram_has_latency "CL18" ;
+                                  :ram_has_name "KINGSTON Renegade RGB 64GB - RAM" ;
+                                  :ram_has_rgb "true"^^xsd:boolean ;
+                                  :ram_has_type "DDR4" ;
+                                  :ram_has_voltage 1.35 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L2_CACHE_2MB
+:L2_CACHE_2MB rdf:type owl:NamedIndividual ,
+                       :Cache ;
+              :cache_has_level "2" ;
+              :cache_has_size_in_mb 2 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L2_CACHE_32MB
+:L2_CACHE_32MB rdf:type owl:NamedIndividual ,
+                        :Cache ;
+               :cache_has_level "2" ;
+               :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L2_CACHE_3MB
+:L2_CACHE_3MB rdf:type owl:NamedIndividual ,
+                       :Cache ;
+              :cache_has_level "2" ;
+              :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L3_CACHE_16MB
+:L3_CACHE_16MB rdf:type owl:NamedIndividual ,
+                        :Cache ;
+               :cache_has_level "3" ;
+               :cache_has_size_in_mb 16 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L3_CACHE_32MB
+:L3_CACHE_32MB rdf:type owl:NamedIndividual ,
+                        :Cache ;
+               :cache_has_level "3" ;
+               :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#L3_CACHE_4MB
+:L3_CACHE_4MB rdf:type owl:NamedIndividual ,
+                       :Cache ;
+              :cache_has_level "3" ;
+              :cache_has_size_in_mb 4 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LC-Power_napajanje_300W_LC300SFX_V3.21
+:LC-Power_napajanje_300W_LC300SFX_V3.21 rdf:type owl:NamedIndividual ,
+                                                 :PSU ;
+                                        :hardware_designed_by_manufacturer :LC_POWER ;
+                                        :psu_has_certificate "SFX V3.21" ;
+                                        :psu_has_name "LC-Power napajanje 300W LC300SFX V3.21" ;
+                                        :psu_has_output_power 300 ;
+                                        :psu_has_pfc "Active pfc" ;
+                                        :psu_has_type "Standardno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LC_POWER
+:LC_POWER rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "LC POWER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LC_POWER_Kuciste_Gaming_800B_Interlayer_X_-_LC-800B-ON
+:LC_POWER_Kuciste_Gaming_800B_Interlayer_X_-_LC-800B-ON rdf:type owl:NamedIndividual ,
+                                                                 :Computer_case ;
+                                                        :hardware_designed_by_manufacturer :LC_POWER ;
+                                                        :computer_case_has_dimensions "20.5 x 48.5 x 43.5 cm" ;
+                                                        :computer_case_has_name "LC POWER Kuciste Gaming 800B Interlayer X - LC-800B-ON" ;
+                                                        :computer_case_has_psu "true"^^xsd:boolean ;
+                                                        :computer_case_supports_motherboard "ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MS
+:MS rdf:type owl:NamedIndividual ,
+             :Manufacturer ;
+    :manufacturer_has_name "MS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI
+:MSI rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "MSI" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI_GeForce_GTX_1660
+:MSI_GeForce_GTX_1660 rdf:type owl:NamedIndividual ,
+                               :Graphic_card ;
+                      :graphic_card_has_gpu :Nvidia_GeForce_GTX_1660_SUPER ;
+                      :hardware_designed_by_manufacturer :MSI ;
+                      :graphic_card_for_gaming "true"^^xsd:boolean ;
+                      :graphic_card_has_memory_in_gb 6 ;
+                      :graphic_card_has_memory_type "GDDR6" ;
+                      :graphic_card_has_name "MSI GeForce GTX 1660" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI_MPG_B550_GAMING_PLUS
+:MSI_MPG_B550_GAMING_PLUS rdf:type owl:NamedIndividual ,
+                                   :Motherboard ;
+                          :hardware_designed_by_manufacturer :MSI ;
+                          :is_comaptible_with_graphic_card :MSI_GeForce_GTX_1660 ;
+                          :is_comaptible_with_network_interface_card :MSI_Realtek_RTL8125B_2.5Gbps ;
+                          :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
+                          :is_compatible_with_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                          :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                          :is_compatible_with_sound_card :X-WAVE_Bluetooth_transmiter_RBT-036 ;
+                          :motherboard_has_name "MSI MPG B550 GAMING PLUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MSI_Realtek_RTL8125B_2.5Gbps
+:MSI_Realtek_RTL8125B_2.5Gbps rdf:type owl:NamedIndividual ,
+                                       :Network_interface_card ;
+                              :hardware_designed_by_manufacturer :MSI ;
+                              :network_interface_card_has_interface "Realtek RTL8125B 2.5Gbps LAN kontroler" ;
+                              :network_interface_card_has_name "MSI Realtek RTL8125B 2.5Gbps" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO
+:MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO rdf:type owl:NamedIndividual ,
+                                                      :PSU ;
+                                             :hardware_designed_by_manufacturer :MS ;
+                                             :psu_has_certificate "80 Plus Platinum" ;
+                                             :psu_has_name "MS Napajanje CORE M500 80 Plus PLATINUM PRO" ;
+                                             :psu_has_output_power 500 ;
+                                             :psu_has_pfc "Active pfc" ;
+                                             :psu_has_type "Standardno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#NVIDIA
+:NVIDIA rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "NVIDIA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nvidia_GeForce_GTX_1650
+:Nvidia_GeForce_GTX_1650 rdf:type owl:NamedIndividual ,
+                                  :GPU ;
+                         :hardware_designed_by_manufacturer :NVIDIA ;
+                         :gpu_has_name "Nvidia GeForce GTX 1650" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nvidia_GeForce_GTX_1660_SUPER
+:Nvidia_GeForce_GTX_1660_SUPER rdf:type owl:NamedIndividual ,
+                                        :GPU ;
+                               :hardware_designed_by_manufacturer :NVIDIA ;
+                               :gpu_has_name "Nvidia GeForce GTX 1660 SUPER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nvidia_GeForce_GT_730
+:Nvidia_GeForce_GT_730 rdf:type owl:NamedIndividual ,
+                                :GPU ;
+                       :hardware_designed_by_manufacturer :NVIDIA ;
+                       :gpu_has_name "Nvidia GeForce GT 730" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#RAIDMAX
+:RAIDMAX rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "RAIDMAX" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W
+:RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W rdf:type owl:NamedIndividual ,
+                                                        :PSU ;
+                                               :hardware_designed_by_manufacturer :RAIDMAX ;
+                                               :psu_has_certificate "80 Plus Gold" ;
+                                               :psu_has_name "RAIDMAX Napajanje VORTEX GOLD RX-800AE-V 800W" ;
+                                               :psu_has_output_power 800 ;
+                                               :psu_has_pfc "Active pfc" ;
+                                               :psu_has_type "Standardno" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSUNG
+:SAMSUNG rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "SAMSUNG" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSUNG_2TB_SSD_970
+:SAMSUNG_2TB_SSD_970 rdf:type owl:NamedIndividual ,
+                              :SSD ;
+                     :hardware_designed_by_manufacturer :SAMSUNG ;
+                     :ssd_has_capacity_in_gb 2000 ;
+                     :ssd_has_format "M.2 2280" ;
+                     :ssd_has_interface "PCIe 3.0" ;
+                     :ssd_has_name "SAMSUNG 2TB SSD 970" ;
+                     :ssd_has_read_speed_in_mbs 3500 ;
+                     :ssd_has_write_speed_in_mbs 3300 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSUNG_SSD_4TB_MZ_77Q4T0BW
+:SAMSUNG_SSD_4TB_MZ_77Q4T0BW rdf:type owl:NamedIndividual ,
+                                      :SSD ;
+                             :hardware_designed_by_manufacturer :SAMSUNG ;
+                             :ssd_has_capacity_in_gb 4000 ;
+                             :ssd_has_format "2.5" ;
+                             :ssd_has_interface "SATA III" ;
+                             :ssd_has_name "SAMSUNG SSD 4TB  MZ 77Q4T0BW" ;
+                             :ssd_has_read_speed_in_mbs 560 ;
+                             :ssd_has_write_speed_in_mbs 530 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAPPHIRE
+:SAPPHIRE rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "SAPPHIRE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT
+:SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT rdf:type owl:NamedIndividual ,
+                                               :Graphic_card ;
+                                      :graphic_card_has_gpu :AMD_Radeon_RX_6700_XT ;
+                                      :hardware_designed_by_manufacturer :SAPPHIRE ;
+                                      :graphic_card_for_gaming "false"^^xsd:boolean ;
+                                      :graphic_card_has_memory_in_gb 12 ;
+                                      :graphic_card_has_memory_type "GDDR6" ;
+                                      :graphic_card_has_name "SAPPHIRE PULSE AMD Radeon RX 6700 XT" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SEAGATE
+:SEAGATE rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "SEAGATE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000
+:SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 rdf:type owl:NamedIndividual ,
+                                                                            :HDD ;
+                                                                   :hardware_designed_by_manufacturer :SEAGATE ;
+                                                                   :hdd_has_buffer_in_mb 256 ;
+                                                                   :hdd_has_capacity_in_gb 16000 ;
+                                                                   :hdd_has_format "3.5" ;
+                                                                   :hdd_has_name "SEAGATE HDD 16TB 3.5 SATA III 7200rpm 256MB IronWolf ST16000NE000" ;
+                                                                   :hdd_has_rpm 7200 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SILICON_POWER
+:SILICON_POWER rdf:type owl:NamedIndividual ,
+                        :Manufacturer ;
+               :manufacturer_has_name "SILICON POWER" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SILICON_POWER_A60_SSD
+:SILICON_POWER_A60_SSD rdf:type owl:NamedIndividual ,
+                                :SSD ;
+                       :hardware_designed_by_manufacturer :SILICON_POWER ;
+                       :ssd_has_capacity_in_gb 1000 ;
+                       :ssd_has_format "M.2 2280" ;
+                       :ssd_has_interface "PCIe 3.0" ;
+                       :ssd_has_name "SILICON POWER A60 SSD" ;
+                       :ssd_has_read_speed_in_mbs 2200 ;
+                       :ssd_has_write_speed_in_mbs 1600 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#THERMALTAKE
+:THERMALTAKE rdf:type owl:NamedIndividual ,
+                      :Manufacturer ;
+             :manufacturer_has_name "THERMALTAKE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#THERMALTAKE_ventilator_Riing_Silent_12_RGB
+:THERMALTAKE_ventilator_Riing_Silent_12_RGB rdf:type owl:NamedIndividual ,
+                                                     :Cooler ;
+                                            :hardware_designed_by_manufacturer :THERMALTAKE ;
+                                            :cooler_has_cooling_type "vazdusno hladjenje" ;
+                                            :cooler_has_name "THERMALTAKE ventilator Riing Silent 12 RGB" ;
+                                            :cooler_has_rpm 1500 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#WD
+:WD rdf:type owl:NamedIndividual ,
+             :Manufacturer ;
+    :manufacturer_has_name "WD" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#WD_1TB_-_WD10SPZX
+:WD_1TB_-_WD10SPZX rdf:type owl:NamedIndividual ,
+                            :HDD ;
+                   :hardware_designed_by_manufacturer :WD ;
+                   :hdd_has_buffer_in_mb 128 ;
+                   :hdd_has_capacity_in_gb 1000 ;
+                   :hdd_has_format "2.5" ;
+                   :hdd_has_name "WD 1TB - WD10SPZX" ;
+                   :hdd_has_rpm 5400 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD
+:WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD rdf:type owl:NamedIndividual ,
+                                                    :HDD ;
+                                           :hardware_designed_by_manufacturer :WD ;
+                                           :hdd_has_buffer_in_mb 128 ;
+                                           :hdd_has_capacity_in_gb 8000 ;
+                                           :hdd_has_format "3.5" ;
+                                           :hdd_has_name "WD Red Plus 8TB NAS SATA 3.5 WD80EFZZ HDD" ;
+                                           :hdd_has_rpm 5400 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#X-WAVE
+:X-WAVE rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "X-WAVE" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#X-WAVE_Bluetooth_transmiter_RBT-036
+:X-WAVE_Bluetooth_transmiter_RBT-036 rdf:type owl:NamedIndividual ,
+                                              :Sound_card ;
+                                     :hardware_designed_by_manufacturer :X-WAVE ;
+                                     :sound_card_has_name "X-WAVE Bluetooth transmiter RBT-036" ;
+                                     :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37/480G
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37/480G> rdf:type owl:NamedIndividual ,
+                                                                                                                :SSD ;
+                                                                                                       :hardware_designed_by_manufacturer :KINGSTON ;
+                                                                                                       :ssd_has_capacity_in_gb 480 ;
+                                                                                                       :ssd_has_format "2.5" ;
+                                                                                                       :ssd_has_interface "SATA III" ;
+                                                                                                       :ssd_has_name "KINGSTON SSDNow SA400S37/480G" ;
+                                                                                                       :ssd_has_read_speed_in_mbs 500 ;
+                                                                                                       :ssd_has_write_speed_in_mbs 450 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_-_KVR32N22D8/32
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_-_KVR32N22D8/32> rdf:type owl:NamedIndividual ,
+                                                                                                                               :RAM ;
+                                                                                                                      :hardware_designed_by_manufacturer :KINGSTON ;
+                                                                                                                      :ram_has_capacity_in_gb 32 ;
+                                                                                                                      :ram_has_latency "CL22" ;
+                                                                                                                      :ram_has_name "KINGSTON ValueRAM 32GB SDRAM KVR32N22D8/32" ;
+                                                                                                                      :ram_has_rgb "false"^^xsd:boolean ;
+                                                                                                                      :ram_has_type "DDR4" ;
+                                                                                                                      :ram_has_voltage 1.2 .
+
+
 #################################################################
 #    General axioms
 #################################################################
@@ -2236,6 +2901,23 @@
                 :Office_package
                 :Operating_system
                 :Video_game
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CPU
+                :Computer_case
+                :Cooler
+                :GPU
+                :Graphic_card
+                :HDD
+                :Motherboard
+                :Network_interface_card
+                :PSU
+                :RAM
+                :SSD
+                :Sound_card
               )
 ] .
 
