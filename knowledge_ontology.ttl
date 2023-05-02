@@ -50,7 +50,11 @@
 :desktop_computer_has rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       rdfs:domain :Desktop_computer ;
-                      rdfs:range :Hardware .
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Hardware
+                                                 :Software
+                                               )
+                                 ] .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_computer_case
@@ -78,7 +82,11 @@
 :desktop_computer_has_hdd rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :desktop_computer_has ;
                           rdfs:domain :Desktop_computer ;
-                          rdfs:range :HDD .
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( :HDD
+                                                     :SSD
+                                                   )
+                                     ] .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//desktop_computer_has_motherboard
@@ -338,6 +346,13 @@
                                    rdfs:subPropertyOf :designed_by_manufacturer ;
                                    rdfs:domain :Software ;
                                    rdfs:range :Manufacturer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#desktop_computer_has_operating_system
+:desktop_computer_has_operating_system rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :desktop_computer_has ;
+                                       rdfs:domain :Desktop_computer ;
+                                       rdfs:range :Operating_system .
 
 
 #################################################################
@@ -1468,24 +1483,6 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//A-DATA
-:A-DATA rdf:type owl:NamedIndividual ,
-                 :Manufacturer ;
-        :manufacturer_has_name "A-DATA" .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3//A-DATA_XPG_LANCER_RGB_16GB_-_RAM
-:A-DATA_XPG_LANCER_RGB_16GB_-_RAM rdf:type owl:NamedIndividual ,
-                                           :RAM ;
-                                  :hardware_designed_by_manufacturer :A-DATA ;
-                                  :ram_has_capacity_in_gb 16 ;
-                                  :ram_has_latency "CL12" ;
-                                  :ram_has_name "A-DATA XPG LANCER RGB 16GB  - RAM" ;
-                                  :ram_has_rgb "true"^^xsd:boolean ;
-                                  :ram_has_type "DDR5" ;
-                                  :ram_has_voltage 1.25 .
-
-
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//ALCTRON
 :ALCTRON rdf:type owl:NamedIndividual ,
                   :Manufacturer ;
@@ -1551,14 +1548,14 @@
        :manufacturer_has_name "ANTEC" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//ANTEC_P10C_-_Kuciste
-:ANTEC_P10C_-_Kuciste rdf:type owl:NamedIndividual ,
-                               :Computer_case ;
-                      :hardware_designed_by_manufacturer :ANTEC ;
-                      :computer_case_has_dimensions "22 x 48.6 x 47.7" ;
-                      :computer_case_has_name "ANTEC P10C - Kuciste" ;
-                      :computer_case_has_psu "false"^^xsd:boolean ;
-                      :computer_case_supports_motherboard "ATX i manje" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ANTEC_P10C_Kuciste
+:ANTEC_P10C_Kuciste rdf:type owl:NamedIndividual ,
+                             :Computer_case ;
+                    :hardware_designed_by_manufacturer :ANTEC ;
+                    :computer_case_has_dimensions "22 x 48.6 x 47.7" ;
+                    :computer_case_has_name "ANTEC P10C Kuciste" ;
+                    :computer_case_has_psu "false"^^xsd:boolean ;
+                    :computer_case_supports_motherboard "ATX i manje" .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//ANTEC_kuciste_VSK2000-U3
@@ -1624,7 +1621,7 @@
                       :hardware_designed_by_manufacturer :ASUS ;
                       :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
                       :is_compatible_with_cpu :AMD_Ryzen_5_5600X ;
-                      :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                      :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
                       :is_compatible_with_sound_card :ASUS_7.1_PCIe_zvucna_kartica ;
                       :motherboard_has_name "ASUS PRIME B550-PLUS" .
 
@@ -1635,7 +1632,7 @@
                          :hardware_designed_by_manufacturer :ASUS ;
                          :is_comaptible_with_network_interface_card :ASUS_LANGUARD_NETWORK_CARD ;
                          :is_compatible_with_cpu :INTEL_Core_i7-11700F ;
-                         :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                         :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
                          :motherboard_has_name "ASUS PRIME H670-PLUS D4" .
 
 
@@ -1643,7 +1640,7 @@
 :ASUS_PRIME_Z690-P_WIFI rdf:type owl:NamedIndividual ,
                                  :Motherboard ;
                         :hardware_designed_by_manufacturer :ASUS ;
-                        :is_comaptible_with_hdd :WD_1TB_-_WD10SPZX ;
+                        :is_comaptible_with_hdd :WD_1TB_WD10SPZX ;
                         :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
                         :is_compatible_with_cooler :DEEP_COOL_AK400_ZERO_DARK_PLUS_-_Kuler ;
                         :is_compatible_with_cpu :INTEL_Core_i9-13900K ;
@@ -1683,6 +1680,24 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                          :hardware_designed_by_manufacturer :AUDIOQUEST ;
                                          :sound_card_has_name "AUDIOQUEST USB Zvucna kartica Dragonfly" ;
                                          :sound_card_has_type "USB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//A_DATA
+:A_DATA rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "A DATA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//A_DATA_XPG_LANCER_RGB_16GB_RAM
+:A_DATA_XPG_LANCER_RGB_16GB_RAM rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_designed_by_manufacturer :A_DATA ;
+                                :ram_has_capacity_in_gb 16 ;
+                                :ram_has_latency "CL12" ;
+                                :ram_has_name "A DATA XPG LANCER RGB 16GB RAM" ;
+                                :ram_has_rgb "true"^^xsd:boolean ;
+                                :ram_has_type "DDR5" ;
+                                :ram_has_voltage 1.25 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//BROTHER
@@ -1889,6 +1904,40 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                       :driver_has_version "2016" .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EA
+:EA rdf:type owl:NamedIndividual ,
+             :Manufacturer ;
+    :manufacturer_has_name "EA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EA_F1_2023
+:EA_F1_2023 rdf:type owl:NamedIndividual ,
+                     :Video_game ;
+            :software_designed_by_manufacturer :EA ;
+            :video_game_has_name "EA F1 2023" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EA_Fifa_2023
+:EA_Fifa_2023 rdf:type owl:NamedIndividual ,
+                       :Video_game ;
+              :software_designed_by_manufacturer :EA ;
+              :video_game_has_name "EA Fifa 2023" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EA_Plants_Vs_Zombies
+:EA_Plants_Vs_Zombies rdf:type owl:NamedIndividual ,
+                               :Video_game ;
+                      :software_designed_by_manufacturer :EA ;
+                      :video_game_has_name "EA Plants Vs Zombies" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//EA_The_Sims_4
+:EA_The_Sims_4 rdf:type owl:NamedIndividual ,
+                        :Video_game ;
+               :software_designed_by_manufacturer :EA ;
+               :video_game_has_name "EA The Sims 4" .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//EDIFIER
 :EDIFIER rdf:type owl:NamedIndividual ,
                   :Manufacturer ;
@@ -1968,14 +2017,14 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
           :manufacturer_has_name "GIGABYTE" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//GIGABYTE_B650_GAMING_-_Maticna_ploca
-:GIGABYTE_B650_GAMING_-_Maticna_ploca rdf:type owl:NamedIndividual ,
-                                               :Motherboard ;
-                                      :hardware_designed_by_manufacturer :GIGABYTE ;
-                                      :is_comaptible_with_network_interface_card :GIGABYTE_Realtek_2.5GbE_LAN_chip ;
-                                      :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
-                                      :is_compatible_with_ram :KINGSTON_Fury_Renegade_32GB__-_RAM ;
-                                      :motherboard_has_name "GIGABYTE B650 GAMING  - Maticna ploca" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3//GIGABYTE_B650_GAMING_Maticna_ploca
+:GIGABYTE_B650_GAMING_Maticna_ploca rdf:type owl:NamedIndividual ,
+                                             :Motherboard ;
+                                    :hardware_designed_by_manufacturer :GIGABYTE ;
+                                    :is_comaptible_with_network_interface_card :GIGABYTE_Realtek_2.5GbE_LAN_chip ;
+                                    :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
+                                    :is_compatible_with_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                                    :motherboard_has_name "GIGABYTE B650 GAMING Maticna ploca" .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//GIGABYTE_GeForce_GTX_1650_D6_OC
@@ -2160,16 +2209,16 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
           :manufacturer_has_name "KINGSTON" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Fury_Renegade_32GB__-_RAM
-:KINGSTON_Fury_Renegade_32GB__-_RAM rdf:type owl:NamedIndividual ,
-                                             :RAM ;
-                                    :hardware_designed_by_manufacturer :KINGSTON ;
-                                    :ram_has_capacity_in_gb 32 ;
-                                    :ram_has_latency "CL32" ;
-                                    :ram_has_name "KINGSTON Fury Renegade 32GB  - RAM" ;
-                                    :ram_has_rgb "true"^^xsd:boolean ;
-                                    :ram_has_type "DDR5" ;
-                                    :ram_has_voltage 1.4 .
+###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Fury_Renegade_32GB_RAM
+:KINGSTON_Fury_Renegade_32GB_RAM rdf:type owl:NamedIndividual ,
+                                          :RAM ;
+                                 :hardware_designed_by_manufacturer :KINGSTON ;
+                                 :ram_has_capacity_in_gb 32 ;
+                                 :ram_has_latency "CL32" ;
+                                 :ram_has_name "KINGSTON Fury Renegade 32GB RAM" ;
+                                 :ram_has_rgb "true"^^xsd:boolean ;
+                                 :ram_has_type "DDR5" ;
+                                 :ram_has_voltage 1.4 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Fury_Renegade_SSD
@@ -2184,16 +2233,16 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                             :ssd_has_write_speed_in_mbs 7000 .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Renegade_RGB_64GB_-_RAM
-:KINGSTON_Renegade_RGB_64GB_-_RAM rdf:type owl:NamedIndividual ,
-                                           :RAM ;
-                                  :hardware_designed_by_manufacturer :KINGSTON ;
-                                  :ram_has_capacity_in_gb 64 ;
-                                  :ram_has_latency "CL18" ;
-                                  :ram_has_name "KINGSTON Renegade RGB 64GB - RAM" ;
-                                  :ram_has_rgb "true"^^xsd:boolean ;
-                                  :ram_has_type "DDR4" ;
-                                  :ram_has_voltage 1.35 .
+###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Renegade_RGB_64GB_RAM
+:KINGSTON_Renegade_RGB_64GB_RAM rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_designed_by_manufacturer :KINGSTON ;
+                                :ram_has_capacity_in_gb 64 ;
+                                :ram_has_latency "CL18" ;
+                                :ram_has_name "KINGSTON Renegade RGB 64GB RAM" ;
+                                :ram_has_rgb "true"^^xsd:boolean ;
+                                :ram_has_type "DDR4" ;
+                                :ram_has_voltage 1.35 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//L2_CACHE_2MB
@@ -2255,14 +2304,14 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
           :manufacturer_has_name "LC POWER" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//LC_POWER_Kuciste_Gaming_800B_Interlayer_X_-_LC-800B-ON
-:LC_POWER_Kuciste_Gaming_800B_Interlayer_X_-_LC-800B-ON rdf:type owl:NamedIndividual ,
-                                                                 :Computer_case ;
-                                                        :hardware_designed_by_manufacturer :LC_POWER ;
-                                                        :computer_case_has_dimensions "20.5 x 48.5 x 43.5 cm" ;
-                                                        :computer_case_has_name "LC POWER Kuciste Gaming 800B Interlayer X - LC-800B-ON" ;
-                                                        :computer_case_has_psu "true"^^xsd:boolean ;
-                                                        :computer_case_supports_motherboard "ATX i manje" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3//LC_POWER_Kuciste_Gaming_800B_Interlayer_X_LC_800B_ON
+:LC_POWER_Kuciste_Gaming_800B_Interlayer_X_LC_800B_ON rdf:type owl:NamedIndividual ,
+                                                               :Computer_case ;
+                                                      :hardware_designed_by_manufacturer :LC_POWER ;
+                                                      :computer_case_has_dimensions "20.5 x 48.5 x 43.5 cm" ;
+                                                      :computer_case_has_name "LC POWER Kuciste Gaming 800B Interlayer X  LC 800B ON" ;
+                                                      :computer_case_has_psu "true"^^xsd:boolean ;
+                                                      :computer_case_supports_motherboard "ATX i manje" .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//LG
@@ -2515,7 +2564,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                           :is_comaptible_with_network_interface_card :MSI_Realtek_RTL8125B_2.5Gbps ;
                           :is_compatible_with_cpu :AMD_Ryzen_5_4500 ;
                           :is_compatible_with_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
-                          :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_-_RAM ;
+                          :is_compatible_with_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
                           :is_compatible_with_sound_card :X-WAVE_Bluetooth_transmiter_RBT-036 ;
                           :motherboard_has_name "MSI MPG B550 GAMING PLUS" .
 
@@ -2585,6 +2634,12 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                 :joystick_has_number_of_tasters 10 .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Nitendo_Wii
+:Nitendo_Wii rdf:type owl:NamedIndividual ,
+                      :Manufacturer ;
+             :manufacturer_has_name "Nitendo Wii" .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//Nvidia_GeForce_GTX_1650
 :Nvidia_GeForce_GTX_1650 rdf:type owl:NamedIndividual ,
                                   :GPU ;
@@ -2610,6 +2665,13 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :PS4 rdf:type owl:NamedIndividual ,
               :Manufacturer ;
      :manufacturer_has_name "PS4" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//PS4_Uncharted
+:PS4_Uncharted rdf:type owl:NamedIndividual ,
+                        :Video_game ;
+               :software_designed_by_manufacturer :PS4 ;
+               :video_game_has_name "PS4 Uncharted" .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//RAIDMAX
@@ -2654,7 +2716,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                              :ssd_has_capacity_in_gb 4000 ;
                              :ssd_has_format "2.5" ;
                              :ssd_has_interface "SATA III" ;
-                             :ssd_has_name "SAMSUNG SSD 4TB  MZ 77Q4T0BW" ;
+                             :ssd_has_name "SAMSUNG SSD 4TB MZ 77Q4T0BW" ;
                              :ssd_has_read_speed_in_mbs 560 ;
                              :ssd_has_write_speed_in_mbs 530 .
 
@@ -2760,8 +2822,8 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :TRUST_mikrofon_GXT_252_Emita_-_21753 rdf:type owl:NamedIndividual ,
                                                :Microphone ;
                                       :device_designed_by_manufacturer :TRUST ;
-                                      :manufacturer_has_name "TRUST mikrofon GXT 252 Emita - 21753" ;
-                                      :microphone_has_frequency "18 Hz - 21 kHz" .
+                                      :microphone_has_frequency "18 Hz - 21 kHz" ;
+                                      :microphone_has_name "TRUST mikrofon GXT 252 Emita - 21753" .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//UGEE
@@ -2786,15 +2848,15 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
     :manufacturer_has_name "WD" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3//WD_1TB_-_WD10SPZX
-:WD_1TB_-_WD10SPZX rdf:type owl:NamedIndividual ,
-                            :HDD ;
-                   :hardware_designed_by_manufacturer :WD ;
-                   :hdd_has_buffer_in_mb 128 ;
-                   :hdd_has_capacity_in_gb 1000 ;
-                   :hdd_has_format "2.5" ;
-                   :hdd_has_name "WD 1TB - WD10SPZX" ;
-                   :hdd_has_rpm 5400 .
+###  http://www.semanticweb.org/sara/ontologies/2023/3//WD_1TB_WD10SPZX
+:WD_1TB_WD10SPZX rdf:type owl:NamedIndividual ,
+                          :HDD ;
+                 :hardware_designed_by_manufacturer :WD ;
+                 :hdd_has_buffer_in_mb 128 ;
+                 :hdd_has_capacity_in_gb 1000 ;
+                 :hdd_has_format "2.5" ;
+                 :hdd_has_name "WD 1TB WD10SPZX" ;
+                 :hdd_has_rpm 5400 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD
@@ -2806,6 +2868,34 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                            :hdd_has_format "3.5" ;
                                            :hdd_has_name "WD Red Plus 8TB NAS SATA 3.5 WD80EFZZ HDD" ;
                                            :hdd_has_rpm 5400 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wii_Fit_Plus
+:Wii_Fit_Plus rdf:type owl:NamedIndividual ,
+                       :Video_game ;
+              :software_designed_by_manufacturer :Nitendo_Wii ;
+              :video_game_has_name "Wii Fit Plus" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wii_Just_Dance_2022
+:Wii_Just_Dance_2022 rdf:type owl:NamedIndividual ,
+                              :Video_game ;
+                     :software_designed_by_manufacturer :Nitendo_Wii ;
+                     :video_game_has_name "Wii Just Dance 2022" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wii_Mario_Brothers
+:Wii_Mario_Brothers rdf:type owl:NamedIndividual ,
+                             :Video_game ;
+                    :software_designed_by_manufacturer :Nitendo_Wii ;
+                    :video_game_has_name "Wii Mario Brothers" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Wii_Mario_Kart
+:Wii_Mario_Kart rdf:type owl:NamedIndividual ,
+                         :Video_game ;
+                :software_designed_by_manufacturer :Nitendo_Wii ;
+                :video_game_has_name "Wii Mario Kart" .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//Windows_10_Pro
@@ -2875,103 +2965,400 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                  :video_game_has_name "PS4 LEGO Movie 2: The Videogame" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#EA
-:EA rdf:type owl:NamedIndividual ,
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#A4_TECH
+:A4_TECH rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "A4 TECH" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#A4_TECH_slušalice_Comfort_Fit_A4HS30
+:A4_TECH_slušalice_Comfort_Fit_A4HS30 rdf:type owl:NamedIndividual ,
+                                               :Wired_headphones ;
+                                      :device_designed_by_manufacturer :A4_TECH ;
+                                      :headphones_are_wireless "false"^^xsd:boolean ;
+                                      :headphones_for_gaming "false"^^xsd:boolean ;
+                                      :headphones_have_microphone "true"^^xsd:boolean ;
+                                      :headphones_have_name "A4 TECH slušalice Comfort Fit A4HS30" ;
+                                      :headphones_have_sensitivity_in_db 102 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_D500SC_5114001310
+:ASUS_D500SC_5114001310 rdf:type owl:NamedIndividual ,
+                                 :Desktop_computer ;
+                        :desktop_computer_designed_by_manufacturer :ASUS ;
+                        :desktop_computer_has_computer_case :ASUS_Kuciste_ROG_STRIX_HELIOS_RGB_WHITE_EDITION_GX601 ;
+                        :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                        :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                        :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                        :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                        :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                        :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                        :desktop_computer_has_operating_system :Windows_10_Pro ;
+                        :desktop_computer_has_dimension "9.46 x 31.95 x 32.06 cm" ;
+                        :desktop_computer_has_name "ASUS D500SC 5114001310" ;
+                        :desktop_computer_has_operating_system "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_D700MC_5115000210
+:ASUS_D700MC_5115000210 rdf:type owl:NamedIndividual ,
+                                 :Desktop_computer ;
+                        :desktop_computer_designed_by_manufacturer :ASUS ;
+                        :desktop_computer_has_computer_case :ANTEC_P10C_Kuciste ;
+                        :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                        :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                        :desktop_computer_has_hdd :SILICON_POWER_A60_SSD ;
+                        :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                        :desktop_computer_has_psu :LC-Power_napajanje_300W_LC300SFX_V3.21 ;
+                        :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                        :desktop_computer_has_operating_system :Windows_11_Home ;
+                        :desktop_computer_has_dimension "16,2 x 29,13 x 35,5 cm" ;
+                        :desktop_computer_has_name "ASUS D700MC 5115000210" ;
+                        :desktop_computer_has_operating_system "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_G15DK_WB7626_Gaming
+:ASUS_G15DK_WB7626_Gaming rdf:type owl:NamedIndividual ,
+                                   :Desktop_computer ;
+                          :desktop_computer_designed_by_manufacturer :ASUS ;
+                          :desktop_computer_has_computer_case :LC_POWER_Kuciste_Gaming_800B_Interlayer_X_LC_800B_ON ;
+                          :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                          :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                          :desktop_computer_has_hdd :CRUCIAL_P3_Plus_2TB_SSD ;
+                          :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                          :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                          :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                          :desktop_computer_has_dimension "185 x 421 x 498 mm" ;
+                          :desktop_computer_has_name "ASUS G15DK WB7626 Gaming" ;
+                          :desktop_computer_has_operating_system "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ASUS_ROG_Strix_Z790-E_Gaming
+:ASUS_ROG_Strix_Z790-E_Gaming rdf:type owl:NamedIndividual ,
+                                       :Motherboard ;
+                              :hardware_designed_by_manufacturer :ASUS ;
+                              :is_comaptible_with_network_interface_card :ASUS_Realtek_2.5Gb_Ethernet ;
+                              :is_compatible_with_cpu :INTEL_Core_i5-13400 ;
+                              :is_compatible_with_psu :LC-Power_napajanje_300W_LC300SFX_V3.21 ;
+                              :is_compatible_with_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                              :is_compatible_with_sound_card :ASUS_7.1_PCIe_zvucna_kartica ;
+                              :motherboard_has_name "ASUS ROG Strix Z790-E Gaming" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DELL_OptiPlex_7000_I716G512SW11P
+:DELL_OptiPlex_7000_I716G512SW11P rdf:type owl:NamedIndividual ,
+                                           :Desktop_computer ;
+                                  :desktop_computer_designed_by_manufacturer :Dell ;
+                                  :desktop_computer_has_computer_case :DELL_Optiplex_Computer_case_7040 ;
+                                  :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                                  :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                                  :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                                  :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                                  :desktop_computer_has_psu :LC-Power_napajanje_300W_LC300SFX_V3.21 ;
+                                  :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                                  :desktop_computer_has_operating_system :Windows_11_Pro ;
+                                  :desktop_computer_has_dimension "29.2 x 29 x 9.2 cm" ;
+                                  :desktop_computer_has_name "DELL OptiPlex 7000 I716G512SW11P" ;
+                                  :desktop_computer_has_operating_system "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#DELL_Optiplex_Computer_case_7040
+:DELL_Optiplex_Computer_case_7040 rdf:type owl:NamedIndividual ,
+                                           :Computer_case ;
+                                  :hardware_designed_by_manufacturer :Dell ;
+                                  :computer_case_has_dimensions "22 x 48.6 x 47.7" ;
+                                  :computer_case_has_name "DELL Optiplex Computer case 7040" ;
+                                  :computer_case_has_psu "true"^^xsd:boolean ;
+                                  :computer_case_supports_motherboard "ATX i manje" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#EDIFIER_Zvučnici_za_računar_Airpulse_A100
+:EDIFIER_Zvučnici_za_računar_Airpulse_A100 rdf:type owl:NamedIndividual ,
+                                                    :Wireless_computer_speakers ;
+                                           :device_designed_by_manufacturer :EDIFIER ;
+                                           :computer_speakers_are_wireless "true"^^xsd:boolean ;
+                                           :computer_speakers_have_name "EDIFIER Zvučnici za računar Airpulse A100" ;
+                                           :computer_speakers_have_power_in_w 100 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#FUJITSU
+:FUJITSU rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "FUJITSU" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#FUJITSU_Skener_Image_fi7140
+:FUJITSU_Skener_Image_fi7140 rdf:type owl:NamedIndividual ,
+                                      :Black_and_white_scanner ;
+                             :device_designed_by_manufacturer :FUJITSU ;
+                             :scanner_has_color "false"^^xsd:boolean ;
+                             :scanner_has_format "A4" ;
+                             :scanner_has_name "FUJITSU Skener Image fi7140" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GENIUS
+:GENIUS rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "GENIUS" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#GENIUS_Zvučnici_za_računar_SPHF2800_BT
+:GENIUS_Zvučnici_za_računar_SPHF2800_BT rdf:type owl:NamedIndividual ,
+                                                 :Wireless_computer_speakers ;
+                                        :device_designed_by_manufacturer :GENIUS ;
+                                        :computer_speakers_are_wireless "true"^^xsd:boolean ;
+                                        :computer_speakers_have_name "GENIUS Zvučnici za računar SPHF2800 BT" ;
+                                        :computer_speakers_have_power_in_w 60 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#HAMA
+:HAMA rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "HAMA" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#HAMA_MW300_Bežični_miš
+:HAMA_MW300_Bežični_miš rdf:type owl:NamedIndividual ,
+                                 :Wireless_mouse ;
+                        :device_designed_by_manufacturer :HAMA ;
+                        :mouse_has_connection "USB nano prijemnik" ;
+                        :mouse_has_name "HAMA MW300 Bežični miš" ;
+                        :mouse_has_sensor "true"^^xsd:boolean ;
+                        :mouse_is_wireless "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#HP
+:HP rdf:type owl:NamedIndividual ,
              :Manufacturer ;
-    :manufacturer_has_name "EA" .
+    :manufacturer_has_name "HP" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#EA_F1_2023
-:EA_F1_2023 rdf:type owl:NamedIndividual ,
-                     :Video_game ;
-            :software_designed_by_manufacturer :EA ;
-            :video_game_has_name "EA F1 2023" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#HP_Štampač_M203dnG3Q46A
+:HP_Štampač_M203dnG3Q46A rdf:type owl:NamedIndividual ,
+                                  :Black_and_white_printer ;
+                         :device_designed_by_manufacturer :HP ;
+                         :printer_has_color "false"^^xsd:boolean ;
+                         :printer_has_format "A4" ;
+                         :printer_has_name "HP Štampač M203dnG3Q46A" ;
+                         :printer_has_type "laserski" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#EA_Fifa_2023
-:EA_Fifa_2023 rdf:type owl:NamedIndividual ,
-                       :Video_game ;
-              :software_designed_by_manufacturer :EA ;
-              :video_game_has_name "EA Fifa 2023" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#HP_Štampač_M454dnW1Y44A
+:HP_Štampač_M454dnW1Y44A rdf:type owl:NamedIndividual ,
+                                  :Color_printer ;
+                         :device_designed_by_manufacturer :HP ;
+                         :printer_has_color "true"^^xsd:boolean ;
+                         :printer_has_format "A4" ;
+                         :printer_has_name "HP Štampač M454dnW1Y44A" ;
+                         :printer_has_type "laserski" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#EA_Plants_Vs_Zombies
-:EA_Plants_Vs_Zombies rdf:type owl:NamedIndividual ,
-                               :Video_game ;
-                      :software_designed_by_manufacturer :EA ;
-                      :video_game_has_name "EA Plants Vs Zombies" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_KVR48S40BS68_SODIMM_8GB
+:KINGSTON_KVR48S40BS68_SODIMM_8GB rdf:type owl:NamedIndividual ,
+                                           :RAM ;
+                                  :hardware_designed_by_manufacturer :KINGSTON ;
+                                  :ram_has_capacity_in_gb 8 ;
+                                  :ram_has_latency "CL40" ;
+                                  :ram_has_name "KINGSTON KVR48S40BS68 SODIMM 8GB" ;
+                                  :ram_has_rgb "false"^^xsd:boolean ;
+                                  :ram_has_type "SO-DIMM DDR5" ;
+                                  :ram_has_voltage 1.1 .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#EA_The_Sims_4
-:EA_The_Sims_4 rdf:type owl:NamedIndividual ,
-                        :Video_game ;
-               :software_designed_by_manufacturer :EA ;
-               :video_game_has_name "EA The Sims 4" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37
+:KINGSTON_SSDNow_SA400S37 rdf:type owl:NamedIndividual ,
+                                   :SSD ;
+                          :hardware_designed_by_manufacturer :KINGSTON ;
+                          :ssd_has_capacity_in_gb 480 ;
+                          :ssd_has_format "2.5" ;
+                          :ssd_has_interface "SATA III" ;
+                          :ssd_has_name "KINGSTON SSDNow SA400S37" ;
+                          :ssd_has_read_speed_in_mbs 500 ;
+                          :ssd_has_write_speed_in_mbs 450 .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Nitendo_Wii
-:Nitendo_Wii rdf:type owl:NamedIndividual ,
-                      :Manufacturer ;
-             :manufacturer_has_name "Nitendo Wii" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8
+:KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 rdf:type owl:NamedIndividual ,
+                                                  :RAM ;
+                                         :hardware_designed_by_manufacturer :KINGSTON ;
+                                         :ram_has_capacity_in_gb 32 ;
+                                         :ram_has_latency "CL22" ;
+                                         :ram_has_name "KINGSTON ValueRAM 32GB SDRAM KVR32N22D8" ;
+                                         :ram_has_rgb "false"^^xsd:boolean ;
+                                         :ram_has_type "DDR4" ;
+                                         :ram_has_voltage 1.2 .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#PS4_Uncharted
-:PS4_Uncharted rdf:type owl:NamedIndividual ,
-                        :Video_game ;
-               :software_designed_by_manufacturer :PS4 ;
-               :video_game_has_name "PS4 Uncharted" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KYOCERA
+:KYOCERA rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "KYOCERA" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Wii_Fit_Plus
-:Wii_Fit_Plus rdf:type owl:NamedIndividual ,
-                       :Video_game ;
-              :software_designed_by_manufacturer :Nitendo_Wii ;
-              :video_game_has_name "Wii Fit Plus" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KYOCERA_Štampač_Ecosys_FS1060DN
+:KYOCERA_Štampač_Ecosys_FS1060DN rdf:type owl:NamedIndividual ,
+                                          :Black_and_white_printer ;
+                                 :device_designed_by_manufacturer :KYOCERA ;
+                                 :printer_has_color "false"^^xsd:boolean ;
+                                 :printer_has_format "A4" ;
+                                 :printer_has_name "KYOCERA Štampač Ecosys FS1060DN" ;
+                                 :printer_has_type "laserski" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Wii_Just_Dance_2022
-:Wii_Just_Dance_2022 rdf:type owl:NamedIndividual ,
-                              :Video_game ;
-                     :software_designed_by_manufacturer :Nitendo_Wii ;
-                     :video_game_has_name "Wii Just Dance 2022" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LENOVO
+:LENOVO rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "LENOVO" .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Wii_Mario_Brothers
-:Wii_Mario_Brothers rdf:type owl:NamedIndividual ,
-                             :Video_game ;
-                    :software_designed_by_manufacturer :Nitendo_Wii ;
-                    :video_game_has_name "Wii Mario Brothers" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LENOVO_ThinkCentre_neo_50s_11SX002XYA
+:LENOVO_ThinkCentre_neo_50s_11SX002XYA rdf:type owl:NamedIndividual ,
+                                                :Desktop_computer ;
+                                       :desktop_computer_designed_by_manufacturer :LENOVO ;
+                                       :desktop_computer_has_computer_case :ANTEC_kuciste_VSK2000-U3 ;
+                                       :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                                       :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                                       :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                                       :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                                       :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                                       :desktop_computer_has_ram :KINGSTON_KVR48S40BS68_SODIMM_8GB ;
+                                       :desktop_computer_has_dimension "10 x 30.8 x 27.5 cm" ;
+                                       :desktop_computer_has_name "LENOVO ThinkCentre neo 50s 11SX002XYA" ;
+                                       :desktop_computer_has_operating_system "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Wii_Mario_Kart
-:Wii_Mario_Kart rdf:type owl:NamedIndividual ,
-                         :Video_game ;
-                :software_designed_by_manufacturer :Nitendo_Wii ;
-                :video_game_has_name "Wii Mario Kart" .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LOGITECH_tastatura_K120
+:LOGITECH_tastatura_K120 rdf:type owl:NamedIndividual ,
+                                  :Wired_keyboard ;
+                         :device_designed_by_manufacturer :LOGITECH ;
+                         :keyboard_has_dimension "361 x 153 x 34 mm" ;
+                         :keyboard_has_name "LOGITECH tastatura K120" ;
+                         :keyboard_is_wireless "false"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37/480G
-<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_SSDNow_SA400S37/480G> rdf:type owl:NamedIndividual ,
-                                                                                                                :SSD ;
-                                                                                                       :hardware_designed_by_manufacturer :KINGSTON ;
-                                                                                                       :ssd_has_capacity_in_gb 480 ;
-                                                                                                       :ssd_has_format "2.5" ;
-                                                                                                       :ssd_has_interface "SATA III" ;
-                                                                                                       :ssd_has_name "KINGSTON SSDNow SA400S37/480G" ;
-                                                                                                       :ssd_has_read_speed_in_mbs 500 ;
-                                                                                                       :ssd_has_write_speed_in_mbs 450 .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LOGITECH_tastatura_MX_Keys_Mini_US
+:LOGITECH_tastatura_MX_Keys_Mini_US rdf:type owl:NamedIndividual ,
+                                             :Wireless_keyboard ;
+                                    :device_designed_by_manufacturer :LOGITECH ;
+                                    :keyboard_has_dimension "295.99 x 20.97 x 131.95 mm" ;
+                                    :keyboard_has_name "LOGITECH tastatura MX Keys Mini US" ;
+                                    :keyboard_is_wireless "true"^^xsd:boolean .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_-_KVR32N22D8/32
-<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#KINGSTON_ValueRAM_32GB_SDRAM_-_KVR32N22D8/32> rdf:type owl:NamedIndividual ,
-                                                                                                                               :RAM ;
-                                                                                                                      :hardware_designed_by_manufacturer :KINGSTON ;
-                                                                                                                      :ram_has_capacity_in_gb 32 ;
-                                                                                                                      :ram_has_latency "CL22" ;
-                                                                                                                      :ram_has_name "KINGSTON ValueRAM 32GB SDRAM KVR32N22D8/32" ;
-                                                                                                                      :ram_has_rgb "false"^^xsd:boolean ;
-                                                                                                                      :ram_has_type "DDR4" ;
-                                                                                                                      :ram_has_voltage 1.2 .
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#LOGITECH_Žični_miš_M500S
+:LOGITECH_Žični_miš_M500S rdf:type owl:NamedIndividual ,
+                                   :Wired_mouse ;
+                          :device_designed_by_manufacturer :LOGITECH ;
+                          :mouse_has_connection "USB" ;
+                          :mouse_has_name "LOGITECH Žični miš M500S" ;
+                          :mouse_has_sensor "false"^^xsd:boolean ;
+                          :mouse_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MICROLAB
+:MICROLAB rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "MICROLAB" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MICROLAB_B-27_Stereo_zvučnici
+:MICROLAB_B-27_Stereo_zvučnici rdf:type owl:NamedIndividual ,
+                                        :Wired_computer_speakers ;
+                               :device_designed_by_manufacturer :MICROLAB ;
+                               :computer_speakers_are_wireless "false"^^xsd:boolean ;
+                               :computer_speakers_have_name "MICROLAB B-27 Stereo zvučnici" ;
+                               :computer_speakers_have_power_in_w 10 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#MICROLAB_B-72_Zvučnici_za_računar
+:MICROLAB_B-72_Zvučnici_za_računar rdf:type owl:NamedIndividual ,
+                                            :Wired_computer_speakers ;
+                                   :device_designed_by_manufacturer :MICROLAB ;
+                                   :computer_speakers_are_wireless "false"^^xsd:boolean ;
+                                   :computer_speakers_have_name "MICROLAB B-72 Zvučnici za računar" ;
+                                   :computer_speakers_have_power_in_w 24 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#REDRAGON
+:REDRAGON rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "REDRAGON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#REDRAGON_GAINER_M610
+:REDRAGON_GAINER_M610 rdf:type owl:NamedIndividual ,
+                               :Wired_mouse ;
+                      :device_designed_by_manufacturer :REDRAGON ;
+                      :mouse_has_connection "USB" ;
+                      :mouse_has_name "REDRAGON GAINER M610" ;
+                      :mouse_has_sensor "true"^^xsd:boolean ;
+                      :mouse_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#REDRAGON_Gejmerska_tastatura_USAS_K553_US
+:REDRAGON_Gejmerska_tastatura_USAS_K553_US rdf:type owl:NamedIndividual ,
+                                                    :Wired_keyboard ;
+                                           :device_designed_by_manufacturer :REDRAGON ;
+                                           :keyboard_has_dimension "295.99 x 20.97 x 131.95 mm" ;
+                                           :keyboard_has_name "REDRAGON Gejmerska tastatura USAS K553 US" ;
+                                           :keyboard_is_wireless "false"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSON
+:SAMSON rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "SAMSON" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SAMSON_Zvučnici_za_računar_MediaOne_BT4
+:SAMSON_Zvučnici_za_računar_MediaOne_BT4 rdf:type owl:NamedIndividual ,
+                                                  :Wireless_computer_speakers ;
+                                         :device_designed_by_manufacturer :SAMSON ;
+                                         :computer_speakers_are_wireless "true"^^xsd:boolean ;
+                                         :computer_speakers_have_name "SAMSON Zvučnici za računar MediaOne BT4" ;
+                                         :computer_speakers_have_power_in_w 40 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SONIC_GEAR
+:SONIC_GEAR rdf:type owl:NamedIndividual ,
+                     :Manufacturer ;
+            :manufacturer_has_name "SONIC GEAR" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SONIC_GEAR_Zvučnici_za_računar_EVO_9_BTMI
+:SONIC_GEAR_Zvučnici_za_računar_EVO_9_BTMI rdf:type owl:NamedIndividual ,
+                                                    :Wireless_computer_speakers ;
+                                           :device_designed_by_manufacturer :SONIC_GEAR ;
+                                           :computer_speakers_are_wireless "true"^^xsd:boolean ;
+                                           :computer_speakers_have_name "SONIC GEAR Zvučnici za računar EVO 9 BTMI" ;
+                                           :computer_speakers_have_power_in_w 60 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#SONY_MDR_ZX310L
+:SONY_MDR_ZX310L rdf:type owl:NamedIndividual ,
+                          :Wired_headphones ;
+                 :device_designed_by_manufacturer :SONY ;
+                 :headphones_are_wireless "false"^^xsd:boolean ;
+                 :headphones_for_gaming "false"^^xsd:boolean ;
+                 :headphones_have_microphone "false"^^xsd:boolean ;
+                 :headphones_have_name "SONY MDR ZX310L" ;
+                 :headphones_have_sensitivity_in_db 98 .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN> rdf:type owl:NamedIndividual ,
+                                                                                                 :Manufacturer ;
+                                                                                        :manufacturer_has_name "BANG & OLUFSEN" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN_slušalice_Beoplay_H95
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN_slušalice_Beoplay_H95> rdf:type owl:NamedIndividual ,
+                                                                                                                       :Wireless_headphones ;
+                                                                                                              :device_designed_by_manufacturer <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN> ;
+                                                                                                              :headphones_are_wireless "true"^^xsd:boolean ;
+                                                                                                              :headphones_for_gaming "false"^^xsd:boolean ;
+                                                                                                              :headphones_have_microphone "true"^^xsd:boolean ;
+                                                                                                              :headphones_have_name "BANG & OLUFSEN slušalice Beoplay H95" ;
+                                                                                                              :headphones_have_sensitivity_in_db 102 .
 
 
 #################################################################
