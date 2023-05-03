@@ -989,6 +989,13 @@
                  rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_max_frequency_in_mhz
+:ram_has_max_frequency_in_mhz rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :RAM ;
+                              rdfs:range xsd:integer .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_has_name
 :ram_has_name rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
@@ -1099,13 +1106,6 @@
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain :Video_game ;
                      rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ram_has_max_frequency_in_mhz
-:ram_has_max_frequency_in_mhz rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf owl:topDataProperty ;
-                              rdfs:domain :RAM ;
-                              rdfs:range xsd:integer .
 
 
 #################################################################
@@ -1534,7 +1534,7 @@
                                  :L3_CACHE_4MB ;
                   :hardware_designed_by_manufacturer :AMD ;
                   :cpu_for_gaming "true"^^xsd:boolean ;
-                  :cpu_has_clock_rate 3.6 ;
+                  :cpu_has_clock_rate 2.2 ;
                   :cpu_has_cores 6 ;
                   :cpu_has_name "AMD Ryzen 5 4500" ;
                   :cpu_has_tdp 65 ;
@@ -1770,11 +1770,11 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                 :hardware_designed_by_manufacturer :A_DATA ;
                                 :ram_has_capacity_in_gb 16 ;
                                 :ram_has_latency "CL12" ;
+                                :ram_has_max_frequency_in_mhz 5600 ;
                                 :ram_has_name "A DATA XPG LANCER RGB 16GB RAM" ;
                                 :ram_has_rgb "true"^^xsd:boolean ;
                                 :ram_has_type "DDR5" ;
-                                :ram_has_voltage 1.25 ;
-                                :ram_has_max_frequency_in_mhz 5600 .
+                                :ram_has_voltage 1.25 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//BROTHER
@@ -2399,11 +2399,11 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                  :hardware_designed_by_manufacturer :KINGSTON ;
                                  :ram_has_capacity_in_gb 32 ;
                                  :ram_has_latency "CL32" ;
+                                 :ram_has_max_frequency_in_mhz 6400 ;
                                  :ram_has_name "KINGSTON Fury Renegade 32GB RAM" ;
                                  :ram_has_rgb "true"^^xsd:boolean ;
                                  :ram_has_type "DDR5" ;
-                                 :ram_has_voltage 1.4 ;
-                                 :ram_has_max_frequency_in_mhz 6400 .
+                                 :ram_has_voltage 1.4 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Fury_Renegade_SSD
@@ -2424,11 +2424,11 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                   :hardware_designed_by_manufacturer :KINGSTON ;
                                   :ram_has_capacity_in_gb 8 ;
                                   :ram_has_latency "CL40" ;
+                                  :ram_has_max_frequency_in_mhz 4800 ;
                                   :ram_has_name "KINGSTON KVR48S40BS68 SODIMM 8GB" ;
                                   :ram_has_rgb "false"^^xsd:boolean ;
                                   :ram_has_type "SO-DIMM DDR5" ;
-                                  :ram_has_voltage 1.1 ;
-                                  :ram_has_max_frequency_in_mhz 4800 .
+                                  :ram_has_voltage 1.1 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_Renegade_RGB_64GB_RAM
@@ -2437,11 +2437,11 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                 :hardware_designed_by_manufacturer :KINGSTON ;
                                 :ram_has_capacity_in_gb 64 ;
                                 :ram_has_latency "CL18" ;
+                                :ram_has_max_frequency_in_mhz 4000 ;
                                 :ram_has_name "KINGSTON Renegade RGB 64GB RAM" ;
                                 :ram_has_rgb "true"^^xsd:boolean ;
                                 :ram_has_type "DDR4" ;
-                                :ram_has_voltage 1.35 ;
-                                :ram_has_max_frequency_in_mhz 4000 .
+                                :ram_has_voltage 1.35 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//KINGSTON_SSDNow_SA400S37
@@ -2462,11 +2462,11 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                          :hardware_designed_by_manufacturer :KINGSTON ;
                                          :ram_has_capacity_in_gb 32 ;
                                          :ram_has_latency "CL22" ;
+                                         :ram_has_max_frequency_in_mhz 3200 ;
                                          :ram_has_name "KINGSTON ValueRAM 32GB SDRAM KVR32N22D8" ;
                                          :ram_has_rgb "false"^^xsd:boolean ;
                                          :ram_has_type "DDR4" ;
-                                         :ram_has_voltage 1.2 ;
-                                         :ram_has_max_frequency_in_mhz 3200 .
+                                         :ram_has_voltage 1.2 .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//KYOCERA
