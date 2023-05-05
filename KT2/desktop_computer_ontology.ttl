@@ -13,145 +13,175 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#designed_by_manufacturer
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/compatible_with_operating_system
+:compatible_with_operating_system rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  rdfs:domain <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Device> ;
+                                  rdfs:range <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Operating_system> .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/designed_by_manufacturer
 :designed_by_manufacturer rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf owl:topObjectProperty ;
                           rdfs:domain [ rdf:type owl:Class ;
                                         owl:unionOf ( :Desktop_computer
                                                       <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Software>
-                                                      <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Devices>
-                                                      <http://www.semanticweb.org/sara/ontologies/2023/3//Hardware>
+                                                      <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Device>
+                                                      <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Hardware>
                                                     )
                                       ] ;
                           rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_designed_by_manufacturer
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_designed_by_manufacturer
 :desktop_computer_designed_by_manufacturer rdf:type owl:ObjectProperty ;
                                            rdfs:subPropertyOf :designed_by_manufacturer ;
                                            rdfs:domain :Desktop_computer ;
                                            rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has
 :desktop_computer_has rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf owl:topObjectProperty ;
                       rdfs:domain :Desktop_computer ;
-                      rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Hardware> .
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Software>
+                                                 <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Hardware>
+                                               )
+                                 ] .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_computer_case
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_computer_case
 :desktop_computer_has_computer_case rdf:type owl:ObjectProperty ;
                                     rdfs:subPropertyOf :desktop_computer_has ;
                                     rdfs:domain :Desktop_computer ;
-                                    rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Computer_case> .
+                                    rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Computer_case> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_cpu
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_cpu
 :desktop_computer_has_cpu rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :desktop_computer_has ;
                           rdfs:domain :Desktop_computer ;
-                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//CPU> .
+                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/CPU> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_graphic_card
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_graphic_card
 :desktop_computer_has_graphic_card rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf :desktop_computer_has ;
                                    rdfs:domain :Desktop_computer ;
-                                   rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Graphic_card> .
+                                   rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Graphic_card> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_hdd
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_hdd
 :desktop_computer_has_hdd rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :desktop_computer_has ;
                           rdfs:domain :Desktop_computer ;
-                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//HDD> .
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/HDD>
+                                                     <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/SSD>
+                                                   )
+                                     ] .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_motherboard
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_motherboard
 :desktop_computer_has_motherboard rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf :desktop_computer_has ;
                                   rdfs:domain :Desktop_computer ;
-                                  rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Motherboard> .
+                                  rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Motherboard> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_psu
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_operating_system
+:desktop_computer_has_operating_system rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :desktop_computer_has ;
+                                       rdfs:domain :Desktop_computer ;
+                                       rdfs:range <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Operating_system> .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_psu
 :desktop_computer_has_psu rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :desktop_computer_has ;
                           rdfs:domain :Desktop_computer ;
-                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//PSU> .
+                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/PSU> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_ram
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_ram
 :desktop_computer_has_ram rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :desktop_computer_has ;
                           rdfs:domain :Desktop_computer ;
-                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//RAM> .
+                          rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/RAM> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/software_designed_by_manufacturer
-<http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/software_designed_by_manufacturer> rdfs:subPropertyOf :designed_by_manufacturer .
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/device_designed_by_manufacturer
+:device_designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :designed_by_manufacturer ;
+                                 rdfs:domain <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Device> ;
+                                 rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer> .
 
 
-###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/device_designed_by_manufacturer
-<http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/device_designed_by_manufacturer> rdfs:subPropertyOf :designed_by_manufacturer .
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/software_designed_by_manufacturer
+:software_designed_by_manufacturer rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :designed_by_manufacturer ;
+                                   rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Software> ;
+                                   rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer> .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/graphic_tablet_is_compatible_with_operating_system
+<http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/graphic_tablet_is_compatible_with_operating_system> rdfs:subPropertyOf :compatible_with_operating_system .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/joystick_is_compatible_with_operating_system
+<http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/joystick_is_compatible_with_operating_system> rdfs:subPropertyOf :compatible_with_operating_system .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//hardware_designed_by_manufacturer
-<http://www.semanticweb.org/sara/ontologies/2023/3//hardware_designed_by_manufacturer> rdfs:subPropertyOf :designed_by_manufacturer .
+<http://www.semanticweb.org/sara/ontologies/2023/3//hardware_designed_by_manufacturer> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:subPropertyOf :designed_by_manufacturer ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Hardware> ;
+                                                                                       rdfs:range <http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer> .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#cache_has_level
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/cache_has_level
 :cache_has_level rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:domain <http://www.semanticweb.org/sara/ontologies/2023/3//Cache> ;
                  rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#cache_has_size_in_mb
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/cache_has_size_in_mb
 :cache_has_size_in_mb rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
-                      rdfs:domain <http://www.semanticweb.org/sara/ontologies/2023/3//Cache> ;
                       rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#computer_speakers_are_wireless
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/computer_speakers_are_wireless
 :computer_speakers_are_wireless rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf owl:topDataProperty ;
                                 rdfs:domain <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Computer_speakers> ;
                                 rdfs:range xsd:boolean .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_dimension
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_dimension
 :desktop_computer_has_dimension rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf owl:topDataProperty ;
                                 rdfs:domain :Desktop_computer ;
                                 rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_name
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/desktop_computer_has_name
 :desktop_computer_has_name rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf owl:topDataProperty ;
                            rdfs:domain :Desktop_computer ;
                            rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#desktop_computer_has_operating_system
-:desktop_computer_has_operating_system rdf:type owl:DatatypeProperty ;
-                                       rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:domain :Desktop_computer ;
-                                       rdfs:range xsd:boolean .
-
-
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Black_and_white_printer
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Black_and_white_printer
 :Black_and_white_printer rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Printer>
                                                                     [ rdf:type owl:Restriction ;
@@ -165,7 +195,7 @@
                          owl:disjointWith :Color_printer .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Black_and_white_scanner
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Black_and_white_scanner
 :Black_and_white_scanner rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Scanner>
                                                                     [ rdf:type owl:Restriction ;
@@ -179,7 +209,7 @@
                          owl:disjointWith :Color_scanner .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Color_printer
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Color_printer
 :Color_printer rdf:type owl:Class ;
                owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Printer>
                                                           [ rdf:type owl:Restriction ;
@@ -192,7 +222,7 @@
                rdfs:subClassOf <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Printer> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Color_scanner
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Color_scanner
 :Color_scanner rdf:type owl:Class ;
                owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Scanner>
                                                           [ rdf:type owl:Restriction ;
@@ -205,11 +235,11 @@
                rdfs:subClassOf <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Scanner> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Desktop_computer
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Desktop_computer
 :Desktop_computer rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wired_camera
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wired_camera
 :Wired_camera rdf:type owl:Class ;
               owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Camera>
                                                          [ rdf:type owl:Restriction ;
@@ -223,7 +253,7 @@
               owl:disjointWith :Wireless_camera .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wired_computer_speakers
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wired_computer_speakers
 :Wired_computer_speakers rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Computer_speakers>
                                                                     [ rdf:type owl:Restriction ;
@@ -237,7 +267,7 @@
                          owl:disjointWith :Wireless_computer_speakers .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wired_headphones
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wired_headphones
 :Wired_headphones rdf:type owl:Class ;
                   owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Headphones>
                                                              [ rdf:type owl:Restriction ;
@@ -251,7 +281,7 @@
                   owl:disjointWith :Wireless_headphones .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wired_keyboard
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wired_keyboard
 :Wired_keyboard rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Keyboard>
                                                            [ rdf:type owl:Restriction ;
@@ -265,7 +295,7 @@
                 owl:disjointWith :Wireless_keyboard .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wired_mouse
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wired_mouse
 :Wired_mouse rdf:type owl:Class ;
              owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Mouse>
                                                         [ rdf:type owl:Restriction ;
@@ -279,12 +309,20 @@
              owl:disjointWith :Wireless_mouse .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wireless_camera
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wireless_camera
 :Wireless_camera rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Camera>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/camera_is_wireless> ;
+                                                              owl:hasValue "true"^^xsd:boolean
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
                  rdfs:subClassOf <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Camera> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wireless_computer_speakers
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wireless_computer_speakers
 :Wireless_computer_speakers rdf:type owl:Class ;
                             owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Computer_speakers>
                                                                        [ rdf:type owl:Restriction ;
@@ -297,7 +335,7 @@
                             rdfs:subClassOf <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Computer_speakers> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wireless_headphones
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wireless_headphones
 :Wireless_headphones rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Headphones>
                                                                 [ rdf:type owl:Restriction ;
@@ -310,7 +348,7 @@
                      rdfs:subClassOf <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Headphones> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wireless_keyboard
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wireless_keyboard
 :Wireless_keyboard rdf:type owl:Class ;
                    owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Keyboard>
                                                               [ rdf:type owl:Restriction ;
@@ -323,7 +361,7 @@
                    rdfs:subClassOf <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Keyboard> .
 
 
-###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11#Wireless_mouse
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-11/Wireless_mouse
 :Wireless_mouse rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Mouse>
                                                            [ rdf:type owl:Restriction ;
@@ -345,6 +383,17 @@
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Desktop_computer
+                <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Software>
+                <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Device>
+                <http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer>
+                <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Cache>
+                <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Hardware>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Camera>
                 <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Graphic_tablet>
                 <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Joystick>
@@ -362,23 +411,6 @@
                 <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Monitor>
                 <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Printer>
                 <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Projector>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/sara/ontologies/2023/3//CPU>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//Computer_case>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//Cooler>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//GPU>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//Graphic_card>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//HDD>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//Motherboard>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//Network_interface_card>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//PSU>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//RAM>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//SSD>
-                <http://www.semanticweb.org/sara/ontologies/2023/3//Sound_card>
               )
 ] .
 

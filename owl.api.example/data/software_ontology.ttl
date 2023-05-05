@@ -1,0 +1,186 @@
+@prefix : <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/> .
+
+<http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6> rdf:type owl:Ontology ;
+                                                                             owl:imports <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_is_compatible
+:operating_system_is_compatible rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdfs:domain :Operating_system ;
+                                rdfs:range :Software .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_is_compatible_with_antivirus
+:operating_system_is_compatible_with_antivirus rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :operating_system_is_compatible ;
+                                               rdfs:domain :Operating_system ;
+                                               rdfs:range :Antivirus .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_is_compatible_with_driver
+:operating_system_is_compatible_with_driver rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf :operating_system_is_compatible ;
+                                            rdfs:domain :Operating_system ;
+                                            rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_is_compatible_with_office_package
+:operating_system_is_compatible_with_office_package rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf :operating_system_is_compatible ;
+                                                    rdfs:domain :Operating_system ;
+                                                    rdfs:range :Office_package .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_is_compatible_with_video_game
+:operating_system_is_compatible_with_video_game rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf :operating_system_is_compatible ;
+                                                rdfs:domain :Operating_system ;
+                                                rdfs:range :Video_game .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/antivirus_has_aim
+:antivirus_has_aim rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Antivirus ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/antivirus_has_name
+:antivirus_has_name rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Antivirus ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/antivirus_has_version
+:antivirus_has_version rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Antivirus ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/driver_has_name
+:driver_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Driver ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/driver_has_version
+:driver_has_version rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Driver ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/office_package_has_aim
+:office_package_has_aim rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Office_package ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/office_package_has_name
+:office_package_has_name rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Office_package ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/office_package_has_version
+:office_package_has_version rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :Office_package ;
+                            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_has_name
+:operating_system_has_name rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :Operating_system ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_has_system_version
+:operating_system_has_system_version rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                     rdfs:domain :Operating_system ;
+                                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/operating_system_has_version
+:operating_system_has_version rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Operating_system ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/video_game_has_name
+:video_game_has_name rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Video_game ;
+                     rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Antivirus
+:Antivirus rdf:type owl:Class ;
+           rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver
+:Driver rdf:type owl:Class ;
+        rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Office_package
+:Office_package rdf:type owl:Class ;
+                rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Operating_system
+:Operating_system rdf:type owl:Class ;
+                  rdfs:subClassOf :Software .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Software
+:Software rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Video_game
+:Video_game rdf:type owl:Class ;
+            rdfs:subClassOf :Software .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Antivirus
+                :Driver
+                :Office_package
+                :Operating_system
+                :Video_game
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,536 @@
+@prefix : <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/> .
+
+<http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_cache
+:cpu_has_cache rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :CPU ;
+               rdfs:range :Cache .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/graphic_card_has_gpu
+:graphic_card_has_gpu rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :Graphic_card ;
+                      rdfs:range :GPU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_comaptible_with_graphic_card
+:is_comaptible_with_graphic_card rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                                 rdfs:domain :Motherboard ;
+                                 rdfs:range :Graphic_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_comaptible_with_hdd
+:is_comaptible_with_hdd rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :HDD .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_comaptible_with_network_interface_card
+:is_comaptible_with_network_interface_card rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                                           rdfs:domain :Motherboard ;
+                                           rdfs:range :Network_interface_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_compatible_with_cooler
+:is_compatible_with_cooler rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                           rdfs:domain :Motherboard ;
+                           rdfs:range :Cooler .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_compatible_with_cpu
+:is_compatible_with_cpu rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :CPU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_compatible_with_psu
+:is_compatible_with_psu rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :PSU .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_compatible_with_ram
+:is_compatible_with_ram rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_compatible_with_sound_card
+:is_compatible_with_sound_card rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                               rdfs:domain :Motherboard ;
+                               rdfs:range :Sound_card .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/is_compatible_with_ssd
+:is_compatible_with_ssd rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :motherboard_is_compatible_with ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :SSD .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/motherboard_is_compatible_with
+:motherboard_is_compatible_with rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/computer_case_has_dimensions
+:computer_case_has_dimensions rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Computer_case ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/computer_case_has_name
+:computer_case_has_name rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Computer_case ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/computer_case_has_psu
+:computer_case_has_psu rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Computer_case ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/computer_case_supports_motherboard
+:computer_case_supports_motherboard rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                    rdfs:domain :Computer_case ;
+                                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cooler_has_cooling_type
+:cooler_has_cooling_type rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Cooler ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cooler_has_name
+:cooler_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Cooler ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cooler_has_rpm
+:cooler_has_rpm rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Cooler ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_for_gaming
+:cpu_for_gaming rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :CPU ;
+                rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_clock_rate
+:cpu_has_clock_rate rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :CPU ;
+                    rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_cores
+:cpu_has_cores rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :CPU ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_name
+:cpu_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CPU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_tdp
+:cpu_has_tdp rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :CPU ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_threads
+:cpu_has_threads rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :CPU ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_has_type
+:cpu_has_type rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CPU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/cpu_with_integrated_gpu
+:cpu_with_integrated_gpu rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :CPU ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/gpu_has_name
+:gpu_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :GPU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/graphic_card_for_gaming
+:graphic_card_for_gaming rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Graphic_card ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/graphic_card_has_memory_in_gb
+:graphic_card_has_memory_in_gb rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Graphic_card ;
+                               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/graphic_card_has_memory_type
+:graphic_card_has_memory_type rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Graphic_card ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/graphic_card_has_name
+:graphic_card_has_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Graphic_card ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/hdd_has_buffer_in_mb
+:hdd_has_buffer_in_mb rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :HDD ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/hdd_has_capacity_in_gb
+:hdd_has_capacity_in_gb rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :HDD ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/hdd_has_format
+:hdd_has_format rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :HDD ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/hdd_has_name
+:hdd_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :HDD ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/hdd_has_rpm
+:hdd_has_rpm rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :HDD ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/manufacturer_has_name
+:manufacturer_has_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/motherboard_has_name
+:motherboard_has_name rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Motherboard ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/network_interface_card_has_interface
+:network_interface_card_has_interface rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdfs:domain :Network_interface_card ;
+                                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/network_interface_card_has_name
+:network_interface_card_has_name rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain :Network_interface_card ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/psu_has_certificate
+:psu_has_certificate rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :PSU ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/psu_has_name
+:psu_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :PSU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/psu_has_output_power
+:psu_has_output_power rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :PSU ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/psu_has_pfc
+:psu_has_pfc rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :PSU ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/psu_has_type
+:psu_has_type rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :PSU ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_capacity_in_gb
+:ram_has_capacity_in_gb rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :RAM ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_latency
+:ram_has_latency rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :RAM ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_max_frequency_in_mhz
+:ram_has_max_frequency_in_mhz rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :RAM ;
+                              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_name
+:ram_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :RAM ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_rgb
+:ram_has_rgb rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :RAM ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_type
+:ram_has_type rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :RAM ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ram_has_voltage
+:ram_has_voltage rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :RAM ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/sound_card_has_name
+:sound_card_has_name rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Sound_card ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/sound_card_has_type
+:sound_card_has_type rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Sound_card ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ssd_has_capacity_in_gb
+:ssd_has_capacity_in_gb rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :SSD ;
+                        rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ssd_has_format
+:ssd_has_format rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :SSD ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ssd_has_interface
+:ssd_has_interface rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :SSD ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ssd_has_name
+:ssd_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :SSD ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ssd_has_read_speed_in_mbs
+:ssd_has_read_speed_in_mbs rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :SSD ;
+                           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/ssd_has_write_speed_in_mbs
+:ssd_has_write_speed_in_mbs rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :SSD ;
+                            rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/CPU
+:CPU rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Cache
+:Cache rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Computer_case
+:Computer_case rdf:type owl:Class ;
+               rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Cooler
+:Cooler rdf:type owl:Class ;
+        rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/GPU
+:GPU rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Graphic_card
+:Graphic_card rdf:type owl:Class ;
+              rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/HDD
+:HDD rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Hardware
+:Hardware rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Motherboard
+:Motherboard rdf:type owl:Class ;
+             rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Network_interface_card
+:Network_interface_card rdf:type owl:Class ;
+                        rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/PSU
+:PSU rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/RAM
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/SSD
+:SSD rdf:type owl:Class ;
+     rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10/Sound_card
+:Sound_card rdf:type owl:Class ;
+            rdfs:subClassOf :Hardware .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CPU
+                :Computer_case
+                :Cooler
+                :GPU
+                :Graphic_card
+                :HDD
+                :Motherboard
+                :Network_interface_card
+                :PSU
+                :RAM
+                :SSD
+                :Sound_card
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

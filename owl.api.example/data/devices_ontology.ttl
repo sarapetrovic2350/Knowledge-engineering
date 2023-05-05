@@ -1,0 +1,491 @@
+@prefix : <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/> .
+
+<http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates
+:driver_operates rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:range :Device .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_camera
+:driver_operates_camera rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :driver_operates ;
+                        rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                        rdfs:range :Camera .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_computer_speakers
+:driver_operates_computer_speakers rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :driver_operates ;
+                                   rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                                   rdfs:range :Computer_speakers .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_graphic_tablet
+:driver_operates_graphic_tablet rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :driver_operates ;
+                                rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                                rdfs:range :Graphic_tablet .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_headphones
+:driver_operates_headphones rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :driver_operates ;
+                            rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                            rdfs:range :Headphones .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_joystick
+:driver_operates_joystick rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :driver_operates ;
+                          rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                          rdfs:range :Joystick .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_keyboard
+:driver_operates_keyboard rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :driver_operates ;
+                          rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                          rdfs:range :Keyboard .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_microphone
+:driver_operates_microphone rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :driver_operates ;
+                            rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                            rdfs:range :Microphone .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_monitor
+:driver_operates_monitor rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :driver_operates ;
+                         rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                         rdfs:range :Monitor .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_mouse
+:driver_operates_mouse rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :driver_operates ;
+                       rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                       rdfs:range :Mouse .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_printer
+:driver_operates_printer rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :driver_operates ;
+                         rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                         rdfs:range :Printer .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_projector
+:driver_operates_projector rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :driver_operates ;
+                           rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                           rdfs:range :Projector .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/driver_operates_scanner
+:driver_operates_scanner rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :driver_operates ;
+                         rdfs:domain <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Driver> ;
+                         rdfs:range :Scanner .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/graphic_tablet_is_compatible_with_operating_system
+:graphic_tablet_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain :Graphic_tablet ;
+                                                    rdfs:range <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Operating_system> .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/joystick_is_compatible_with_operating_system
+:joystick_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
+                                              rdfs:domain :Joystick ;
+                                              rdfs:range <http://www.semanticweb.org/korisnik/ontologies/2023/3/untitled-ontology-6/Operating_system> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/camera_has_microphone
+:camera_has_microphone rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Camera ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/camera_has_name
+:camera_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Camera ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/camera_has_resolution
+:camera_has_resolution rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Camera ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/camera_is_wireless
+:camera_is_wireless rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Camera ;
+                    rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/computer_speakers_have_name
+:computer_speakers_have_name rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain :Computer_speakers ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/computer_speakers_have_power_in_w
+:computer_speakers_have_power_in_w rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                   rdfs:domain :Computer_speakers ;
+                                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/graphic_tablet_has_dimensions
+:graphic_tablet_has_dimensions rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Graphic_tablet ;
+                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/graphic_tablet_has_name
+:graphic_tablet_has_name rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Graphic_tablet ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/graphic_tablet_has_resolution
+:graphic_tablet_has_resolution rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Graphic_tablet ;
+                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/headphones_are_wireless
+:headphones_are_wireless rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Headphones ;
+                         rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/headphones_for_gaming
+:headphones_for_gaming rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Headphones ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/headphones_have_microphone
+:headphones_have_microphone rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :Headphones ;
+                            rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/headphones_have_name
+:headphones_have_name rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Headphones ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/headphones_have_sensitivity_in_db
+:headphones_have_sensitivity_in_db rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                   rdfs:domain :Headphones ;
+                                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/joystick_has_name
+:joystick_has_name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Joystick ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/joystick_has_number_of_tasters
+:joystick_has_number_of_tasters rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdfs:domain :Joystick ;
+                                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/keyboard_has_dimensions
+:keyboard_has_dimensions rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Keyboard ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/keyboard_has_name
+:keyboard_has_name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Keyboard ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/keyboard_is_wireless
+:keyboard_is_wireless rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Keyboard ;
+                      rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/microphone_has_frequency
+:microphone_has_frequency rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain :Microphone ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/microphone_has_name
+:microphone_has_name rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Microphone ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/monitor_has_diagonal
+:monitor_has_diagonal rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Monitor ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/monitor_has_name
+:monitor_has_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Monitor ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/monitor_has_refreshment_in_hz
+:monitor_has_refreshment_in_hz rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Monitor ;
+                               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/monitor_has_resolution
+:monitor_has_resolution rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Monitor ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/monitor_is_curved
+:monitor_is_curved rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Monitor ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/mouse_has_connection
+:mouse_has_connection rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Mouse ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/mouse_has_name
+:mouse_has_name rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Mouse ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/mouse_has_sensor
+:mouse_has_sensor rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Mouse ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/mouse_is_wireless
+:mouse_is_wireless rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Mouse ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/printer_has_color
+:printer_has_color rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Printer ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/printer_has_format
+:printer_has_format rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Printer ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/printer_has_name
+:printer_has_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Printer ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/printer_has_type
+:printer_has_type rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Printer ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/projector_has_lightning_type
+:projector_has_lightning_type rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Projector ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/projector_has_name
+:projector_has_name rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Projector ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/projector_has_resolution
+:projector_has_resolution rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain :Projector ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/projector_has_system_projection
+:projector_has_system_projection rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain :Projector ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/scanner_has_color
+:scanner_has_color rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Scanner ;
+                   rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/scanner_has_format
+:scanner_has_format rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Scanner ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/scanner_has_name
+:scanner_has_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Scanner ;
+                  rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Camera
+:Camera rdf:type owl:Class ;
+        rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Computer_speakers
+:Computer_speakers rdf:type owl:Class ;
+                   rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Device
+:Device rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Graphic_tablet
+:Graphic_tablet rdf:type owl:Class ;
+                rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Headphones
+:Headphones rdf:type owl:Class ;
+            rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Input
+:Input rdf:type owl:Class ;
+       rdfs:subClassOf :Device .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Joystick
+:Joystick rdf:type owl:Class ;
+          rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Keyboard
+:Keyboard rdf:type owl:Class ;
+          rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Microphone
+:Microphone rdf:type owl:Class ;
+            rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Monitor
+:Monitor rdf:type owl:Class ;
+         rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Mouse
+:Mouse rdf:type owl:Class ;
+       rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Output
+:Output rdf:type owl:Class ;
+        rdfs:subClassOf :Device .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Printer
+:Printer rdf:type owl:Class ;
+         rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Projector
+:Projector rdf:type owl:Class ;
+           rdfs:subClassOf :Output .
+
+
+###  http://www.semanticweb.org/milijevic/ontologies/2023/3/untitled-ontology-12/Scanner
+:Scanner rdf:type owl:Class ;
+         rdfs:subClassOf :Input .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer
+<http://www.semanticweb.org/sara/ontologies/2023/3//Manufacturer> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
