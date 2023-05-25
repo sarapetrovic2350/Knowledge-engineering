@@ -21,7 +21,7 @@ public class MonitorService {
     private OWLDataFactory dataFactory;
     private OWLReasonerFactory reasonerFactory;
     private OWLReasoner reasoner;
-    private static String baseIRI = "http://www.semanticweb.org/sara/ontologies/2023/3//";
+    private static String baseIRI = "http://www.semanticweb.org/sara/ontologies/2023/4/untitled-ontology-46/";
     private OWLClassExpression classMonitor;
     private OWLDataProperty monitorName;
     private OWLDataProperty monitorRefreshment;

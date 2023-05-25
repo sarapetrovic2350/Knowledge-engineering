@@ -25,7 +25,7 @@ public class CPUService {
     private OWLDataFactory dataFactory;
     private OWLReasonerFactory reasonerFactory;
     private OWLReasoner reasoner;
-    private static String baseIRI = "http://www.semanticweb.org/sara/ontologies/2023/3//";
+    private static String baseIRI = "http://www.semanticweb.org/sara/ontologies/2023/4/untitled-ontology-44/";
     private OWLClassExpression classCPU;
     private OWLDataProperty cpuName;
     private OWLDataProperty cpuCores;
