@@ -84,8 +84,8 @@ END_FUZZIFY
 // Fuzzify input variable 'psu_output_power'
 FUZZIFY psu_output_power
     TERM poor := (200, 1) (300, 1) (400, 0);
-    TERM average := (300, 0) (600, 1) (800, 1) (700, 0);
-    TERM excellent := (600, 0) (750, 1) (1200, 1);
+    TERM average := (300, 0) (600, 1) (700, 1) (800, 0);
+    TERM excellent := (700, 0) (750, 1) (1200, 1);
 END_FUZZIFY
 
 // Fuzzify input variable 'hdd_capacity_in_gb'
@@ -197,22 +197,22 @@ RULEBLOCK app_development_rules
     RULE 9 : IF ram_capacity_in_gb IS excellent
                 THEN app_development IS excellent;
 
-    RULE 10 : IF ram_voltage IS poor
+    RULE 10 : IF ram_voltage IS low
                 THEN app_development IS poor;
 
-    RULE 11 : IF ram_voltage IS average
+    RULE 11 : IF ram_voltage IS normal
                 THEN app_development IS good;
 
-    RULE 12 : IF ram_voltage IS excellent
+    RULE 12 : IF ram_voltage IS high
                 THEN app_development IS excellent;
 
     RULE 13 : IF ram_speed IS slow
                 THEN app_development IS poor;
 
-    RULE 14 : IF ram_speed IS normal
+    RULE 14 : IF ram_speed IS average
                 THEN app_development IS good;
 
-    RULE 15 : IF ram_speed IS excellent
+    RULE 15 : IF ram_speed IS fast
                 THEN app_development IS excellent;
 
     RULE 16 : IF hdd_capacity_in_gb IS poor
@@ -245,21 +245,20 @@ RULEBLOCK app_development_rules
     RULE 25 : IF psu_output_power IS average OR psu_output_power IS excellent
                 THEN app_development IS excellent;
 
-    RULE 26: IF cpu_cores IS excellent AND gpu_memory_in_gb IS excellent AND ram_capacity_in_gb IS poor
+    RULE 26 : IF cpu_cores IS excellent AND gpu_memory_in_gb IS excellent AND ram_capacity_in_gb IS poor
                 THEN app_development IS poor;
 
-    RULE 27: IF cpu_cores IS average AND gpu_memory_in_gb IS average AND ram_capacity_in_gb IS excellent
+    RULE 27 : IF cpu_cores IS average AND gpu_memory_in_gb IS average AND ram_capacity_in_gb IS excellent
                 THEN app_development IS excellent;
 
-    RULE 28: IF cpu_cores IS average AND cpu_threads IS average AND ram_capacity_in_gb IS excellent
+    RULE 28 : IF cpu_cores IS average AND cpu_threads IS average AND ram_capacity_in_gb IS excellent
                 THEN app_development IS excellent;
 
-    RULE 29: IF cpu_cores IS excellent AND cpu_threads IS average AND ram_capacity_in_gb IS poor
+    RULE 29 : IF cpu_cores IS excellent AND cpu_threads IS average AND ram_capacity_in_gb IS poor
                 THEN app_development IS poor;
 
-    RULE 30: IF cpu_cores IS average AND gpu_memory_in_gb IS average AND ram_speed IS fast
+    RULE 30 : IF cpu_cores IS average AND gpu_memory_in_gb IS average AND ram_speed IS fast
                 THEN app_development IS excellent;
-
 END_RULEBLOCK
 
 RULEBLOCK gaming_rules
@@ -293,7 +292,7 @@ RULEBLOCK gaming_rules
                 THEN gaming IS poor;
 
     RULE 8 : IF cpu_threads IS average AND cpu_tdp IS excellent
-                THEN gaming IS average;
+                THEN gaming IS good;
 
     RULE 9 : IF ram_capacity_in_gb IS poor OR ram_capacity_in_gb IS average
                 THEN gaming IS poor;
@@ -301,19 +300,19 @@ RULEBLOCK gaming_rules
     RULE 10 : IF ram_capacity_in_gb IS excellent
                 THEN gaming IS excellent;
 
-    RULE 11 : IF ram_voltage IS poor
+    RULE 11 : IF ram_voltage IS low
                 THEN gaming IS poor;
 
-    RULE 12 : IF ram_voltage IS average
+    RULE 12 : IF ram_voltage IS normal
                 THEN gaming IS good;
 
-    RULE 13 : IF ram_voltage IS excellent
+    RULE 13 : IF ram_voltage IS high
                 THEN gaming IS excellent;
 
-    RULE 14 : IF ram_speed IS slow OR ram_speed IS normal
+    RULE 14 : IF ram_speed IS slow OR ram_speed IS average
                 THEN gaming IS poor;
 
-    RULE 15 : IF ram_speed IS excellent
+    RULE 15 : IF ram_speed IS fast
                 THEN gaming IS excellent;
 
     RULE 16 : IF hdd_capacity_in_gb IS poor
@@ -356,7 +355,7 @@ RULEBLOCK gaming_rules
                 THEN gaming IS poor;
 
     RULE 29 : IF cpu_cores IS average OR ram_capacity_in_gb IS excellent AND gpu_clock_in_mhz IS average
-                THEN gaming IS average;
+                THEN gaming IS good;
 
     RULE 30 : IF cpu_cores IS poor OR ram_capacity_in_gb IS average AND gpu_clock_in_mhz IS average
                 THEN gaming IS poor;

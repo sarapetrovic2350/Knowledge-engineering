@@ -19,25 +19,26 @@ public class FuzzyService {
 
         //JFuzzyChart.get().chart(fis);
 
-        fis.setVariable("service", service);
-        fis.setVariable("food", food);
+        //fis.setVariable("service", service);
+        //fis.setVariable("food", food);
 
-        fis.evaluate();
+        //fis.evaluate();
 
-        Variable tip = fis.getVariable("tip");
+        //Variable tip = fis.getVariable("tip");
         //JFuzzyChart.get().chart(tip, tip.getDefuzzifier(), true);
         // Print ruleSet
         System.out.println(fis);
-        System.out.println("TIP: " + fis.getVariable("service").getMembership("excellent"));
-        System.out.println("TIP: " + fis.getVariable("service").getMembership("good"));
-        System.out.println("TIP: " + fis.getVariable("service").getMembership("poor"));
-
-        System.out.println("TIP: " + fis.getVariable("tip").getMembership("generous"));
-        System.out.println("TIP: " + fis.getVariable("tip").getMembership("cheap"));
-        System.out.println("TIP: " + fis.getVariable("tip").getMembership("average"));
-        System.out.println("TIP: " + fis.getVariable("food").getMembership("delicious"));
-        System.out.println("TIP: " + fis.getVariable("food").getMembership("rancid"));
-
-        return fis.getVariable("tip").getMembership("generous");
+//        System.out.println("TIP: " + fis.getVariable("service").getMembership("excellent"));
+//        System.out.println("TIP: " + fis.getVariable("service").getMembership("good"));
+//        System.out.println("TIP: " + fis.getVariable("service").getMembership("poor"));
+//
+//        System.out.println("TIP: " + fis.getVariable("tip").getMembership("generous"));
+//        System.out.println("TIP: " + fis.getVariable("tip").getMembership("cheap"));
+//        System.out.println("TIP: " + fis.getVariable("tip").getMembership("average"));
+//        System.out.println("TIP: " + fis.getVariable("food").getMembership("delicious"));
+//        System.out.println("TIP: " + fis.getVariable("food").getMembership("rancid"));
+//
+//        return fis.getVariable("tip").getMembership("generous");
+        return 2.0;
     }
 }
