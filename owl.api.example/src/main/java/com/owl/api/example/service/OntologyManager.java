@@ -31,7 +31,7 @@ public class OntologyManager {
         man.addAxioms(combinedOntology, individualsOntology.getAxioms());
         */
         this.ontology = ontology;
-        System.out.println(ontology.getAxioms());
+      //  System.out.println(ontology.getAxioms());
     }
 
 }
