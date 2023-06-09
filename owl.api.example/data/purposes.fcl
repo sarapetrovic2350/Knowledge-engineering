@@ -1,5 +1,5 @@
 // Block definition (there may be more than one block per file)
-FUNCTION_BLOCK tipper
+FUNCTION_BLOCK purposes
 
 // Define input variables
 VAR_INPUT
@@ -41,7 +41,7 @@ END_FUZZIFY
 
 // Fuzzify input variable 'cpu_tdp'
 FUZZIFY cpu_tdp
-    TERM poor := (4.5, 1) (45, 1) (60, 0);
+    TERM poor := (5, 1) (45, 1) (60, 0);
     TERM average := (55, 0) (65, 1) (80, 1) (105, 0);
     TERM excellent := (100, 0) (105, 1) (350, 1);
 END_FUZZIFY
@@ -97,9 +97,9 @@ END_FUZZIFY
 
 // Defzzzify output variable 'app_development'
 DEFUZZIFY app_development
-    TERM poor := (0,0) (15,1) (25,0);
-    TERM good := (25,0) (50,1) (75,0);
-    TERM excellent := (75,0) (90,1) (100,0);
+    TERM poor := (0,0) (15,1) (30,0);
+    TERM good := (30,0) (55,1) (80,0);
+    TERM excellent := (80,0) (90,1) (100,0);
     // Use 'Center Of Gravity' defuzzification method
     METHOD : COG;
     // Default value is 0 (if no rule activates defuzzifier)
@@ -108,9 +108,9 @@ END_DEFUZZIFY
 
 // Defzzzify output variable 'gaming'
 DEFUZZIFY gaming
-    TERM poor := (0,0) (15,1) (25,0);
-    TERM good := (25,0) (50,1) (75,0);
-    TERM excellent := (75,0) (90,1) (100,0);
+    TERM poor := (0,0) (15,1) (30,0);
+    TERM good := (30,0) (55,1) (80,0);
+    TERM excellent := (80,0) (90,1) (100,0);
     // Use 'Center Of Gravity' defuzzification method
     METHOD : COG;
     // Default value is 0 (if no rule activates defuzzifier)
