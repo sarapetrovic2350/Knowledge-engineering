@@ -23,6 +23,8 @@ public class FuzzyService {
         PurposeDTO purpose = new PurposeDTO();
         MembershipDTO appDevelopmentMemberships = new MembershipDTO();
         MembershipDTO gamingMemberships = new MembershipDTO();
+        MembershipDTO cryptoMiningMemberships = new MembershipDTO();
+        MembershipDTO homeMemberships = new MembershipDTO();
 
         fis.setVariable("cpu_cores", cpu_cores);
         fis.setVariable("cpu_threads", cpu_threads);
@@ -47,6 +49,16 @@ public class FuzzyService {
         gamingMemberships.setGood(fis.getVariable("gaming").getMembership("good"));
         gamingMemberships.setExcellent(fis.getVariable("gaming").getMembership("excellent"));
         purpose.setGaming(gamingMemberships);
+
+        cryptoMiningMemberships.setPoor(fis.getVariable("crypto_mining").getMembership("poor"));
+        cryptoMiningMemberships.setGood(fis.getVariable("crypto_mining").getMembership("good"));
+        cryptoMiningMemberships.setExcellent(fis.getVariable("crypto_mining").getMembership("excellent"));
+        purpose.setCryptoMining(cryptoMiningMemberships);
+
+        homeMemberships.setPoor(fis.getVariable("home").getMembership("poor"));
+        homeMemberships.setGood(fis.getVariable("home").getMembership("good"));
+        homeMemberships.setExcellent(fis.getVariable("home").getMembership("excellent"));
+        purpose.setHome(homeMemberships);
 
         System.out.println("Cpu cores poor: " + fis.getVariable("cpu_cores").getMembership("poor"));
         System.out.println("Cpu cores average: " + fis.getVariable("cpu_cores").getMembership("average"));
