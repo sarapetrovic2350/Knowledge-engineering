@@ -1,0 +1,533 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node Overheating
+{
+     label = "C1";
+     position = (294 154);
+     states = ("YES" "NO");
+}
+
+node Cooling_system_is_not_working_properly
+{
+     label = "C3";
+     position = (17 24);
+     states = ("YES" "NO");
+}
+
+node Computer_ventilation_is_blocked
+{
+     label = "C4";
+     position = (272 17);
+     states = ("YES" "NO");
+}
+
+node Computer_case_is_dirty
+{
+     label = "C5";
+     position = (488 20);
+     states = ("YES" "NO");
+}
+
+node Fans_are_clogged
+{
+     label = "C6";
+     position = (22 117);
+     states = ("YES" "NO");
+}
+
+node Viruses
+{
+     label = "C7";
+     position = (506 102);
+     states = ("YES" "NO");
+}
+
+node Slow_performance
+{
+     label = "C8";
+     position = (281 270);
+     states = ("YES" "NO");
+}
+
+node Memory_maxed_out
+{
+     label = "C9";
+     position = (269 412);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_maxed_out
+{
+     label = "C10";
+     position = (388 356);
+     states = ("YES" "NO");
+}
+
+node Unnecessary_processes_running
+{
+     label = "C11";
+     position = (21 201);
+     states = ("YES" "NO");
+}
+
+node Too_many_active_browsers_tabs
+{
+     label = "C12";
+     position = (34 277);
+     states = ("YES" "NO");
+}
+
+node Running_in_low_power_mode
+{
+     label = "C13";
+     position = (37 389);
+     states = ("YES" "NO");
+}
+
+node Loud_noises
+{
+     label = "C14";
+     position = (666 154);
+     states = ("YES" "NO");
+}
+
+node Faulty_hard_drive
+{
+     label = "C15";
+     position = (695 24);
+     states = ("YES" "NO");
+}
+
+node CPU_overload
+{
+     label = "C16";
+     position = (846 38);
+     states = ("YES" "NO");
+}
+
+node Overworked_power_supply
+{
+     label = "C17";
+     position = (878 97);
+     states = ("YES" "NO");
+}
+
+node GPU_coil_whine
+{
+     label = "C18";
+     position = (915 174);
+     states = ("YES" "NO");
+}
+
+node Blank_monitor
+{
+     label = "C19";
+     position = (1193 256);
+     states = ("YES" "NO");
+}
+
+node Power_cable_failure
+{
+     label = "C20";
+     position = (1176 127);
+     states = ("YES" "NO");
+}
+
+node Power_cable_mechanical_failure
+{
+     label = "C21";
+     position = (1341 43);
+     states = ("YES" "NO");
+}
+
+node Power_cable_electrical_failure
+{
+     label = "C22";
+     position = (1084 33);
+     states = ("YES" "NO");
+}
+
+node Graphic_card_failure
+{
+     label = "C23";
+     position = (910 253);
+     states = ("YES" "NO");
+}
+
+node Insufficient_power
+{
+     label = "C24";
+     position = (875 353);
+     states = ("YES" "NO");
+}
+
+node Graphic_card_fans_failure
+{
+     label = "C25";
+     position = (1026 346);
+     states = ("YES" "NO");
+}
+
+node Graphic_card_drivers_outdated
+{
+     label = "C26";
+     position = (696 301);
+     states = ("YES" "NO");
+}
+
+node Corrupted_operating_system
+{
+     label = "C27";
+     position = (1348 184);
+     states = ("YES" "NO");
+}
+
+node Blue_screen_of_death
+{
+     label = "C28";
+     position = (642 405);
+     states = ("YES" "NO");
+}
+
+node Corrupted_drivers
+{
+     label = "C29";
+     position = (461 478);
+     states = ("YES" "NO");
+}
+
+node Too_much_pressure_on_the_RAM
+{
+     label = "C30";
+     position = (624 512);
+     states = ("YES" "NO");
+}
+
+node Hardware_malfunctioning
+{
+     label = "C31";
+     position = (880 481);
+     states = ("YES" "NO");
+}
+
+potential (Overheating | Viruses Fans_are_clogged Computer_case_is_dirty Computer_ventilation_is_blocked Cooling_system_is_not_working_properly)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.5 0.5 ))))
+(((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.8 0.2 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.01 0.99 ))))));
+}
+
+potential (Cooling_system_is_not_working_properly)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Computer_ventilation_is_blocked)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Computer_case_is_dirty)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Fans_are_clogged)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Viruses)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Slow_performance | Unnecessary_processes_running Overheating Running_in_low_power_mode Too_many_active_browsers_tabs Memory_maxed_out Hard_drive_maxed_out)
+{
+ data = ((((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.4 0.6 )))))
+((((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))))
+(((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )))
+((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.4 0.6 ))))
+(((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.4 0.6 )))
+((( 0.6 0.4 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.2 0.8 )))))
+((((( 0.8 0.2 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.6 0.4 )))
+((( 0.6 0.4 )
+( 0.4 0.6 ))
+(( 0.4 0.6 )
+( 0.2 0.8 ))))
+(((( 0.5 0.5 )
+( 0.3 0.7 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 0.4 0.6 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))))));
+}
+
+potential (Memory_maxed_out)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Hard_drive_maxed_out)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Unnecessary_processes_running)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Too_many_active_browsers_tabs)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Running_in_low_power_mode)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Loud_noises | GPU_coil_whine Overworked_power_supply CPU_overload Overheating Faulty_hard_drive)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.6 0.4 )
+( 0.4 0.6 ))))
+(((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))))
+((((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.5 0.5 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.4 0.6 )
+( 0.2 0.8 ))))
+(((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 0.4 0.6 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.1 0.9 ))))));
+}
+
+potential (Faulty_hard_drive)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (CPU_overload)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Overworked_power_supply)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (GPU_coil_whine)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Blank_monitor | Corrupted_operating_system Graphic_card_failure Power_cable_failure)
+{
+ data = (((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.9 0.1 )
+( 0.3 0.7 )))
+((( 0.8 0.2 )
+( 0.4 0.6 ))
+(( 0.5 0.5 )
+( 0.1 0.9 ))));
+}
+
+potential (Power_cable_failure | Power_cable_electrical_failure Power_cable_mechanical_failure)
+{
+ data = ((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.9 0.1 )
+( 0.1 0.9 )));
+}
+
+potential (Power_cable_mechanical_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Power_cable_electrical_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Graphic_card_failure | Graphic_card_drivers_outdated Graphic_card_fans_failure Overheating Insufficient_power)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.7 0.3 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.2 0.8 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.5 0.5 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.1 0.9 )))));
+}
+
+potential (Insufficient_power)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Graphic_card_fans_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Graphic_card_drivers_outdated)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Corrupted_operating_system)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Blue_screen_of_death | Overheating Corrupted_drivers Too_much_pressure_on_the_RAM Hardware_malfunctioning)
+{
+ data = ((((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.8 0.2 )
+( 0.5 0.5 ))
+(( 0.6 0.4 )
+( 0.2 0.8 ))))
+(((( 0.9 0.1 )
+( 0.5 0.5 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.1 0.9 )))));
+}
+
+potential (Corrupted_drivers)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Too_much_pressure_on_the_RAM)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Hardware_malfunctioning)
+{
+ data = ( 0.8 0.2 );
+}
+
