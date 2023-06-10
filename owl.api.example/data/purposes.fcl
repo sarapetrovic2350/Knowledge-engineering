@@ -141,20 +141,20 @@ END_DEFUZZIFY
 
 // Defzzzify output variable 'business'
 DEFUZZIFY business
-   TERM poor := (0,0) (15,1) (25,0);
-   TERM good := (25,0) (50,1) (75,0);
-   TERM excellent := (75,0) (90,1) (100,0);
-    // Use 'Center Of Gravity' defuzzification method
-    METHOD : COG;
-    // Default value is 0 (if no rule activates defuzzifier)
-    DEFAULT := 0;
+   TERM poor := (0,0) (15,1) (30,0);
+   TERM good := (30,0) (55,1) (80,0);
+   TERM excellent := (80,0) (90,1) (100,0);
+   // Use 'Center Of Gravity' defuzzification method
+   METHOD : COG;
+   // Default value is 0 (if no rule activates defuzzifier)
+   DEFAULT := 0;
 END_DEFUZZIFY
 
 // Defzzzify output variable 'hosting'
 DEFUZZIFY hosting
-     TERM poor := (0,0) (15,1) (25,0);
-     TERM good := (25,0) (50,1) (75,0);
-     TERM excellent := (75,0) (90,1) (100,0);
+     TERM poor := (0,0) (15,1) (30,0);
+     TERM good := (30,0) (55,1) (80,0);
+     TERM excellent := (80,0) (90,1) (100,0);
     // Use 'Center Of Gravity' defuzzification method
     METHOD : COG;
     // Default value is 0 (if no rule activates defuzzifier)
@@ -567,6 +567,209 @@ RULEBLOCK home_rules
 
     RULE 33 : IF cpu_cores IS excellent AND psu_output_power IS excellent AND ram_capacity_in_gb IS poor
                 THEN home IS poor;
+
+END_RULEBLOCK
+
+RULEBLOCK business_rules
+    // Use 'min' for 'and' (also implicit use 'max'
+    // for 'or' to fulfill DeMorgan's Law)
+    AND : MIN;
+    // Use 'min' activation method
+    ACT : MIN;
+    // Use 'max' accumulation method
+    ACCU : MAX;
+
+    RULE 1 : IF cpu_cores IS poor
+                THEN business IS poor;
+
+    RULE 2 : IF cpu_cores IS average
+                THEN business IS good;
+
+    RULE 3 : IF cpu_cores IS excellent
+                 THEN business IS excellent;
+
+    RULE 4 : IF cpu_threads IS poor
+                THEN business IS good;
+
+    RULE 5 : IF cpu_threads IS average OR cpu_threads IS excellent
+                THEN business IS excellent;
+
+    RULE 6 : IF cpu_tdp IS poor OR cpu_tdp IS excellent
+                THEN business IS poor;
+
+    RULE 7 : IF cpu_tdp IS average
+                THEN business IS excellent;
+
+    RULE 6 : IF ram_capacity_in_gb IS poor
+                THEN business IS poor;
+
+    RULE 9 : IF ram_capacity_in_gb IS average OR ram_capacity_in_gb IS excellent
+                THEN business IS excellent;
+
+    RULE 10 : IF ram_voltage IS low
+                THEN business IS poor;
+
+    RULE 11 : IF ram_voltage IS normal
+                THEN business IS good;
+
+    RULE 12 : IF ram_voltage IS high
+                 THEN business IS excellent;
+
+    RULE 13 : IF ram_speed IS slow
+                THEN business IS poor;
+
+    RULE 14 : IF ram_speed IS average
+                THEN business IS good;
+
+    RULE 15 : IF ram_speed IS fast
+                 THEN business IS excellent;
+
+    RULE 16 : IF hdd_capacity_in_gb IS poor
+                THEN business IS good;
+
+    RULE 17 : IF hdd_capacity_in_gb IS average
+                THEN business IS excellent;
+
+    RULE 18 : IF hdd_capacity_in_gb IS excellent
+                 THEN business IS poor;
+
+    RULE 19 : IF gpu_memory_in_gb IS poor
+                THEN business IS good;
+
+    RULE 20 : IF gpu_memory_in_gb IS average
+                THEN business IS excellent;
+
+    RULE 21 : IF gpu_memory_in_gb IS excellent
+                THEN business IS poor;
+
+    RULE 22 : IF gpu_clock_in_mhz IS poor
+                THEN business IS good;
+
+    RULE 23 : IF gpu_clock_in_mhz IS average or gpu_clock_in_mhz IS excellent
+                THEN business IS excellent;
+
+    RULE 24 : IF psu_output_power IS poor
+                THEN business IS poor;
+
+    RULE 25 : IF psu_output_power IS average
+                THEN business IS good;
+
+    RULE 26: IF psu_output_power IS excellent
+                THEN business IS excellent;
+
+    RULE 27 : IF cpu_cores IS average AND gpu_memory_in_gb IS poor AND ram_capacity_in_gb IS average
+                THEN business IS excellent;
+
+    RULE 28 : IF cpu_cores IS average AND gpu_memory_in_gb IS average AND ram_capacity_in_gb IS excellent
+                THEN business IS excellent;
+
+    RULE 29 : IF cpu_threads IS average AND gpu_memory_in_gb IS average AND ram_capacity_in_gb IS excellent
+                THEN business IS excellent;
+
+    RULE 30 : IF gpu_clock_in_mhz IS poor AND ram_voltage IS normal AND ram_speed IS average
+                THEN business IS good;
+
+END_RULEBLOCK
+
+RULEBLOCK hosting_rules
+    // Use 'min' for 'and' (also implicit use 'max'
+    // for 'or' to fulfill DeMorgan's Law)
+    AND : MIN;
+    // Use 'min' activation method
+    ACT : MIN;
+    // Use 'max' accumulation method
+    ACCU : MAX;
+
+    RULE 1 : IF cpu_cores IS poor OR cpu_cores IS average
+                THEN hosting IS poor;
+
+    RULE 2 : IF cpu_cores IS excellent
+                 THEN hosting IS excellent;
+
+    RULE 3 : IF cpu_threads IS poor OR cpu_threads IS average
+                THEN hosting IS poor;
+
+    RULE 4 : IF cpu_threads IS excellent
+                THEN hosting IS excellent;
+
+    RULE 5 : IF cpu_tdp IS poor OR cpu_tdp IS average
+                THEN hosting IS poor;
+
+    RULE 6 : IF cpu_tdp IS average
+                 THEN hosting IS poor;
+
+    RULE 7 : IF cpu_tdp IS excellent
+                THEN hosting IS excellent;
+
+    RULE 8 : IF ram_capacity_in_gb IS poor
+                THEN hosting IS poor;
+
+    RULE 9 : IF ram_capacity_in_gb IS average OR ram_capacity_in_gb IS excellent
+                THEN hosting IS excellent;
+
+    RULE 10 : IF ram_voltage IS low
+                THEN hosting IS poor;
+
+    RULE 11 : IF ram_voltage IS normal
+                THEN hosting IS good;
+
+    RULE 12 : IF ram_voltage IS high
+                 THEN hosting IS excellent;
+
+    RULE 13 : IF ram_speed IS slow
+                THEN hosting IS poor;
+
+    RULE 14 : IF ram_speed IS average OR ram_speed IS fast
+                THEN hosting IS good;
+
+    RULE 15 : IF hdd_capacity_in_gb IS poor
+                THEN hosting IS poor;
+
+    RULE 16 : IF hdd_capacity_in_gb IS average OR hdd_capacity_in_gb IS excellent
+                THEN hosting IS excellent;
+
+    RULE 17 : IF gpu_memory_in_gb IS poor
+                THEN hosting IS good;
+
+    RULE 18 : IF gpu_memory_in_gb IS average
+                THEN hosting IS excellent;
+
+    RULE 19 : IF gpu_memory_in_gb IS excellent
+                THEN hosting IS poor;
+
+    RULE 20: IF gpu_clock_in_mhz IS poor
+                THEN hosting IS good;
+
+    RULE 21 : IF gpu_clock_in_mhz IS average or gpu_clock_in_mhz IS excellent
+                THEN hosting IS excellent;
+
+    RULE 22 : IF psu_output_power IS poor
+                THEN hosting IS poor;
+
+    RULE 23: IF psu_output_power IS excellent OR psu_output_power IS average
+                THEN hosting IS excellent;
+
+    RULE 24 : IF cpu_cores IS average AND gpu_memory_in_gb IS poor AND ram_capacity_in_gb IS poor
+                THEN hosting IS poor;
+
+    RULE 25 : IF cpu_threads IS average AND gpu_memory_in_gb IS average AND ram_capacity_in_gb IS excellent
+                THEN hosting IS excellent;
+
+    RULE 26 : IF gpu_clock_in_mhz IS poor AND ram_voltage IS normal AND ram_speed IS average
+                THEN hosting IS good;
+
+    RULE 27 : IF gpu_clock_in_mhz IS excellent AND ram_voltage IS high AND ram_speed IS fast
+                 THEN hosting IS excellent;
+
+    RULE 28 : IF gpu_clock_in_mhz IS average AND ram_voltage IS low AND ram_speed IS slow
+                 THEN hosting IS poor;
+
+    RULE 29 : IF hdd_capacity_in_gb IS average AND ram_voltage IS low AND ram_speed IS slow AND ram_capacity_in_gb IS excellent
+                 THEN hosting IS good;
+
+    RULE 30 : IF cpu_cores IS excellent AND gpu_memory_in_gb IS average AND ram_capacity_in_gb IS excellent
+                 THEN hosting IS excellent;
+
 
 END_RULEBLOCK
 
