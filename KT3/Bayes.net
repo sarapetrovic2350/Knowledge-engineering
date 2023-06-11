@@ -1,0 +1,1428 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C1,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C30,C31,C2)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node Overheating
+{
+     label = "C1";
+     position = (294 154);
+     states = ("YES" "NO");
+}
+
+node Cooling_system_is_not_working_properly
+{
+     label = "C3";
+     position = (0 13);
+     states = ("YES" "NO");
+}
+
+node Computer_ventilation_is_blocked
+{
+     label = "C4";
+     position = (276 0);
+     states = ("YES" "NO");
+}
+
+node Computer_case_is_dirty
+{
+     label = "C5";
+     position = (511 7);
+     states = ("YES" "NO");
+}
+
+node Fans_are_clogged
+{
+     label = "C6";
+     position = (43 101);
+     states = ("YES" "NO");
+}
+
+node Viruses
+{
+     label = "C7";
+     position = (506 102);
+     states = ("YES" "NO");
+}
+
+node Slow_performance
+{
+     label = "C8";
+     position = (218 268);
+     states = ("YES" "NO");
+}
+
+node Memory_maxed_out
+{
+     label = "C9";
+     position = (114 400);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_maxed_out
+{
+     label = "C10";
+     position = (237 366);
+     states = ("YES" "NO");
+}
+
+node Unnecessary_processes_running
+{
+     label = "C11";
+     position = (30 186);
+     states = ("YES" "NO");
+}
+
+node Too_many_active_browsers_tabs
+{
+     label = "C12";
+     position = (0 253);
+     states = ("YES" "NO");
+}
+
+node Running_in_low_power_mode
+{
+     label = "C13";
+     position = (8 342);
+     states = ("YES" "NO");
+}
+
+node Loud_noises
+{
+     label = "C14";
+     position = (713 116);
+     states = ("YES" "NO");
+}
+
+node Faulty_hard_drive
+{
+     label = "C15";
+     position = (695 24);
+     states = ("YES" "NO");
+}
+
+node CPU_overload
+{
+     label = "C16";
+     position = (846 38);
+     states = ("YES" "NO");
+}
+
+node Overworked_power_supply
+{
+     label = "C17";
+     position = (878 97);
+     states = ("YES" "NO");
+}
+
+node GPU_coil_whine
+{
+     label = "C18";
+     position = (915 174);
+     states = ("YES" "NO");
+}
+
+node Blank_monitor
+{
+     label = "C19";
+     position = (1193 256);
+     states = ("YES" "NO");
+}
+
+node Power_cable_failure
+{
+     label = "C20";
+     position = (1176 127);
+     states = ("YES" "NO");
+}
+
+node Power_cable_mechanical_failure
+{
+     label = "C21";
+     position = (1341 43);
+     states = ("YES" "NO");
+}
+
+node Power_cable_electrical_failure
+{
+     label = "C22";
+     position = (1084 33);
+     states = ("YES" "NO");
+}
+
+node Graphic_card_failure
+{
+     label = "C23";
+     position = (924 226);
+     states = ("YES" "NO");
+}
+
+node Insufficient_power
+{
+     label = "C24";
+     position = (868 313);
+     states = ("YES" "NO");
+}
+
+node Graphic_card_fans_failure
+{
+     label = "C25";
+     position = (1010 300);
+     states = ("YES" "NO");
+}
+
+node Graphic_card_drivers_outdated
+{
+     label = "C26";
+     position = (687 261);
+     states = ("YES" "NO");
+}
+
+node Corrupted_operating_system
+{
+     label = "C27";
+     position = (1056 178);
+     states = ("YES" "NO");
+}
+
+node Blue_screen_of_death
+{
+     label = "C28";
+     position = (868 369);
+     states = ("YES" "NO");
+}
+
+node Corrupted_drivers
+{
+     label = "C29";
+     position = (1196 370);
+     states = ("YES" "NO");
+}
+
+node Too_much_pressure_on_the_RAM
+{
+     label = "C30";
+     position = (1067 482);
+     states = ("YES" "NO");
+}
+
+node Hardware_malfunctioning
+{
+     label = "C31";
+     position = (863 453);
+     states = ("YES" "NO");
+}
+
+node PC_is_not_powering_on
+{
+     label = "C1";
+     position = (146 490);
+     states = ("YES" "NO");
+}
+
+node Bad_electrical_connection
+{
+     label = "C2";
+     position = (0 438);
+     states = ("YES" "NO");
+}
+
+node Power_supply_failure
+{
+     label = "C3";
+     position = (0 535);
+     states = ("YES" "NO");
+}
+
+node Operating_system_failure
+{
+     label = "C4";
+     position = (6 629);
+     states = ("YES" "NO");
+}
+
+node Motherboard_failure
+{
+     label = "C5";
+     position = (390 616);
+     states = ("YES" "NO");
+}
+
+node Bad_hardware_installed_on_motherboard
+{
+     label = "C6";
+     position = (626 607);
+     states = ("YES" "NO");
+}
+
+node Accidental_physical_impacts
+{
+     label = "C7";
+     position = (561 671);
+     states = ("YES" "NO");
+}
+
+node Dust_and_debris
+{
+     label = "C8";
+     position = (400 689);
+     states = ("YES" "NO");
+}
+
+node Computer_constantly_freezes
+{
+     label = "C9";
+     position = (418 260);
+     states = ("YES" "NO");
+}
+
+node BIOS_settings_are_not_correct
+{
+     label = "C10";
+     position = (399 335);
+     states = ("YES" "NO");
+}
+
+node Faulty_external_devices
+{
+     label = "C11";
+     position = (685 433);
+     states = ("YES" "NO");
+}
+
+node Internet_browsing_is_slow
+{
+     label = "C12";
+     position = (490 457);
+     states = ("YES" "NO");
+}
+
+node Home_network_is_congested
+{
+     label = "C13";
+     position = (447 535);
+     states = ("YES" "NO");
+}
+
+node Web_browser_is_not_installed_properly
+{
+     label = "C14";
+     position = (669 536);
+     states = ("YES" "NO");
+}
+
+node Monitor_goes_black_for_a_second
+{
+     label = "C15";
+     position = (1419 261);
+     states = ("YES" "NO");
+}
+
+node Monitor_driver_outdated
+{
+     label = "C16";
+     position = (1373 169);
+     states = ("YES" "NO");
+}
+
+node Faulty_monitor
+{
+     label = "C17";
+     position = (1535 170);
+     states = ("YES" "NO");
+}
+
+node USB_cable_failure
+{
+     label = "C18";
+     position = (1335 517);
+     states = ("YES" "NO");
+}
+
+node USB_cable_electrical_failure
+{
+     label = "C19";
+     position = (1225 431);
+     states = ("YES" "NO");
+}
+
+node USB_cable_mechanical_failure
+{
+     label = "C20";
+     position = (1565 448);
+     states = ("YES" "NO");
+}
+
+node Keyboard_is_not_working
+{
+     label = "C21";
+     position = (1453 586);
+     states = ("YES" "NO");
+}
+
+node Keyboard_driver_failure
+{
+     label = "C22";
+     position = (1655 572);
+     states = ("YES" "NO");
+}
+
+node Keyboard_battery_is_low
+{
+     label = "C23";
+     position = (1692 620);
+     states = ("YES" "NO");
+}
+
+node No_internet_connection_error
+{
+     label = "C24";
+     position = (988 528);
+     states = ("YES" "NO");
+}
+
+node Faulty_router
+{
+     label = "C25";
+     position = (898 569);
+     states = ("YES" "NO");
+}
+
+node Incorrect_DNS_server_settings
+{
+     label = "C26";
+     position = (956 666);
+     states = ("YES" "NO");
+}
+
+node Outdated_wireless_drivers
+{
+     label = "C27";
+     position = (1154 622);
+     states = ("YES" "NO");
+}
+
+node Faulty_Wi_Fi_adapter
+{
+     label = "C28";
+     position = (1200 558);
+     states = ("YES" "NO");
+}
+
+node Mouse_is_not_working
+{
+     label = "C29";
+     position = (1371 667);
+     states = ("YES" "NO");
+}
+
+node Mouse_driver_failure
+{
+     label = "C30";
+     position = (1737 676);
+     states = ("YES" "NO");
+}
+
+node Mouse_battery_is_low
+{
+     label = "C31";
+     position = (1648 737);
+     states = ("YES" "NO");
+}
+
+node Computer_speakers_are_not_working
+{
+     label = "C1";
+     position = (1206 719);
+     states = ("YES" "NO");
+}
+
+node Computer_speakers_driver_failure
+{
+     label = "C2";
+     position = (918 732);
+     states = ("YES" "NO");
+}
+
+node Audio_output_is_incorrect
+{
+     label = "C3";
+     position = (1948 819);
+     states = ("YES" "NO");
+}
+
+node Headphones_are_not_working
+{
+     label = "C4";
+     position = (1612 345);
+     states = ("YES" "NO");
+}
+
+node Headphones_driver_failure
+{
+     label = "C5";
+     position = (1701 229);
+     states = ("YES" "NO");
+}
+
+node Bluetooth_pairing_issues
+{
+     label = "C6";
+     position = (1919 349);
+     states = ("YES" "NO");
+}
+
+node Software_issue
+{
+     label = "C7";
+     position = (116 726);
+     states = ("YES" "NO");
+}
+
+node Installation_error
+{
+     label = "C8";
+     position = (0 815);
+     states = ("YES" "NO");
+}
+
+node Integration_of_third_party_tools
+{
+     label = "C9";
+     position = (415 768);
+     states = ("YES" "NO");
+}
+
+node Memory_leaks
+{
+     label = "C10";
+     position = (0 687);
+     states = ("YES" "NO");
+}
+
+node Malware_attack
+{
+     label = "C11";
+     position = (140 856);
+     states = ("YES" "NO");
+}
+
+node Slow_downloading_and_uploading
+{
+     label = "C12";
+     position = (675 757);
+     states = ("YES" "NO");
+}
+
+node Internet_speed_is_slow
+{
+     label = "C13";
+     position = (959 803);
+     states = ("YES" "NO");
+}
+
+node New_applications_do_not_install
+{
+     label = "C14";
+     position = (320 850);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_is_not_recognized
+{
+     label = "C15";
+     position = (629 827);
+     states = ("YES" "NO");
+}
+
+node Bad_initialization
+{
+     label = "C16";
+     position = (878 859);
+     states = ("YES" "NO");
+}
+
+node Not_formatted
+{
+     label = "C17";
+     position = (532 892);
+     states = ("YES" "NO");
+}
+
+node BIOS_settings_not_adjusted
+{
+     label = "C18";
+     position = (690 905);
+     states = ("YES" "NO");
+}
+
+node Ram_is_not_recognized
+{
+     label = "C19";
+     position = (1193 850);
+     states = ("YES" "NO");
+}
+
+node RAM_is_not_compatible_with_motherboard
+{
+     label = "C20";
+     position = (1433 847);
+     states = ("YES" "NO");
+}
+
+node RAM_is_not_fully_inserted
+{
+     label = "C21";
+     position = (1004 911);
+     states = ("YES" "NO");
+}
+
+node Dusty_electrical_contacts
+{
+     label = "C22";
+     position = (1246 921);
+     states = ("YES" "NO");
+}
+
+node USB_card_reader_not_working
+{
+     label = "C23";
+     position = (1878 453);
+     states = ("YES" "NO");
+}
+
+node USB_card_reader_driver_failure
+{
+     label = "C24";
+     position = (2164 497);
+     states = ("YES" "NO");
+}
+
+node SD_card_not_working
+{
+     label = "C25";
+     position = (2085 621);
+     states = ("YES" "NO");
+}
+
+node low_virtual_memory
+{
+     label = "C26";
+     position = (2022 702);
+     states = ("YES" "NO");
+}
+
+node SD_card_is_not_recognized
+{
+     label = "C27";
+     position = (2151 740);
+     states = ("YES" "NO");
+}
+
+node SD_card_reader_not_working
+{
+     label = "C28";
+     position = (2244 654);
+     states = ("YES" "NO");
+}
+
+node SD_card_driver_outdated
+{
+     label = "C29";
+     position = (2236 573);
+     states = ("YES" "NO");
+}
+
+potential (Overheating | Viruses Fans_are_clogged Computer_case_is_dirty Computer_ventilation_is_blocked Cooling_system_is_not_working_properly)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.5 0.5 ))))
+(((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.8 0.2 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.01 0.99 ))))));
+}
+
+potential (Cooling_system_is_not_working_properly)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Computer_ventilation_is_blocked)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Computer_case_is_dirty)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Fans_are_clogged)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Viruses)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Slow_performance | Unnecessary_processes_running Overheating Running_in_low_power_mode Too_many_active_browsers_tabs Memory_maxed_out Hard_drive_maxed_out)
+{
+ data = ((((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.4 0.6 )))))
+((((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))))
+(((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )))
+((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.4 0.6 ))))
+(((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.4 0.6 )))
+((( 0.6 0.4 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.2 0.8 )))))
+((((( 0.8 0.2 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.6 0.4 )))
+((( 0.6 0.4 )
+( 0.4 0.6 ))
+(( 0.4 0.6 )
+( 0.2 0.8 ))))
+(((( 0.5 0.5 )
+( 0.3 0.7 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 0.4 0.6 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))))));
+}
+
+potential (Memory_maxed_out)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Hard_drive_maxed_out)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Unnecessary_processes_running)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Too_many_active_browsers_tabs)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Running_in_low_power_mode)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Loud_noises | GPU_coil_whine Overworked_power_supply CPU_overload Overheating Faulty_hard_drive)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.6 0.4 )
+( 0.4 0.6 ))))
+(((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))))
+((((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.5 0.5 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.4 0.6 )
+( 0.2 0.8 ))))
+(((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 0.4 0.6 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.01 0.99 ))))));
+}
+
+potential (Faulty_hard_drive)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (CPU_overload)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Overworked_power_supply)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (GPU_coil_whine)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Blank_monitor | Corrupted_operating_system Graphic_card_failure Power_cable_failure)
+{
+ data = (((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.9 0.1 )
+( 0.3 0.7 )))
+((( 0.8 0.2 )
+( 0.4 0.6 ))
+(( 0.5 0.5 )
+( 0.01 0.99 ))));
+}
+
+potential (Power_cable_failure | Power_cable_electrical_failure Power_cable_mechanical_failure)
+{
+ data = ((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.9 0.1 )
+( 0.01 0.99 )));
+}
+
+potential (Power_cable_mechanical_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Power_cable_electrical_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Graphic_card_failure | Graphic_card_drivers_outdated Graphic_card_fans_failure Overheating Insufficient_power)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.7 0.3 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.2 0.8 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.5 0.5 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))));
+}
+
+potential (Insufficient_power)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Graphic_card_fans_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Graphic_card_drivers_outdated)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Corrupted_operating_system)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Blue_screen_of_death | Overheating Corrupted_drivers Too_much_pressure_on_the_RAM Hardware_malfunctioning)
+{
+ data = ((((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.8 0.2 )
+( 0.5 0.5 ))
+(( 0.6 0.4 )
+( 0.2 0.8 ))))
+(((( 0.9 0.1 )
+( 0.5 0.5 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.01 0.99 )))));
+}
+
+potential (Corrupted_drivers)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Too_much_pressure_on_the_RAM)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Hardware_malfunctioning)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (PC_is_not_powering_on | Motherboard_failure Operating_system_failure Power_supply_failure Bad_electrical_connection)
+{
+ data = ((((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.3 0.7 ))))
+(((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 0.5 0.5 )
+( 0.2 0.8 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))));
+}
+
+potential (Bad_electrical_connection)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Power_supply_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Operating_system_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Motherboard_failure | Dust_and_debris Accidental_physical_impacts Bad_hardware_installed_on_motherboard Overheating)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.7 0.3 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.2 0.8 ))))
+(((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.2 0.8 )))
+((( 0.7 0.3 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))));
+}
+
+potential (Bad_hardware_installed_on_motherboard)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Accidental_physical_impacts)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Dust_and_debris)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Computer_constantly_freezes | Faulty_external_devices Hardware_malfunctioning BIOS_settings_are_not_correct Slow_performance)
+{
+ data = ((((( 0.99 0.01 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.6 0.4 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.5 0.5 )
+( 0.2 0.8 ))
+(( 0.3 0.7 )
+( 0.01 0.99 )))));
+}
+
+potential (BIOS_settings_are_not_correct)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Faulty_external_devices)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Internet_browsing_is_slow | Web_browser_is_not_installed_properly Home_network_is_congested Slow_performance)
+{
+ data = (((( 0.99 0.01 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.3 0.7 )))
+((( 0.9 0.1 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.01 0.99 ))));
+}
+
+potential (Home_network_is_congested)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Web_browser_is_not_installed_properly)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Monitor_goes_black_for_a_second | Faulty_monitor Corrupted_drivers Monitor_driver_outdated Power_cable_failure)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.7 0.3 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.2 0.8 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.7 0.3 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))));
+}
+
+potential (Monitor_driver_outdated)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Faulty_monitor)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (USB_cable_failure | USB_cable_mechanical_failure USB_cable_electrical_failure)
+{
+ data = ((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.8 0.2 )
+( 0.01 0.99 )));
+}
+
+potential (USB_cable_electrical_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (USB_cable_mechanical_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Keyboard_is_not_working | Keyboard_battery_is_low Keyboard_driver_failure USB_cable_failure)
+{
+ data = (((( 0.99 0.01 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.3 0.7 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.4 0.6 )
+( 0.01 0.99 ))));
+}
+
+potential (Keyboard_driver_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Keyboard_battery_is_low)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (No_internet_connection_error | Faulty_Wi_Fi_adapter Outdated_wireless_drivers Incorrect_DNS_server_settings Faulty_router)
+{
+ data = ((((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.6 0.4 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.8 0.2 ))
+(( 0.6 0.4 )
+( 0.6 0.4 ))))
+(((( 0.8 0.2 )
+( 0.8 0.2 ))
+(( 0.3 0.7 )
+( 0.2 0.8 )))
+((( 0.7 0.3 )
+( 0.7 0.3 ))
+(( 0.1 0.9 )
+( 0.01 0.99 )))));
+}
+
+potential (Faulty_router)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Incorrect_DNS_server_settings)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Outdated_wireless_drivers)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Faulty_Wi_Fi_adapter)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Mouse_is_not_working | Mouse_battery_is_low Mouse_driver_failure USB_cable_failure)
+{
+ data = (((( 0.99 0.01 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.3 0.7 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.4 0.6 )
+( 0.01 0.99 ))));
+}
+
+potential (Mouse_driver_failure)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Mouse_battery_is_low)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Computer_speakers_are_not_working | Audio_output_is_incorrect Computer_speakers_driver_failure USB_cable_failure)
+{
+ data = (((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.2 0.8 )))
+((( 0.9 0.1 )
+( 0.4 0.6 ))
+(( 0.3 0.7 )
+( 0.99 0.01 ))));
+}
+
+potential (Computer_speakers_driver_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Audio_output_is_incorrect)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Headphones_are_not_working | Audio_output_is_incorrect Bluetooth_pairing_issues Headphones_driver_failure USB_cable_failure)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )))
+((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.6 0.4 )
+( 0.2 0.8 ))))
+(((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.4 0.6 )
+( 0.2 0.8 )))
+((( 0.5 0.5 )
+( 0.3 0.7 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))));
+}
+
+potential (Headphones_driver_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Bluetooth_pairing_issues)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Software_issue | Malware_attack Integration_of_third_party_tools Installation_error Memory_leaks)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.3 0.7 )
+( 0.2 0.8 ))))
+(((( 0.8 0.2 )
+( 0.7 0.3 ))
+(( 0.4 0.6 )
+( 0.3 0.7 )))
+((( 0.5 0.5 )
+( 0.3 0.7 ))
+(( 0.9 0.1 )
+( 0.01 0.99 )))));
+}
+
+potential (Installation_error)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Integration_of_third_party_tools)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Memory_leaks)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Malware_attack)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Slow_downloading_and_uploading | Internet_speed_is_slow No_internet_connection_error)
+{
+ data = ((( 0.99 0.01 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.01 0.99 )));
+}
+
+potential (Internet_speed_is_slow)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (New_applications_do_not_install | Hard_drive_maxed_out Software_issue)
+{
+ data = ((( 0.99 0.01 )
+( 0.6 0.4 ))
+(( 0.4 0.6 )
+( 0.01 0.99 )));
+}
+
+potential (Hard_drive_is_not_recognized | BIOS_settings_not_adjusted Not_formatted Bad_initialization)
+{
+ data = (((( 0.99 0.01 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.2 0.8 )))
+((( 0.9 0.1 )
+( 0.3 0.7 ))
+(( 0.4 0.6 )
+( 0.01 0.99 ))));
+}
+
+potential (Bad_initialization)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Not_formatted)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (BIOS_settings_not_adjusted)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Ram_is_not_recognized | Dusty_electrical_contacts RAM_is_not_fully_inserted RAM_is_not_compatible_with_motherboard)
+{
+ data = (((( 0.99 0.01 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.2 0.8 )))
+((( 0.9 0.1 )
+( 0.3 0.7 ))
+(( 0.4 0.6 )
+( 0.01 0.99 ))));
+}
+
+potential (RAM_is_not_compatible_with_motherboard)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (RAM_is_not_fully_inserted)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Dusty_electrical_contacts)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (USB_card_reader_not_working | USB_card_reader_driver_failure USB_cable_failure)
+{
+ data = ((( 0.99 0.01 )
+( 0.5 0.5 ))
+(( 0.5 0.5 )
+( 0.01 0.99 )));
+}
+
+potential (USB_card_reader_driver_failure)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (SD_card_not_working | low_virtual_memory SD_card_driver_outdated SD_card_reader_not_working SD_card_is_not_recognized)
+{
+ data = ((((( 0.99 0.01 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.9 0.1 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.1 0.9 ))))
+(((( 0.9 0.1 )
+( 0.6 0.4 ))
+(( 0.7 0.3 )
+( 0.2 0.8 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.01 0.99 )))));
+}
+
+potential (low_virtual_memory)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (SD_card_is_not_recognized)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (SD_card_reader_not_working)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (SD_card_driver_outdated)
+{
+ data = ( 0.6 0.4 );
+}
+
