@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>Symptoms of failure</mat-label>
+    <input type="text" matInput [(ngModel)]="symptoms" placeholder="Enter the symptoms"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <button class="btn" mat-mini-fab color="primary" (click)="findCauses()">Find causes</button>
+  <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
+    <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
+  </button>
+</mat-card>
+
+<div class="container" *ngIf="isSearched">
+  <div class="table-header" *ngIf="isSearched">
+    <p class="table-title">Causes</p>
+    <p *ngIf="notFound" class="table-title"> No causes found for entered symptoms!</p>
+  </div>
+  <table *ngIf="isSearched" mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> Name</th>
+      <td mat-cell *matCellDef="let cause" class="cell-center">{{cause.cause}}</td>
+    </ng-container>
+    <ng-container matColumnDef="Probability">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> Probability</th>
+      <td mat-cell *matCellDef="let cause" class="cell-center">{{cause.probability}}%</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<footer></footer>
+
+
