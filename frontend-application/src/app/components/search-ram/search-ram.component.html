@@ -1,0 +1,86 @@
+<mat-card elevation="5" fxFlex class="content">
+    <div class="row">
+      <div>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Min Capacity</mat-label>
+      <input type="number" [(ngModel)]="minCapacity"  matInput placeholder="Enter min capacity"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Max capacity</mat-label>
+      <input type="number" [(ngModel)]="maxCapacity" matInput placeholder="Enter max capacity"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Min frequency</mat-label>
+      <input type="number" [(ngModel)]="minFrequency" matInput placeholder="Enter min frequency"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Max frequency</mat-label>
+      <input type="number" [(ngModel)]="maxFrequency" matInput placeholder="Enter max frequency"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Min voltage</mat-label>
+      <input type="number" [(ngModel)]="minVoltage" matInput placeholder="Enter min voltage"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Max voltage</mat-label>
+      <input type="number" [(ngModel)]="maxVoltage" matInput placeholder="Enter max voltage"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+      </div>
+    </div>
+    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchRam()">Search</button>
+    <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
+      <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
+    </button>
+  </mat-card>
+
+  <div *ngIf="isSearched"class="container">
+    <div class="table-header" *ngIf="isSearched">
+      <p class="table-title">RAMs</p>
+    <mat-table #table [dataSource]="dataSource">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let ram"> {{ram.name}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="capacity">
+        <mat-header-cell *matHeaderCellDef> Capacity </mat-header-cell>
+        <mat-cell *matCellDef="let ram"> {{ram.capacityInGB}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="maxFrequency">
+        <mat-header-cell *matHeaderCellDef> Max frequency </mat-header-cell>
+        <mat-cell *matCellDef="let ram"> {{ram.maxFrequencyInMHz}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="voltage">
+        <mat-header-cell *matHeaderCellDef> Voltage </mat-header-cell>
+        <mat-cell *matCellDef="let ram"> {{ram.voltage}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="latency">
+        <mat-header-cell *matHeaderCellDef> Latency </mat-header-cell>
+        <mat-cell *matCellDef="let ram"> {{ram.latency}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+        <mat-cell *matCellDef="let ram"> {{ram.type}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  
+  <footer></footer>

@@ -10,13 +10,15 @@ import {AngularMaterialModule} from "./angular-material/angular-material.module"
 import { SymptomsCausesComponent } from './components/symptoms-causes/symptoms-causes.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PurposesComponent } from './components/purposes/purposes.component';
+import { SearchRamComponent } from './components/search-ram/search-ram.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SymptomsCausesComponent,
-    PurposesComponent
+    PurposesComponent,
+    SearchRamComponent
   ],
   imports: [
     BrowserModule,

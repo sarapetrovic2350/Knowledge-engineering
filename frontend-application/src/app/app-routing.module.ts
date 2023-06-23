@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {SymptomsCausesComponent} from "./components/symptoms-causes/symptoms-causes.component";
 import {PurposesComponent} from "./components/purposes/purposes.component";
+import { SearchRamComponent } from './components/search-ram/search-ram.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:'purposes',
     component: PurposesComponent
+  },
+  {
+    path:'search-ram',
+    component: SearchRamComponent
   }
 ];
 
