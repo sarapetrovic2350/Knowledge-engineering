@@ -35,6 +35,7 @@ public class CPUService {
     private OWLDataProperty cpuThreads;
     private OWLDataProperty cpuType;
     private OWLDataProperty cpuIntegratedGPU;
+    private OWLObjectProperty cpuIsSupportedOn;
 
     public CPUService() throws OWLOntologyCreationException {
         ontologyManager = new OntologyManager();
@@ -52,6 +53,7 @@ public class CPUService {
         cpuThreads = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "cpu_has_threads"));
         cpuType = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "cpu_has_type"));
         cpuIntegratedGPU = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "cpu_with_integrated_gpu"));
+        cpuIsSupportedOn = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "cpu_is_supported_on"));
 
     }
 
@@ -128,7 +130,7 @@ public class CPUService {
         return getAllCPUsDTOs(queryExpression);
     }
 
-    public List<CPUResponseDTO> getCPUsUpgrades(String CPU){
+    public List<CPUResponseDTO> getCPUsUpgrades(String CPU, String motherboard){
 
         OWLNamedIndividual CPUIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI +CPU.replace(" ", "_")));
 
@@ -150,11 +152,14 @@ public class CPUService {
         OWLDataRange clockRateRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()),
                 dataFactory.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, dataFactory.getOWLLiteral(String.valueOf(clockRateLiteral.getLiteral()), dataFactory.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()))));
 
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
+
         OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
                 classCPU,
                 dataFactory.getOWLDataSomeValuesFrom(cpuCores, coreRange),
                 dataFactory.getOWLDataSomeValuesFrom(cpuThreads, threadsRange),
-                dataFactory.getOWLDataSomeValuesFrom(cpuClockRate, clockRateRange)
+                dataFactory.getOWLDataSomeValuesFrom(cpuClockRate, clockRateRange),
+                dataFactory.getOWLObjectHasValue(cpuIsSupportedOn, motherboardIndividual)
         );
         return getAllCPUsDTOs(queryExpression);
     }

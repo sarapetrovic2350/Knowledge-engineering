@@ -11,6 +11,8 @@ import { SymptomsCausesComponent } from './components/symptoms-causes/symptoms-c
 import {HttpClientModule} from "@angular/common/http";
 import { PurposesComponent } from './components/purposes/purposes.component';
 import { SearchRamComponent } from './components/search-ram/search-ram.component';
+import { CpuSearchComponent } from './components/cpu-search/cpu-search.component';
+import { SsdSearchComponent } from './components/ssd-search/ssd-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SearchRamComponent } from './components/search-ram/search-ram.component
     HeaderComponent,
     SymptomsCausesComponent,
     PurposesComponent,
-    SearchRamComponent
+    SearchRamComponent,
+    CpuSearchComponent,
+    SsdSearchComponent
   ],
   imports: [
     BrowserModule,

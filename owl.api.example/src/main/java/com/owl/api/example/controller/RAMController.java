@@ -50,7 +50,8 @@ public class RAMController {
 
     @GetMapping("/rams-upgrades")
     public ResponseEntity<List<RAMResponseDTO>> getAllRAMsUpgrades(
-            @RequestParam(required = true) String ram) {
-        return new ResponseEntity<>(this.ramService.getRAMsUpgrades(ram), HttpStatus.OK);
+            @RequestParam(required = true) String ram,
+            @RequestParam(required = true) String motherboard) {
+        return new ResponseEntity<>(this.ramService.getRAMsUpgrades(ram, motherboard), HttpStatus.OK);
     }
 }
