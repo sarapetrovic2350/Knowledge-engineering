@@ -50,8 +50,9 @@ public class SSDController {
 
     @GetMapping("/ssds-upgrades")
     public ResponseEntity<List<SSDResponseDTO>> getAllSSDsUpgrades(
-            @RequestParam(required = true) String SSD) {
-        return new ResponseEntity<>(this.ssdService.getSSDsUpgrades(SSD), HttpStatus.OK);
+            @RequestParam(required = true) String SSD,
+            @RequestParam(required = true) String motherboard){
+        return new ResponseEntity<>(this.ssdService.getSSDsUpgrades(SSD, motherboard), HttpStatus.OK);
     }
 
 }

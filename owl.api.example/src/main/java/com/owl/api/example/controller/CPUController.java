@@ -52,7 +52,8 @@ public class CPUController {
 
     @GetMapping("/cpus-upgrades")
     public ResponseEntity<List<CPUResponseDTO>> getAllCPUsUpgrades(
-            @RequestParam(required = true) String CPU) {
-        return new ResponseEntity<>(this.cpuService.getCPUsUpgrades(CPU), HttpStatus.OK);
+            @RequestParam(required = true) String CPU,
+            @RequestParam(required = true) String motherboard) {
+        return new ResponseEntity<>(this.cpuService.getCPUsUpgrades(CPU, motherboard), HttpStatus.OK);
     }
 }

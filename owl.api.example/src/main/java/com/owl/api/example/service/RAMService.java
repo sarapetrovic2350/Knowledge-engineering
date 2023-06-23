@@ -30,6 +30,7 @@ public class RAMService {
     private OWLDataProperty ramRgb;
     private OWLDataProperty ramLatency;
     private OWLDataProperty ramMaxFrequency;
+    private OWLObjectProperty ramIsSupportedOn;
 
     public RAMService() throws OWLOntologyCreationException {
         ontologyManager = new OntologyManager();
@@ -46,6 +47,7 @@ public class RAMService {
         ramRgb = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_rgb"));
         ramLatency = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_latency"));
         ramMaxFrequency = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_max_frequency_in_mhz"));
+        ramIsSupportedOn = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "ram_is_supported_on"));
 
     }
 
@@ -116,7 +118,7 @@ public class RAMService {
         return getAllRAMsDTOs(queryExpression);
     }
 
-    public List<RAMResponseDTO> getRAMsUpgrades(String ram){
+    public List<RAMResponseDTO> getRAMsUpgrades(String ram, String motherboard){
 
         OWLNamedIndividual ramIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + ram.replace(" ", "_")));
 
@@ -138,11 +140,14 @@ public class RAMService {
         OWLDataRange frequencyRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
                 dataFactory.getOWLFacetRestriction(OWLFacet.MIN_EXCLUSIVE, dataFactory.getOWLLiteral(Integer.parseInt(frequencyLiteral.getLiteral()))));
 
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
+
         OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
                 classRAM,
                 dataFactory.getOWLDataSomeValuesFrom(ramCapacity, capacityRange),
                 dataFactory.getOWLDataSomeValuesFrom(ramMaxFrequency, frequencyRange),
-                dataFactory.getOWLDataSomeValuesFrom(ramVoltage, voltageRange)
+                dataFactory.getOWLDataSomeValuesFrom(ramVoltage, voltageRange),
+                dataFactory.getOWLObjectHasValue(ramIsSupportedOn, motherboardIndividual)
         );
         return getAllRAMsDTOs(queryExpression);
     }

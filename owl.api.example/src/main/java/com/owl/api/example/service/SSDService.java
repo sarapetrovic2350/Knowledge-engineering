@@ -29,6 +29,7 @@ public class SSDService {
     private OWLDataProperty ssdWriteSpeed;
     private OWLDataProperty ssdInterface;
     private OWLDataProperty ssdFormat;
+    private OWLObjectProperty ssdIsSupportedOn;
 
 
     public SSDService() throws OWLOntologyCreationException {
@@ -45,6 +46,7 @@ public class SSDService {
         ssdWriteSpeed = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ssd_has_write_speed_in_mbs"));
         ssdInterface = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ssd_has_interface"));
         ssdFormat = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ssd_has_format"));
+        ssdIsSupportedOn = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "ssd_is_supported_on"));
 
     }
     public List<SSDResponseDTO> getAllSSDs() {
@@ -109,7 +111,7 @@ public class SSDService {
         );
         return getAllSSDsDTOs(queryExpression);
     }
-    public List<SSDResponseDTO> getSSDsUpgrades(String SSD){
+    public List<SSDResponseDTO> getSSDsUpgrades(String SSD, String motherboard){
 
         OWLNamedIndividual SSDIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + SSD.replace(" ", "_")));
 
@@ -131,11 +133,14 @@ public class SSDService {
         OWLDataRange writeSpeedRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
                 dataFactory.getOWLFacetRestriction(OWLFacet.MIN_EXCLUSIVE, dataFactory.getOWLLiteral(Integer.parseInt(writeSpeedLiteral.getLiteral()))));
 
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
+
         OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
                 classSSD,
                 dataFactory.getOWLDataSomeValuesFrom(ssdCapacity, capacityRange),
                 dataFactory.getOWLDataSomeValuesFrom(ssdReadSpeed, readSpeedRange),
-                dataFactory.getOWLDataSomeValuesFrom(ssdWriteSpeed, writeSpeedRange)
+                dataFactory.getOWLDataSomeValuesFrom(ssdWriteSpeed, writeSpeedRange),
+                dataFactory.getOWLObjectHasValue(ssdIsSupportedOn, motherboardIndividual)
         );
         return getAllSSDsDTOs(queryExpression);
     }

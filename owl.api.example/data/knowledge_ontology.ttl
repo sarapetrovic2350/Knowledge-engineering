@@ -1955,7 +1955,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                 :ram_is_supported_on :ASUS_PRIME_B550-PLUS ;
                                 :ram_has_capacity_in_gb 16 ;
                                 :ram_has_latency "CL12" ;
-                                :ram_has_max_frequency_in_mhz 5600 ;
+                                :ram_has_max_frequency_in_mhz 3600 ;
                                 :ram_has_name "A DATA XPG LANCER RGB 16GB RAM" ;
                                 :ram_has_rgb "true"^^xsd:boolean ;
                                 :ram_has_type "DDR5" ;
