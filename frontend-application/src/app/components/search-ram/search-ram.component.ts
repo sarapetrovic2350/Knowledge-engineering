@@ -20,7 +20,7 @@ export class SearchRamComponent implements OnInit {
   isSearched: boolean = false;
   public searchResults: any[] = [];
   dataSource: any;
-  displayedColumns = ['name', 'capacity', 'maxFrequency', 'voltage', 'latency'];
+  displayedColumns = ['name', 'capacity', 'maxFrequency', 'voltage', 'latency', 'type', 'rgb'];
   public ram: Ram = new Ram();
 
   ngOnInit(): void {
@@ -49,6 +49,7 @@ export class SearchRamComponent implements OnInit {
           this.isSearched = true;
           this.searchResults = res;
           this.dataSource = this.searchResults
+          console.log(this.searchResults)
 
         },
         error: (e) => {
