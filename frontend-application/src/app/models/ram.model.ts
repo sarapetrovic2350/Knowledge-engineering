@@ -6,6 +6,6 @@ export class Ram {
         public voltage: number = 0,
         public latency: string = '',
         public type: string = '',
-        public hasRgb: boolean = false,
+        public hasRGB: boolean = false,
       ) {}
 }
