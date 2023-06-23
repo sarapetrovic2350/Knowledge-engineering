@@ -12,6 +12,14 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//camera_is_operated_by
+:camera_is_operated_by rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :device_is_operated_by ;
+                       owl:inverseOf :driver_operates_camera ;
+                       rdfs:domain :Camera ;
+                       rdfs:range :Driver .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//compatible_with_operating_system
 :compatible_with_operating_system rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf owl:topObjectProperty ;
@@ -19,11 +27,35 @@
                                   rdfs:range :Operating_system .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//computer_speakers_is_operated_by
+:computer_speakers_is_operated_by rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf :device_is_operated_by ;
+                                  owl:inverseOf :driver_operates_computer_speakers ;
+                                  rdfs:domain :Computer_speakers ;
+                                  rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cooler_is_supported_on
+:cooler_is_supported_on rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :is_supported_on_motherboard ;
+                        owl:inverseOf :is_compatible_with_cooler ;
+                        rdfs:domain :Cooler ;
+                        rdfs:range :Motherboard .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_has_cache
 :cpu_has_cache rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain :CPU ;
                rdfs:range :Cache .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//cpu_is_supported_on
+:cpu_is_supported_on rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_supported_on_motherboard ;
+                     owl:inverseOf :is_compatible_with_cpu ;
+                     rdfs:domain :CPU ;
+                     rdfs:range :Motherboard .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//designed_by_manufacturer
@@ -124,10 +156,17 @@
                                  rdfs:range :Manufacturer .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//device_is_operated_by
+:device_is_operated_by rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       owl:inverseOf :driver_operates ;
+                       rdfs:domain :Device ;
+                       rdfs:range :Driver .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates
 :driver_operates rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
-                 owl:inverseOf :device_is_operated_by ;
                  rdfs:domain :Driver ;
                  rdfs:range :Device .
 
@@ -135,7 +174,6 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_camera
 :driver_operates_camera rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :driver_operates ;
-                        owl:inverseOf :camera_is_operated_by ;
                         rdfs:domain :Driver ;
                         rdfs:range :Camera .
 
@@ -143,7 +181,6 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//driver_operates_computer_speakers
 :driver_operates_computer_speakers rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf :driver_operates ;
-                                   owl:inverseOf :computer_speakers_is_operated_by ;
                                    rdfs:domain :Driver ;
                                    rdfs:range :Computer_speakers .
 
@@ -235,11 +272,26 @@
                       rdfs:range :GPU .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_card_is_supported_on
+:graphic_card_is_supported_on rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :is_supported_on_motherboard ;
+                              owl:inverseOf :is_comaptible_with_graphic_card ;
+                              rdfs:domain :Graphic_card ;
+                              rdfs:range :Motherboard .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_is_compatible_with_operating_system
 :graphic_tablet_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
                                                     rdfs:subPropertyOf :compatible_with_operating_system ;
                                                     rdfs:domain :Graphic_tablet ;
                                                     rdfs:range :Operating_system .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//graphic_tablet_is_operated_by
+:graphic_tablet_is_operated_by rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :device_is_operated_by ;
+                               rdfs:domain :Graphic_tablet ;
+                               rdfs:range :Driver .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//hardware_designed_by_manufacturer
@@ -249,10 +301,24 @@
                                    rdfs:range :Manufacturer .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//hdd_is_supported_on
+:hdd_is_supported_on rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_supported_on_motherboard ;
+                     owl:inverseOf :is_comaptible_with_hdd ;
+                     rdfs:domain :HDD ;
+                     rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//headphones_are_operated_by
+:headphones_are_operated_by rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :device_is_operated_by ;
+                            rdfs:domain :Headphones ;
+                            rdfs:range :Driver .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_graphic_card
 :is_comaptible_with_graphic_card rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf :motherboard_is_compatible_with ;
-                                 owl:inverseOf :graphic_card_is_supported_on ;
                                  rdfs:domain :Motherboard ;
                                  rdfs:range :Graphic_card .
 
@@ -260,7 +326,6 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_comaptible_with_hdd
 :is_comaptible_with_hdd rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :motherboard_is_compatible_with ;
-                        owl:inverseOf :hdd_is_supported_on ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :HDD .
 
@@ -276,7 +341,6 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_cooler
 :is_compatible_with_cooler rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf :motherboard_is_compatible_with ;
-                           owl:inverseOf :cooler_is_supported_on ;
                            rdfs:domain :Motherboard ;
                            rdfs:range :Cooler .
 
@@ -284,7 +348,6 @@
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//is_compatible_with_cpu
 :is_compatible_with_cpu rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :motherboard_is_compatible_with ;
-                        owl:inverseOf :cpu_is_supported_on ;
                         rdfs:domain :Motherboard ;
                         rdfs:range :CPU .
 
@@ -321,6 +384,14 @@
                         rdfs:range :SSD .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//is_supported_on_motherboard
+:is_supported_on_motherboard rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             owl:inverseOf :motherboard_is_compatible_with ;
+                             rdfs:domain :Hardware ;
+                             rdfs:range :Motherboard .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//joystick_is_compatible_with_operating_system
 :joystick_is_compatible_with_operating_system rdf:type owl:ObjectProperty ;
                                               rdfs:subPropertyOf :compatible_with_operating_system ;
@@ -328,12 +399,53 @@
                                               rdfs:range :Operating_system .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//joystick_is_operated_by
+:joystick_is_operated_by rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :device_is_operated_by ;
+                         rdfs:domain :Joystick ;
+                         rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//keyboard_is_operated_by
+:keyboard_is_operated_by rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :device_is_operated_by ;
+                         rdfs:domain :Keyboard ;
+                         rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//microphone_is_operated_by
+:microphone_is_operated_by rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :device_is_operated_by ;
+                           rdfs:domain :Microphone ;
+                           rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//monitor_is_operated_by
+:monitor_is_operated_by rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :device_is_operated_by ;
+                        rdfs:domain :Monitor ;
+                        rdfs:range :Driver .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//motherboard_is_compatible_with
 :motherboard_is_compatible_with rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf owl:topObjectProperty ;
-                                owl:inverseOf :is_supported_on_motherboard ;
                                 rdfs:domain :Motherboard ;
                                 rdfs:range :Hardware .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//mouse_is_operated_by
+:mouse_is_operated_by rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :device_is_operated_by ;
+                      rdfs:domain :Mouse ;
+                      rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//network_interface_card_is_supported_on
+:network_interface_card_is_supported_on rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf :is_supported_on_motherboard ;
+                                        rdfs:domain :Network_interface_card ;
+                                        rdfs:range :Motherboard .
 
 
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//operating_system_is_compatible_with
@@ -371,6 +483,41 @@
                                                  rdfs:range :Video_game .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3//printer_is_operated_by
+:printer_is_operated_by rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :device_is_operated_by ;
+                        rdfs:domain :Printer ;
+                        rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//projector_is_operated_by
+:projector_is_operated_by rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :device_is_operated_by ;
+                          rdfs:domain :Projector ;
+                          rdfs:range :Driver .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//psu_is_supported_on
+:psu_is_supported_on rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_supported_on_motherboard ;
+                     rdfs:domain :PSU ;
+                     rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ram_is_supported_on
+:ram_is_supported_on rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :is_supported_on_motherboard ;
+                     rdfs:domain :RAM ;
+                     rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3//scanner_is_operated_by
+:scanner_is_operated_by rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :device_is_operated_by ;
+                        rdfs:domain :Scanner ;
+                        rdfs:range :Driver .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3//software_designed_by_manufacturer
 :software_designed_by_manufacturer rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf :designed_by_manufacturer ;
@@ -378,161 +525,14 @@
                                    rdfs:range :Manufacturer .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#camera_is_operated_by
-:camera_is_operated_by rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf :device_is_operated_by ;
-                       rdfs:domain :Camera ;
-                       rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#computer_speakers_is_operated_by
-:computer_speakers_is_operated_by rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf :device_is_operated_by ;
-                                  rdfs:domain :Computer_speakers ;
-                                  rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#cooler_is_supported_on
-:cooler_is_supported_on rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :is_supported_on_motherboard ;
-                        rdfs:domain :Cooler ;
-                        rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#cpu_is_supported_on
-:cpu_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on_motherboard ;
-                     rdfs:domain :CPU ;
-                     rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#device_is_operated_by
-:device_is_operated_by rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty ;
-                       rdfs:domain :Device ;
-                       rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#graphic_card_is_supported_on
-:graphic_card_is_supported_on rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf :is_supported_on_motherboard ;
-                              rdfs:domain :Graphic_card ;
-                              rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#graphic_tablet_is_operated_by
-:graphic_tablet_is_operated_by rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf :device_is_operated_by ;
-                               rdfs:domain :Graphic_tablet ;
-                               rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#hdd_is_supported_on
-:hdd_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on_motherboard ;
-                     rdfs:domain :HDD ;
-                     rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#headphones_are_operated_by
-:headphones_are_operated_by rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf :device_is_operated_by ;
-                            rdfs:domain :Headphones ;
-                            rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#is_supported_on_motherboard
-:is_supported_on_motherboard rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             rdfs:domain :Hardware ;
-                             rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#joystick_is_operated_by
-:joystick_is_operated_by rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :device_is_operated_by ;
-                         rdfs:domain :Joystick ;
-                         rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#keyboard_is_operated_by
-:keyboard_is_operated_by rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :device_is_operated_by ;
-                         rdfs:domain :Keyboard ;
-                         rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#microphone_is_operated_by
-:microphone_is_operated_by rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf :device_is_operated_by ;
-                           rdfs:domain :Microphone ;
-                           rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#monitor_is_operated_by
-:monitor_is_operated_by rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :device_is_operated_by ;
-                        rdfs:domain :Monitor ;
-                        rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#mouse_is_operated_by
-:mouse_is_operated_by rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :device_is_operated_by ;
-                      rdfs:domain :Mouse ;
-                      rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#network_interface_card_is_supported_on
-:network_interface_card_is_supported_on rdf:type owl:ObjectProperty ;
-                                        rdfs:subPropertyOf :is_supported_on_motherboard ;
-                                        rdfs:domain :Network_interface_card ;
-                                        rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#printer_is_operated_by
-:printer_is_operated_by rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :device_is_operated_by ;
-                        rdfs:domain :Printer ;
-                        rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#projector_is_operated_by
-:projector_is_operated_by rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :device_is_operated_by ;
-                          rdfs:domain :Projector ;
-                          rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#psu_is_supported_on
-:psu_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on_motherboard ;
-                     rdfs:domain :PSU ;
-                     rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ram_is_supported_on
-:ram_is_supported_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :is_supported_on_motherboard ;
-                     rdfs:domain :RAM ;
-                     rdfs:range :Motherboard .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#scanner_is_operated_by
-:scanner_is_operated_by rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :device_is_operated_by ;
-                        rdfs:domain :Scanner ;
-                        rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#sound_card_is_supported_on
+###  http://www.semanticweb.org/sara/ontologies/2023/3//sound_card_is_supported_on
 :sound_card_is_supported_on rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :is_supported_on_motherboard ;
                             rdfs:domain :Sound_card ;
                             rdfs:range :Motherboard .
 
 
-###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#ssd_is_supported_on
+###  http://www.semanticweb.org/sara/ontologies/2023/3//ssd_is_supported_on
 :ssd_is_supported_on rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :is_supported_on_motherboard ;
                      rdfs:domain :SSD ;
@@ -1952,6 +1952,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :A_DATA_XPG_LANCER_RGB_16GB_RAM rdf:type owl:NamedIndividual ,
                                          :RAM ;
                                 :hardware_designed_by_manufacturer :A_DATA ;
+                                :ram_is_supported_on :ASUS_PRIME_B550-PLUS ;
                                 :ram_has_capacity_in_gb 16 ;
                                 :ram_has_latency "CL12" ;
                                 :ram_has_max_frequency_in_mhz 5600 ;
@@ -2039,6 +2040,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :CRUCIAL_P3_Plus_2TB_SSD rdf:type owl:NamedIndividual ,
                                   :SSD ;
                          :hardware_designed_by_manufacturer :CRUCIAL ;
+                         :ssd_is_supported_on :ASUS_PRIME_B550-PLUS ;
                          :ssd_has_capacity_in_gb 2000 ;
                          :ssd_has_format "M.2 2280" ;
                          :ssd_has_interface "PCIe 4.0" ;
@@ -2051,6 +2053,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :CRUCIAL_SSD_1TB_BX500 rdf:type owl:NamedIndividual ,
                                 :SSD ;
                        :hardware_designed_by_manufacturer :CRUCIAL ;
+                       :ssd_is_supported_on :ASUS_PRIME_B550-PLUS ;
                        :ssd_has_capacity_in_gb 1000 ;
                        :ssd_has_format "2.5" ;
                        :ssd_has_interface "SATA III" ;
@@ -2450,6 +2453,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                :CPU ;
                       :cpu_has_cache :L2_CACHE_3MB ,
                                      :L3_CACHE_16MB ;
+                      :cpu_is_supported_on :ASUS_PRIME_B550-PLUS ;
                       :hardware_designed_by_manufacturer :Intel ;
                       :cpu_for_gaming "true"^^xsd:boolean ;
                       :cpu_has_clock_rate 2.5 ;
@@ -2466,6 +2470,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                :CPU ;
                       :cpu_has_cache :L2_CACHE_32MB ,
                                      :L3_CACHE_32MB ;
+                      :cpu_is_supported_on :ASUS_PRIME_B550-PLUS ;
                       :hardware_designed_by_manufacturer :Intel ;
                       :cpu_for_gaming "true"^^xsd:boolean ;
                       :cpu_has_clock_rate 3.0 ;
@@ -2581,6 +2586,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :KINGSTON_Fury_Renegade_32GB_RAM rdf:type owl:NamedIndividual ,
                                           :RAM ;
                                  :hardware_designed_by_manufacturer :KINGSTON ;
+                                 :ram_is_supported_on :ASUS_PRIME_B550-PLUS ;
                                  :ram_has_capacity_in_gb 32 ;
                                  :ram_has_latency "CL32" ;
                                  :ram_has_max_frequency_in_mhz 6400 ;
@@ -2594,6 +2600,7 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
 :KINGSTON_Fury_Renegade_SSD rdf:type owl:NamedIndividual ,
                                      :SSD ;
                             :hardware_designed_by_manufacturer :KINGSTON ;
+                            :ssd_is_supported_on :ASUS_PRIME_B550-PLUS ;
                             :ssd_has_capacity_in_gb 2000 ;
                             :ssd_has_format "M.2 2280" ;
                             :ssd_has_interface "PCIe 4.0" ;
