@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {SymptomsCausesComponent} from "./components/symptoms-causes/symptoms-causes.component";
 import {PurposesComponent} from "./components/purposes/purposes.component";
 import { CpuSearchComponent } from './components/cpu-search/cpu-search.component';
+import { SsdSearchComponent } from './components/ssd-search/ssd-search.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'cpuSearch',
     component: CpuSearchComponent
+  }, 
+  {
+    path:'ssdSearch',
+    component: SsdSearchComponent
   }
 
 ];

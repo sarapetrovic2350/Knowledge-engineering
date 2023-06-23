@@ -11,6 +11,7 @@ import { SymptomsCausesComponent } from './components/symptoms-causes/symptoms-c
 import {HttpClientModule} from "@angular/common/http";
 import { PurposesComponent } from './components/purposes/purposes.component';
 import { CpuSearchComponent } from './components/cpu-search/cpu-search.component';
+import { SsdSearchComponent } from './components/ssd-search/ssd-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CpuSearchComponent } from './components/cpu-search/cpu-search.component
     HeaderComponent,
     SymptomsCausesComponent,
     PurposesComponent,
-    CpuSearchComponent
+    CpuSearchComponent,
+    SsdSearchComponent
   ],
   imports: [
     BrowserModule,
