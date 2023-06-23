@@ -1,0 +1,86 @@
+<mat-card elevation="5" fxFlex class="content">
+    <div class="row">
+      <div>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Minimum capacity</mat-label>
+      <input type="number" matInput [(ngModel)]="minCapacity" placeholder="Enter minimum Capacity"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Maximum capacity</mat-label>
+      <input type="number" matInput [(ngModel)]="maxCapacity" placeholder="Enter maximum Capacity"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Minimum read spead </mat-label>
+      <input type="number" matInput [(ngModel)]="minReadSpeed" placeholder="Enter minimum read spead"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Maximum read spead </mat-label>
+      <input type="number" matInput [(ngModel)]="maxReadSpeed" placeholder="Enter maximum read spead"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Minimum write speed</mat-label>
+      <input type="number" matInput [(ngModel)]="minWriteSpeed" placeholder="Enter minimum write speed"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Maximum write speed</mat-label>
+      <input type="number" matInput [(ngModel)]="maxWriteSpeed" placeholder="Enter maximum write speed"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+      </div>
+    </div>
+    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchSsd()">Search for purposes</button>
+    <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
+      <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
+    </button>
+  </mat-card>
+  
+  <div *ngIf="isSearched"class="container">
+    <div class="table-header" *ngIf="isSearched">
+      <p class="table-title">SSDS</p>
+    <mat-table #table [dataSource]="dataSource">
+ 
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let ssd"> {{ssd.name}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="capacityInGB">
+        <mat-header-cell *matHeaderCellDef> Capacity [GB] </mat-header-cell>
+        <mat-cell *matCellDef="let ssd"> {{ssd.capacityInGB}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="readSpeedInMBs">
+        <mat-header-cell *matHeaderCellDef> Reed Speed [MB/s] </mat-header-cell>
+        <mat-cell *matCellDef="let ssd"> {{ssd.readSpeedInMBs}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="writeSpeedInMBs">
+        <mat-header-cell *matHeaderCellDef> Write Speed [MB/s] </mat-header-cell>
+        <mat-cell *matCellDef="let ssd"> {{ssd.writeSpeedInMBs}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="interfaceSSD">
+        <mat-header-cell *matHeaderCellDef>interface </mat-header-cell>
+        <mat-cell *matCellDef="let ssd"> {{ssd.interfaceSSD}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="format">
+        <mat-header-cell *matHeaderCellDef> Format </mat-header-cell>
+        <mat-cell *matCellDef="let ssd"> {{ssd.format}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  
+  <footer></footer>
+  
+  
+  
+
