@@ -1,6 +1,4 @@
-<mat-card elevation="5" fxFlex class="content">
-    <div class="row">
-      <div>
+<mat-card>
     <mat-form-field class="ml" appearance="outline">
       <mat-label>Minimum capacity</mat-label>
       <input type="number" matInput [(ngModel)]="minCapacity" placeholder="Enter minimum Capacity"/>
@@ -31,56 +29,55 @@
       <input type="number" matInput [(ngModel)]="maxWriteSpeed" placeholder="Enter maximum write speed"/>
       <mat-icon matPrefix>search</mat-icon>
     </mat-form-field>
-      </div>
-    </div>
-    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchSsd()">Search for purposes</button>
+    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchSsd()">Search</button>
     <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
       <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
     </button>
   </mat-card>
-  
+
   <div *ngIf="isSearched"class="container">
     <div class="table-header" *ngIf="isSearched">
-      <p class="table-title">SSDS</p>
-    <mat-table #table [dataSource]="dataSource">
- 
+      <p class="table-title">SSDs</p>
+      <p *ngIf="notFound" class="table-title"> No SSDs found for entered parameters!</p>
+    </div>
+    <table *ngIf="isSearched" mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-        <mat-cell *matCellDef="let ssd"> {{ssd.name}} </mat-cell>
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Name </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.name}} </td>
       </ng-container>
-  
+
       <ng-container matColumnDef="capacityInGB">
-        <mat-header-cell *matHeaderCellDef> Capacity [GB] </mat-header-cell>
-        <mat-cell *matCellDef="let ssd"> {{ssd.capacityInGB}} </mat-cell>
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Capacity [GB] </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.capacityInGB}} </td>
       </ng-container>
-  
+
       <ng-container matColumnDef="readSpeedInMBs">
-        <mat-header-cell *matHeaderCellDef> Reed Speed [MB/s] </mat-header-cell>
-        <mat-cell *matCellDef="let ssd"> {{ssd.readSpeedInMBs}} </mat-cell>
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Reed Speed [MB/s] </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.readSpeedInMBs}} </td>
       </ng-container>
-  
+
       <ng-container matColumnDef="writeSpeedInMBs">
-        <mat-header-cell *matHeaderCellDef> Write Speed [MB/s] </mat-header-cell>
-        <mat-cell *matCellDef="let ssd"> {{ssd.writeSpeedInMBs}} </mat-cell>
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Write Speed [MB/s] </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.writeSpeedInMBs}} </td>
       </ng-container>
-  
+
       <ng-container matColumnDef="interfaceSSD">
-        <mat-header-cell *matHeaderCellDef>interface </mat-header-cell>
-        <mat-cell *matCellDef="let ssd"> {{ssd.interfaceSSD}} </mat-cell>
+        <th mat-header-cell *matHeaderCellDef class="cell-center">interface </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.interfaceSSD}} </td>
       </ng-container>
 
       <ng-container matColumnDef="format">
-        <mat-header-cell *matHeaderCellDef> Format </mat-header-cell>
-        <mat-cell *matCellDef="let ssd"> {{ssd.format}} </mat-cell>
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Format </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.format}} </td>
       </ng-container>
-  
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
-  
+
   <footer></footer>
-  
-  
-  
+
+
+
 

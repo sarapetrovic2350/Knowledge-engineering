@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTableDataSource} from "@angular/material/table";
-import {Cause} from "../../models/cause.model";
 import {PurposeService} from "../../services/purpose.service";
 import {Purpose} from "../../models/purpose.model";
 

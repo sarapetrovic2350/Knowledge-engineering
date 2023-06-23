@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Ram } from 'src/app/models/ram.model';
 import { RamService } from 'src/app/services/ram.service';
+import {MatTableDataSource} from "@angular/material/table";
+import {Cause} from "../../models/cause.model";
 
 @Component({
   selector: 'app-search-ram',
@@ -18,10 +20,11 @@ export class SearchRamComponent implements OnInit {
   constructor(private ramService: RamService ) { }
 
   isSearched: boolean = false;
-  public searchResults: any[] = [];
-  dataSource: any;
-  displayedColumns = ['name', 'capacity', 'maxFrequency', 'voltage', 'latency', 'type', 'rgb'];
-  public ram: Ram = new Ram();
+  public rams: Ram[] = [];
+  public dataSource = new MatTableDataSource<Ram>();
+  public notFoundRams: Ram[] = [];
+  notFound: boolean = false;
+  public displayedColumns = ['name', 'capacity', 'maxFrequency', 'voltage', 'latency', 'type', 'rgb'];
 
   ngOnInit(): void {
   }
@@ -47,18 +50,25 @@ export class SearchRamComponent implements OnInit {
       {
         next: (res) => {
           this.isSearched = true;
-          this.searchResults = res;
-          this.dataSource = this.searchResults
-          console.log(this.searchResults)
+          this.notFound = false;
+          this.rams = res;
+          this.dataSource.data = this.rams
+          if(this.rams.length == 0) {
+            this.notFound = true;
+            this.dataSource.data = this.notFoundRams;
+          }
+          console.log(this.rams)
 
         },
         error: (e) => {
           this.isSearched = true;
+          this.notFound = true;
+          this.dataSource.data = this.notFoundRams;
           console.log(e);
         }
 
       });
-    
+
   }
 
   clearSearch(){

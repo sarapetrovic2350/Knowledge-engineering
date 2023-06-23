@@ -1,64 +1,64 @@
-.content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-  
-  mat-card {
-    max-width: 500px;
-    text-align: center;
-    margin-top: 2%;
-    animation: fadein 0.5s;
-    -o-animation: fadein 1s; /* Opera */
-    -moz-animation: fadein 1s; /* Firefox */
-    -webkit-animation: fadein 1s; /* Safari and Chrome */
-  
-  }
-  
-  mat-input-container {
-    display: block;
-  }
-  
-  
-  mat-spinner {
-    width: 25px;
-    height: 25px;
-    margin: 20px auto 0 auto;
-  }
-  
-  .btn{
-    width: 45%;
-    margin: 5px auto 0 auto;
-  }
-  
-  .ml {
-    margin-left: 5px;
-  }
-  .container {
-    width: 70%;
-    margin: 20px auto auto;
-    border-radius: 3px;
-    border: #DCD6CC 1px solid;
-  }
-  
-  table {
-    width: 100%;
-  }
-  
-  table td {
-    max-width: 100px;
-  }
-  
-  .table-title {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    font-size: 20px;
-  
-  }
-  footer{
-    height:10vh;
-    /*Or fixed pixel unit*/
-    background-color: transparent;
-  }
-  
+.mat-card {
+  max-width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml {
+  margin-left: 5px;
+}
+
+.btn {
+  margin-left: 10px;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.container {
+  width: 70%;
+  margin: 20px auto auto;
+  border-radius: 3px;
+  border: #DCD6CC 1px solid;
+}
+
+table {
+  width: 100%;
+}
+
+table td {
+  max-width: 100px;
+}
+
+.table-title {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+
+}
+
+.cell-center {
+  text-align: center;
+}
+
+.clickable:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table-header {
+  display: flex;
+}
+
+p {
+  float: left;
+  margin-right: auto;
+}
+
+footer{
+  height:10vh;
+  /*Or fixed pixel unit*/
+  background-color: transparent;
+}

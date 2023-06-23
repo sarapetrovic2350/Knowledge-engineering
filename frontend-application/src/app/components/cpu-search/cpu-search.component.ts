@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import { Cpu } from 'src/app/models/cpu.model';
 import { CpuService } from 'src/app/services/cpu.service';
+import {Ram} from "../../models/ram.model";
 
 @Component({
   selector: 'app-cpu-search',
@@ -11,21 +12,20 @@ import { CpuService } from 'src/app/services/cpu.service';
 export class CpuSearchComponent implements OnInit {
 
   minCores: number = 0;
-  maxCores: number = 0; 
-  minThreads: number = 0; 
-  maxThreads: number = 0; 
-  minClockRate: number = 0; 
-  maxClockRate: number = 0; 
+  maxCores: number = 0;
+  minThreads: number = 0;
+  maxThreads: number = 0;
+  minClockRate: number = 0;
+  maxClockRate: number = 0;
 
-  public searchResults: any[] = [];
-  public notFoundPurposes: Cpu[] = [];
-  public cpu: Cpu | undefined = undefined;
+  public cpus: Cpu[] = [];
+  public notFoundCpus: Cpu[] = [];
   displayedColumns = ['cpuNames', 'cpuCores', 'cpuClockRate', 'cpuGaming', 'cpuTDP', 'cpuThreads', 'cpuType', 'cpuIntegratedGPU'];
 
 
   isSearched: boolean = false;
   notFound: boolean = false;
-  dataSource: any;
+  public dataSource = new MatTableDataSource<Cpu>();
   constructor(private cpuService: CpuService) { }
 
   ngOnInit(): void {
@@ -51,24 +51,18 @@ export class CpuSearchComponent implements OnInit {
         next: (res) => {
           this.isSearched = true;
           this.notFound = false;
-          this.searchResults = res;
-        // const TABLE_VALUES: any[] = [
-        //     {position: 1, name: 'App development', poor: res.appDevelopment.poor.toFixed(5)*100, good: res.appDevelopment.good.toFixed(5)*100, excellent: res.appDevelopment.excellent.toFixed(5)*100},
-        //     {position: 2, name: 'Gaming', poor: res.gaming.poor.toFixed(5)*100, good: res.gaming.good.toFixed(5)*100, excellent: res.gaming.excellent.toFixed(5)*100},
-        //     {position: 3, name: 'Business', poor: res.gaming.poor.toFixed(5)*100, good: res.gaming.good.toFixed(5)*100, excellent: res.gaming.excellent.toFixed(5)*100},
-        //     {position: 4, name: 'Crypto mining', poor: res.cryptoMining.poor.toFixed(3)*100, good: res.cryptoMining.good.toFixed(5)*100, excellent: res.cryptoMining.excellent.toFixed(5)*100},
-        //     {position: 5, name: 'Home', poor: res.home.poor.toFixed(5)*100, good: res.home.good.toFixed(5)*100, excellent: res.home.excellent.toFixed(5)*100},
-        //     {position: 6, name: 'Hosting', poor: res.hosting.poor.toFixed(5)*100, good: res.hosting.good.toFixed(5)*100, excellent: res.hosting.excellent.toFixed(5)*100},
-        // ];
+          this.cpus = res;
+          this.dataSource.data = this.cpus;
 
-        //   this.dataSource = TABLE_VALUES;
-        this.dataSource = res; 
-          //console.log(res.appDevelopment)
+          if(this.cpus.length == 0) {
+            this.notFound = true;
+            this.dataSource.data = this.notFoundCpus;
+          }
         },
         error: (e) => {
-          this.notFound = true;
           this.isSearched = true;
-          //this.dataSource.data = this.notFoundCauses;
+          this.notFound = true;
+          this.dataSource.data = this.notFoundCpus;
           console.log(e);
         }
 
