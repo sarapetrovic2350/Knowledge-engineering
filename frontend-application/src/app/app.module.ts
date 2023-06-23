@@ -9,12 +9,14 @@ import { HeaderComponent } from './components/header/header.component';
 import {AngularMaterialModule} from "./angular-material/angular-material.module";
 import { SymptomsCausesComponent } from './components/symptoms-causes/symptoms-causes.component';
 import {HttpClientModule} from "@angular/common/http";
+import { PurposesComponent } from './components/purposes/purposes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SymptomsCausesComponent
+    SymptomsCausesComponent,
+    PurposesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,103 @@
+<mat-card elevation="5" fxFlex class="content">
+  <div class="row">
+    <div>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>Number of CPU cores</mat-label>
+    <input type="number" min="2" max="64" matInput [(ngModel)]="cpu_cores" placeholder="Enter the CPU cores number"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>Number of CPU threads</mat-label>
+    <input type="number" min="2" max="128" matInput [(ngModel)]="cpu_threads" placeholder="Enter the CPU threads number"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>CPU tdp</mat-label>
+    <input type="number" min="5" max="350" matInput [(ngModel)]="cpu_tdp" placeholder="Enter the CPU tdp"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>RAM capacity in GB</mat-label>
+    <input type="number" min="1" max="128" matInput [(ngModel)]="ram_capacity" placeholder="Enter the RAM capacity"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>RAM speed</mat-label>
+    <input type="number" min="400" max="4400" matInput [(ngModel)]="ram_speed" placeholder="Enter the RAM speed"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>RAM voltage</mat-label>
+    <input type="number" min="1.2" max="1.65" matInput [(ngModel)]="ram_voltage" placeholder="Enter the RAM voltage"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>GPU memory in GB</mat-label>
+    <input type="number" min="1" max="24" matInput [(ngModel)]="gpu_memory" placeholder="Enter the GPU memory"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>GPU clock in MHz</mat-label>
+    <input type="number" min="100" max="2200" matInput [(ngModel)]="gpu_clock" placeholder="Enter the GPU clock"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>PSU output power</mat-label>
+    <input type="number" min="200" max="1200" matInput [(ngModel)]="psu_power" placeholder="Enter the PSU output power"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>HDD capacity in GB</mat-label>
+    <input type="number" min="16" max="2000" matInput [(ngModel)]="hdd_capacity" placeholder="Enter the HDD capacity"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+    </div>
+  </div>
+  <button class="btn" mat-raised-button type="submit" color="primary" (click)="findPurposes()">Search for purposes</button>
+  <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
+    <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
+  </button>
+</mat-card>
+
+<div *ngIf="isSearched"class="container">
+  <div class="table-header" *ngIf="isSearched">
+    <p class="table-title">Purposes</p>
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="poor">
+      <mat-header-cell *matHeaderCellDef> Poor </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.poor}}% </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="good">
+      <mat-header-cell *matHeaderCellDef> Good </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.good}}% </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="excellent">
+      <mat-header-cell *matHeaderCellDef> Excellent </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.excellent}}% </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+
+<footer></footer>
+
+
