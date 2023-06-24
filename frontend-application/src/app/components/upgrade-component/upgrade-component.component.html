@@ -1,0 +1,183 @@
+<mat-card>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>Motherboard</mat-label>
+      <input [(ngModel)]="motherboard"  matInput placeholder="Enter name of motherboard"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <div>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>RAM</mat-label>
+      <input [(ngModel)]="RAM" matInput placeholder="Enter name of RAM"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>CPU</mat-label>
+      <input [(ngModel)]="CPU" matInput placeholder="Enter name of CPU"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="ml" appearance="outline">
+      <mat-label>SSD</mat-label>
+      <input [(ngModel)]="SSD" matInput placeholder="Enter name of SSD"/>
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="mff" appearance="outline">
+            <mat-label>Choose Component:</mat-label>
+            <mat-select  [(ngModel)]="chosedComponent" name="selections">
+                <mat-option value = 0>CPU</mat-option>
+                <mat-option value = 1>RAM</mat-option>
+                <mat-option value = 2>SSD</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchForUpgrade()">Search</button>
+    <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
+      <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
+    </button>
+  </mat-card>
+
+  <div class="container" *ngIf = "isRAM" >
+    <div class="table-header" *ngIf="isRAM">
+      <p class="table-title">RAMs</p>
+      <p *ngIf="notFound" class="table-title"> No RAMs found for entered parameters!</p>
+    </div>
+    <table *ngIf="isSearched" mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Name </th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="capacity">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Capacity [GB]</th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.capacityInGB}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="maxFrequency">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Max frequency [MHz]</th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.maxFrequencyInMHz}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="voltage">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Voltage </th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.voltage}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="latency">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Latency </th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.latency}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Type </th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.type}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="rgb" >
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Has rgb </th>
+        <td mat-cell *matCellDef="let ram" class="cell-center"> {{ram.hasRGB}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsRAM; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsRAM;"></tr>
+    </table>
+  </div>
+
+  <div *ngIf="isCPU"class="container">
+    <div class="table-header" *ngIf="isCPU">
+      <p class="table-title">CPUs</p>
+      <p *ngIf="notFound" class="table-title"> No CPUs found for entered parameters!</p>
+    </div>
+    <table *ngIf="isSearched" mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="cpuNames">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Name </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuCores">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Core </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuCores}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuClockRate">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Clock Rate </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuClockRate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuGaming">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Gaming </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuGaming}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuTDP">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> TDP </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuTDP}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuThreads">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Threads </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuThreads}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuType">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Type </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuType}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cpuIntegratedGPU">
+        <th mat-header-cell *matHeaderCellDef class="cell-center">Integrated GPU </th>
+        <td mat-cell *matCellDef="let cpu" class="cell-center"> {{cpu.cpuIntegratedGPU}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsCPU; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsCPU;"></tr>
+
+    </table>
+  </div>
+
+  <div *ngIf="isSSD"class="container">
+    <div class="table-header" *ngIf="isSSD">
+      <p class="table-title">SSDs</p>
+      <p *ngIf="notFound" class="table-title"> No SSDs found for entered parameters!</p>
+    </div>
+    <table *ngIf="isSearched" mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Name </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="capacityInGB">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Capacity [GB] </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.capacityInGB}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="readSpeedInMBs">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Reed Speed [MB/s] </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.readSpeedInMBs}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="writeSpeedInMBs">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Write Speed [MB/s] </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.writeSpeedInMBs}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="interfaceSSD">
+        <th mat-header-cell *matHeaderCellDef class="cell-center">interface </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.interfaceSSD}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="format">
+        <th mat-header-cell *matHeaderCellDef class="cell-center"> Format </th>
+        <td mat-cell *matCellDef="let ssd" class="cell-center"> {{ssd.format}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsSSD; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsSSD;"></tr>
+    </table>
+  </div>
+
+  <footer></footer>
