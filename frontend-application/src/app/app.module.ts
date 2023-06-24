@@ -13,6 +13,7 @@ import { PurposesComponent } from './components/purposes/purposes.component';
 import { SearchRamComponent } from './components/search-ram/search-ram.component';
 import { CpuSearchComponent } from './components/cpu-search/cpu-search.component';
 import { SsdSearchComponent } from './components/ssd-search/ssd-search.component';
+import { UpgradeComponentComponent } from './components/upgrade-component/upgrade-component.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SsdSearchComponent } from './components/ssd-search/ssd-search.component
     PurposesComponent,
     SearchRamComponent,
     CpuSearchComponent,
-    SsdSearchComponent
+    SsdSearchComponent,
+    UpgradeComponentComponent
   ],
   imports: [
     BrowserModule,
