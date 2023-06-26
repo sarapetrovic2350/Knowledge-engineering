@@ -1,25 +1,19 @@
 mat-card {
-  max-width: 500px;
+  max-width: 400px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 .ml {
   margin-left: 5px;
+  width: 300px;
 }
 
 .btn {
   margin-left: 10px;
   height: 50px;
-  width: 100px;
+  width: 140px;
   border-radius: 10px;
-}
-
-.home-img{
-  width: 600px;
-  height: 530px;
-  margin-left: 450px;
-  position: static;
 }
 
 .container {
@@ -34,7 +28,7 @@ table {
 }
 
 table td {
-  max-width: 100px;
+  max-width:max-content;
 }
 
 .table-title {
@@ -51,7 +45,7 @@ footer{
 }
 
 .cell-center {
-  text-align: center;
+  text-align: left;
 }
 
 .clickable:hover {

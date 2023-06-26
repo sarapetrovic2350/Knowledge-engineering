@@ -4,7 +4,7 @@
     <input type="text" matInput [(ngModel)]="symptoms" placeholder="Enter the symptoms"/>
     <mat-icon matPrefix>search</mat-icon>
   </mat-form-field>
-  <button class="btn" mat-mini-fab color="primary" (click)="findCauses()">Find causes</button>
+  <button class="btn" mat-mini-fab color="primary" (click)="findCauses()">Search causes</button>
   <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
     <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
   </button>

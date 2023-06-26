@@ -27,7 +27,7 @@
     </div>
     <div>
         <mat-form-field class="mff" appearance="outline">
-            <mat-label>Choose Component:</mat-label>
+            <mat-label>Component to upgrade:</mat-label>
             <mat-select  [(ngModel)]="chosedComponent" name="selections">
                 <mat-option value = 0>CPU</mat-option>
                 <mat-option value = 1>RAM</mat-option>
@@ -35,7 +35,7 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchForUpgrade()">Search</button>
+    <button class="btn" mat-raised-button type="submit" color="primary" (click)="searchForUpgrade()">Search upgrades</button>
     <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
       <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
     </button>
