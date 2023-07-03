@@ -3535,6 +3535,966 @@ Wireless i Bluetooth Samo: M.2 slot (Key E, CNVi & PCIe)""" .
                                  :video_game_has_name "PS4 LEGO Movie 2: The Videogame" .
 
 
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_1
+:Desktop_computer_1 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_1" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_10
+:Desktop_computer_10 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_10" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_11
+:Desktop_computer_11 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_11" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_12
+:Desktop_computer_12 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_12" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_13
+:Desktop_computer_13 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_13" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_14
+:Desktop_computer_14 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_14" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_15
+:Desktop_computer_15 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_15" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_16
+:Desktop_computer_16 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_16" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_17
+:Desktop_computer_17 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_17" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_18
+:Desktop_computer_18 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_18" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_19
+:Desktop_computer_19 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_19" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_2
+:Desktop_computer_2 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_2" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_20
+:Desktop_computer_20 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_20" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_21
+:Desktop_computer_21 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_21" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_22
+:Desktop_computer_22 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_22" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_23
+:Desktop_computer_23 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_23" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_24
+:Desktop_computer_24 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_24" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_25
+:Desktop_computer_25 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_25" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_26
+:Desktop_computer_26 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :MSI_MPG_B550_GAMING_PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_26" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_27
+:Desktop_computer_27 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :MSI_MPG_B550_GAMING_PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_27" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_28
+:Desktop_computer_28 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :MSI_MPG_B550_GAMING_PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_28" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_29
+:Desktop_computer_29 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :MSI_MPG_B550_GAMING_PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_29" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_3
+:Desktop_computer_3 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_3" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_30
+:Desktop_computer_30 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :MSI_MPG_B550_GAMING_PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_30" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_31
+:Desktop_computer_31 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_31" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_32
+:Desktop_computer_32 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_32" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_33
+:Desktop_computer_33 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_33" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_34
+:Desktop_computer_34 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_34" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_35
+:Desktop_computer_35 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_35" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_36
+:Desktop_computer_36 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_36" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_37
+:Desktop_computer_37 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_37" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_38
+:Desktop_computer_38 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_38" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_39
+:Desktop_computer_39 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_39" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_4
+:Desktop_computer_4 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_4" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_40
+:Desktop_computer_40 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_40" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_41
+:Desktop_computer_41 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_41" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_42
+:Desktop_computer_42 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_42" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_43
+:Desktop_computer_43 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_43" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_44
+:Desktop_computer_44 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_44" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_45
+:Desktop_computer_45 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_45" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_46
+:Desktop_computer_46 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_46" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_47
+:Desktop_computer_47 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_47" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_48
+:Desktop_computer_48 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_48" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_49
+:Desktop_computer_49 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_49" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_5
+:Desktop_computer_5 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_5" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_50
+:Desktop_computer_50 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_50" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_51
+:Desktop_computer_51 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_51" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_52
+:Desktop_computer_52 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_52" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_53
+:Desktop_computer_53 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_53" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_54
+:Desktop_computer_54 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_54" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_55
+:Desktop_computer_55 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_55" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_56
+:Desktop_computer_56 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_56" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_57
+:Desktop_computer_57 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_57" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_58
+:Desktop_computer_58 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_58" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_59
+:Desktop_computer_59 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_59" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_6
+:Desktop_computer_6 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_6" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_60
+:Desktop_computer_60 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :LC-Power_napajanje_300W_LC300SFX_V3.21 ;
+                     :desktop_computer_has_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_60" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_61
+:Desktop_computer_61 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :LC-Power_napajanje_300W_LC300SFX_V3.21 ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_61" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_62
+:Desktop_computer_62 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :LC-Power_napajanje_300W_LC300SFX_V3.21 ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_62" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_63
+:Desktop_computer_63 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_63" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_64
+:Desktop_computer_64 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_64" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_65
+:Desktop_computer_65 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_KVR48S40BS68_SODIMM_8GB ;
+                     :desktop_computer_has_name "Desktop_computer_65" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_66
+:Desktop_computer_66 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_Z690-P_WIFI ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_KVR48S40BS68_SODIMM_8GB ;
+                     :desktop_computer_has_name "Desktop_computer_66" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_67
+:Desktop_computer_67 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_B550-PLUS ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_67" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_68
+:Desktop_computer_68 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_68" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_69
+:Desktop_computer_69 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_Renegade_RGB_64GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_69" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_7
+:Desktop_computer_7 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_7" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_70
+:Desktop_computer_70 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_70" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_71
+:Desktop_computer_71 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :MSI_MPG_B550_GAMING_PLUS ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_71" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_72
+:Desktop_computer_72 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_Fury_Renegade_32GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_72" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_73
+:Desktop_computer_73 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_KVR48S40BS68_SODIMM_8GB ;
+                     :desktop_computer_has_name "Desktop_computer_73" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_74
+:Desktop_computer_74 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i7-11700F ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :ASUS_ROG_Strix_Z790-E_Gaming ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_74" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_75
+:Desktop_computer_75 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :INTEL_Core_i5-13400 ;
+                     :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :RAIDMAX_Napajanje_VORTEX_GOLD_RX-800AE-V_800W ;
+                     :desktop_computer_has_ram :KINGSTON_KVR48S40BS68_SODIMM_8GB ;
+                     :desktop_computer_has_name "Desktop_computer_75" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_76
+:Desktop_computer_76 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :KINGSTON_KVR48S40BS68_SODIMM_8GB ;
+                     :desktop_computer_has_name "Desktop_computer_76" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_77
+:Desktop_computer_77 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :KINGSTON_ValueRAM_32GB_SDRAM_KVR32N22D8 ;
+                     :desktop_computer_has_name "Desktop_computer_77" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_78
+:Desktop_computer_78 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :SAPPHIRE_PULSE_AMD_Radeon_RX_6700_XT ;
+                     :desktop_computer_has_hdd :WD_Red_Plus_8TB_NAS_SATA_3.5_WD80EFZZ_HDD ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_78" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_79
+:Desktop_computer_79 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                     :desktop_computer_has_graphic_card :MSI_GeForce_GTX_1660 ;
+                     :desktop_computer_has_hdd :WD_1TB_WD10SPZX ;
+                     :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                     :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_79" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_8
+:Desktop_computer_8 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :INTEL_Core_i9-13900K ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_8" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_80
+:Desktop_computer_80 rdf:type owl:NamedIndividual ,
+                              :Desktop_computer ;
+                     :desktop_computer_has_cpu :AMD_Ryzen_5_5600X ;
+                     :desktop_computer_has_graphic_card :GIGABYTE_GeForce_GTX_1650_D6_OC ;
+                     :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                     :desktop_computer_has_motherboard :GIGABYTE_B650_GAMING_Maticna_ploca ;
+                     :desktop_computer_has_psu :MS_Napajanje_CORE_M500_80_Plus_PLATINUM_PRO ;
+                     :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                     :desktop_computer_has_name "Desktop_computer_80" .
+
+
+###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#Desktop_computer_9
+:Desktop_computer_9 rdf:type owl:NamedIndividual ,
+                             :Desktop_computer ;
+                    :desktop_computer_has_cpu :AMD_Ryzen_5_4500 ;
+                    :desktop_computer_has_graphic_card :ASUS_nVidia_GeForce_GT_730 ;
+                    :desktop_computer_has_hdd :SEAGATE_HDD_16TB_3.5_SATA_III_7200rpm_256MB_IronWolf_ST16000NE000 ;
+                    :desktop_computer_has_motherboard :ASUS_PRIME_H670-PLUS_D4 ;
+                    :desktop_computer_has_psu :CHIEFTEC_napajanje_Photon_Series_CTG-650C-RGB ;
+                    :desktop_computer_has_ram :A_DATA_XPG_LANCER_RGB_16GB_RAM ;
+                    :desktop_computer_has_name "Desktop_computer_9" .
+
+
 ###  http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN
 <http://www.semanticweb.org/sara/ontologies/2023/3/untitled-ontology-10#BANG_&_OLUFSEN> rdf:type owl:NamedIndividual ,
                                                                                                  :Manufacturer ;
