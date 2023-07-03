@@ -6,6 +6,7 @@ import { SearchRamComponent } from './components/search-ram/search-ram.component
 import { CpuSearchComponent } from './components/cpu-search/cpu-search.component';
 import { SsdSearchComponent } from './components/ssd-search/ssd-search.component';
 import { UpgradeComponentComponent } from './components/upgrade-component/upgrade-component.component';
+import {SimilarComputersComponent} from "./components/similar-computers/similar-computers.component";
 
 const routes: Routes = [
   {
@@ -19,11 +20,11 @@ const routes: Routes = [
   {
     path:'search-ram',
     component: SearchRamComponent
-  }, 
+  },
   {
     path:'cpuSearch',
     component: CpuSearchComponent
-  }, 
+  },
   {
     path:'ssdSearch',
     component: SsdSearchComponent
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path:'upgrade-component',
     component: UpgradeComponentComponent
+  },
+  {
+    path:'similar-computers',
+    component: SimilarComputersComponent
   }
 
 ];

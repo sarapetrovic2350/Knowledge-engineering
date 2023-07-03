@@ -1,0 +1,110 @@
+<mat-card>
+  <mat-form-field class="ml" appearance="outline">
+  <mat-label>CPU name</mat-label>
+  <input type="text" matInput [(ngModel)]="cpuName" placeholder="Enter CPU name"/>
+  <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>Number of CPU cores</mat-label>
+    <input type="number" min="0" matInput [(ngModel)]="cpuCores" placeholder="Enter CPU cores number"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>Motherboard name</mat-label>
+    <input type="text" matInput [(ngModel)]="motherboardName" placeholder="Enter motherboard name"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>RAM capacity in GB</mat-label>
+    <input type="number" min="0" matInput [(ngModel)]="ramCapacity" placeholder="Enter RAM capacity in GB"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>RAM type</mat-label>
+    <input type="text" matInput [(ngModel)]="ramType" placeholder="Enter RAM type"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>Graphic card memory in GB</mat-label>
+    <input type="number" min="0" matInput [(ngModel)]="graphicCardMemory" placeholder="Enter graphic card memory in GB"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>HDD capacity in GB</mat-label>
+    <input type="number" min="0" matInput [(ngModel)]="hddCapacity" placeholder="Enter HDD capacity in GB"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="ml" appearance="outline">
+    <mat-label>PSU output power</mat-label>
+    <input type="number" min="0" matInput [(ngModel)]="psuOutputPower" placeholder="Enter PSU output power"/>
+    <mat-icon matPrefix>search</mat-icon>
+  </mat-form-field>
+  <button class="btn" mat-raised-button type="submit" color="primary" (click)="findSimilarComputers()">Find similar computers</button>
+  <button *ngIf="isSearched" mat-button mat-ripple (click)="clearSearch()">
+    <mat-icon color= "primary" matTooltip="clear search"> cancel_presentation</mat-icon>
+  </button>
+</mat-card>
+
+<div *ngIf="isSearched"class="container">
+  <div class="table-header" *ngIf="isSearched">
+    <p class="table-title">Similar computers</p>
+  </div>
+  <table *ngIf="isSearched" mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="evaluation">
+      <th mat-header-cell *matHeaderCellDef class="cell-center">Similarity [%] </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.evaluation}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cpuName">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> CPU name </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.cpuName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cpuCores">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> CPU cores </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.cpuCores}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="motherboardName">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> Motherboard name </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.motherboardName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ramCapacity">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> RAM capacity [GB] </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.ramCapacity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ramType">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> RAM type </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.ramType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="graphicCardMemory">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> Graphic card memory [GB] </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.graphicCardMemory}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hddCapacity">
+      <th mat-header-cell *matHeaderCellDef class="cell-center"> HDD capacity [GB] </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.hddCapacity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="psuOutputPower">
+      <th mat-header-cell *matHeaderCellDef class="cell-center">PSU output power [W] </th>
+      <td mat-cell *matCellDef="let similarityEvaluation" class="cell-center"> {{similarityEvaluation.object.psuOutputPower}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+
+<footer></footer>
+
+
+
+
