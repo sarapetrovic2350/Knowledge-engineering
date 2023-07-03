@@ -14,6 +14,7 @@ import { SearchRamComponent } from './components/search-ram/search-ram.component
 import { CpuSearchComponent } from './components/cpu-search/cpu-search.component';
 import { SsdSearchComponent } from './components/ssd-search/ssd-search.component';
 import { UpgradeComponentComponent } from './components/upgrade-component/upgrade-component.component';
+import { SimilarComputersComponent } from './components/similar-computers/similar-computers.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UpgradeComponentComponent } from './components/upgrade-component/upgrad
     SearchRamComponent,
     CpuSearchComponent,
     SsdSearchComponent,
-    UpgradeComponentComponent
+    UpgradeComponentComponent,
+    SimilarComputersComponent
   ],
   imports: [
     BrowserModule,
